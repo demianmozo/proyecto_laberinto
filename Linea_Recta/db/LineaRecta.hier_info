@@ -1,0 +1,16 @@
+|comparador
+a[0] => LessThan0.IN24
+a[1] => LessThan0.IN23
+a[2] => LessThan0.IN22
+a[3] => LessThan0.IN21
+a[4] => LessThan0.IN20
+a[5] => LessThan0.IN19
+a[6] => LessThan0.IN18
+a[7] => LessThan0.IN17
+a[8] => LessThan0.IN16
+a[9] => LessThan0.IN15
+a[10] => LessThan0.IN14
+a[11] => LessThan0.IN13
+o <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
