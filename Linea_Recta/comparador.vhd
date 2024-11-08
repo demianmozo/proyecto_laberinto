@@ -8,7 +8,7 @@ o: out std_logic);
 end comparador;
 
 architecture behavorial of comparador is
- constant valor_3000 :std_logic_vector(11 downto 0):="101110111000";
+ constant valor_3000 :std_logic_vector(11 downto 0):="011111010000";
  begin 
  o<='1' when a > valor_3000 else '0';
  end behavorial;
