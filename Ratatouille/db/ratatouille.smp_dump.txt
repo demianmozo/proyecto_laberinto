@@ -1,0 +1,15 @@
+
+State Machine - |Control_Motores|Motores:inst|fstate
+Name fstate.Dobla_Derecha fstate.Dobla_Izquierda fstate.Avanza fstate.Idle 
+fstate.Idle 0 0 0 0 
+fstate.Avanza 0 0 1 1 
+fstate.Dobla_Izquierda 0 1 0 1 
+fstate.Dobla_Derecha 1 0 0 1 
+
+State Machine - |Control_Motores|adc:inst8|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|currState
+Name currState.doneState currState.transState currState.waitState currState.resetState currState.pauseState 
+currState.resetState 0 0 0 0 0 
+currState.waitState 0 0 1 1 0 
+currState.transState 0 1 0 1 0 
+currState.doneState 1 0 0 1 0 
+currState.pauseState 0 0 0 1 1 
