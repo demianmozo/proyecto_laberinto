@@ -1,4 +1,20 @@
-|Mux_presuma
+|Posicion
+LS => flipflop_d:b2v_inst6.clk
+reset => flipflop_d:b2v_inst6.reset
+A[0] => sumador_fivebits:b2v_inst2.A[0]
+A[1] => sumador_fivebits:b2v_inst2.A[1]
+A[2] => sumador_fivebits:b2v_inst2.A[2]
+A[3] => sumador_fivebits:b2v_inst2.A[3]
+s[0] => mux_presuma:b2v_inst.s[0]
+s[1] => mux_presuma:b2v_inst.s[1]
+Q[0] <= flipflop_d:b2v_inst6.Q[0]
+Q[1] <= flipflop_d:b2v_inst6.Q[1]
+Q[2] <= flipflop_d:b2v_inst6.Q[2]
+Q[3] <= flipflop_d:b2v_inst6.Q[3]
+Q[4] <= flipflop_d:b2v_inst6.Q[4]
+
+
+|Posicion|Mux_presuma:b2v_inst
 s[0] => Mux0.IN5
 s[0] => Mux1.IN5
 s[0] => Mux2.IN5
@@ -13,5 +29,45 @@ Y[1] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
 Y[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 Y[3] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 Y[4] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Posicion|sumador_fivebits:b2v_inst2
+A[0] => Add0.IN5
+A[1] => Add0.IN4
+A[2] => Add0.IN3
+A[3] => Add0.IN2
+B[0] => Add0.IN10
+B[1] => Add0.IN9
+B[2] => Add0.IN8
+B[3] => Add0.IN7
+B[4] => Add0.IN6
+S[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Posicion|flipflop_d:b2v_inst6
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+reset => Q[0]~reg0.ACLR
+reset => Q[1]~reg0.ACLR
+reset => Q[2]~reg0.ACLR
+reset => Q[3]~reg0.ACLR
+reset => Q[4]~reg0.ACLR
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+D[4] => Q[4]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
