@@ -1,5 +1,5 @@
 Assembler report for ratatouille
-Mon Nov 11 23:28:17 2024
+Thu Nov 14 15:35:34 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,7 +10,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/output_files/ratatouille.sof
+  5. Assembler Device Options: C:/Users/Yo/Documents/RATITA DEMIAN_IAN/proyecto_laberinto/Ratatouille/output_files/ratatouille.sof
   6. Assembler Messages
 
 
@@ -37,9 +37,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Nov 11 23:28:17 2024 ;
+; Assembler Status      ; Successful - Thu Nov 14 15:35:34 2024 ;
 ; Revision Name         ; ratatouille                           ;
-; Top-level Entity Name ; Control_Motores                       ;
+; Top-level Entity Name ; Mux_presuma                           ;
 ; Family                ; Cyclone IV E                          ;
 ; Device                ; EP4CE22F17C6                          ;
 +-----------------------+---------------------------------------+
@@ -77,24 +77,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                            ;
-+--------------------------------------------------------------------------------------+
-; File Name                                                                            ;
-+--------------------------------------------------------------------------------------+
-; C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/output_files/ratatouille.sof ;
-+--------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                           ;
++-----------------------------------------------------------------------------------------------------+
+; File Name                                                                                           ;
++-----------------------------------------------------------------------------------------------------+
+; C:/Users/Yo/Documents/RATITA DEMIAN_IAN/proyecto_laberinto/Ratatouille/output_files/ratatouille.sof ;
++-----------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/output_files/ratatouille.sof ;
-+----------------+-----------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                       ;
-+----------------+-----------------------------------------------------------------------------------------------+
-; Device         ; EP4CE22F17C6                                                                                  ;
-; JTAG usercode  ; 0x001483E0                                                                                    ;
-; Checksum       ; 0x001483E0                                                                                    ;
-+----------------+-----------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Yo/Documents/RATITA DEMIAN_IAN/proyecto_laberinto/Ratatouille/output_files/ratatouille.sof ;
++----------------+--------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                      ;
++----------------+--------------------------------------------------------------------------------------------------------------+
+; Device         ; EP4CE22F17C6                                                                                                 ;
+; JTAG usercode  ; 0x0013531C                                                                                                   ;
+; Checksum       ; 0x0013531C                                                                                                   ;
++----------------+--------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -103,13 +103,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Nov 11 23:28:15 2024
+    Info: Processing started: Thu Nov 14 15:35:32 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off ratatouille -c ratatouille
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4544 megabytes
-    Info: Processing ended: Mon Nov 11 23:28:17 2024
+    Info: Peak virtual memory: 396 megabytes
+    Info: Processing ended: Thu Nov 14 15:35:34 2024
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
