@@ -65,6 +65,10 @@ set_location_assignment PIN_T12 -to VELI
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VHDL_FILE Adyacentes/Donde_ir.vhd
+set_global_assignment -name BDF_FILE Posicion/Posicion.bdf
+set_global_assignment -name BDF_FILE Adyacentes/Donde_ir.bdf
 set_global_assignment -name SMF_FILE Motores/Motores.smf
 set_global_assignment -name VHDL_FILE Posicion/sumador_fivebits.vhd
 set_global_assignment -name VHDL_FILE Posicion/Posicion.vhd
@@ -72,4 +76,3 @@ set_global_assignment -name VHDL_FILE Posicion/Mux_presuma.vhd
 set_global_assignment -name VHDL_FILE Posicion/FFD_fivebits.vhd
 set_global_assignment -name VHDL_FILE Adyacentes/Busmux_16a1.vhd
 set_global_assignment -name VHDL_FILE Adyacentes/seleccionadores_mux.vhd
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

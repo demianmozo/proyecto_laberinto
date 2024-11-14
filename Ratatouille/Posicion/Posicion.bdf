@@ -55,7 +55,7 @@ applicable agreement for further details.
 	(input)
 	(rect 568 80 736 96)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "LS" (rect 5 0 18 12)(font "Arial" ))
+	(text "LS" (rect 5 0 17 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -87,7 +87,7 @@ applicable agreement for further details.
 	(output)
 	(rect 968 128 1144 144)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "Q[4..0]" (rect 90 0 124 12)(font "Arial" ))
+	(text "Q[3..0]" (rect 90 0 124 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -122,9 +122,9 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 528 144 688 224)
+	(rect 528 144 680 224)
 	(text "sumador_fivebits" (rect 5 0 91 12)(font "Arial" ))
-	(text "inst2" (rect 8 64 31 76)(font "Arial" ))
+	(text "inst1" (rect 8 64 31 76)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -140,20 +140,20 @@ applicable agreement for further details.
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
-		(pt 160 32)
+		(pt 152 32)
 		(output)
-		(text "S[4..0]" (rect 0 0 33 12)(font "Arial" ))
-		(text "S[4..0]" (rect 112 27 145 39)(font "Arial" ))
-		(line (pt 160 32)(pt 144 32)(line_width 3))
+		(text "S[3..0]" (rect 0 0 33 12)(font "Arial" ))
+		(text "S[3..0]" (rect 104 27 137 39)(font "Arial" ))
+		(line (pt 152 32)(pt 136 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 144 64))
+		(rectangle (rect 16 16 136 64))
 	)
 )
 (symbol
 	(rect 808 104 968 216)
 	(text "flipflop_d" (rect 5 0 51 12)(font "Arial" ))
-	(text "inst6" (rect 8 96 31 108)(font "Arial" ))
+	(text "inst2" (rect 8 96 31 108)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -171,25 +171,20 @@ applicable agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "D[4..0]" (rect 0 0 34 12)(font "Arial" ))
-		(text "D[4..0]" (rect 21 59 55 71)(font "Arial" ))
+		(text "D[3..0]" (rect 0 0 34 12)(font "Arial" ))
+		(text "D[3..0]" (rect 21 59 55 71)(font "Arial" ))
 		(line (pt 0 64)(pt 16 64)(line_width 3))
 	)
 	(port
 		(pt 160 32)
 		(output)
-		(text "Q[4..0]" (rect 0 0 34 12)(font "Arial" ))
-		(text "Q[4..0]" (rect 111 27 145 39)(font "Arial" ))
+		(text "Q[3..0]" (rect 0 0 34 12)(font "Arial" ))
+		(text "Q[3..0]" (rect 111 27 145 39)(font "Arial" ))
 		(line (pt 160 32)(pt 144 32)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 144 96))
 	)
-)
-(connector
-	(pt 800 176)
-	(pt 688 176)
-	(bus)
 )
 (connector
 	(pt 440 208)
@@ -254,4 +249,9 @@ applicable agreement for further details.
 (connector
 	(pt 800 88)
 	(pt 800 136)
+)
+(connector
+	(pt 680 176)
+	(pt 800 176)
+	(bus)
 )

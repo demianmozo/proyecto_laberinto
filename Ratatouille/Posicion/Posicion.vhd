@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 64-Bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
--- CREATED		"Thu Nov 14 15:36:05 2024"
+-- CREATED		"Thu Nov 14 18:16:56 2024"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -28,7 +28,7 @@ ENTITY Posicion IS
 		reset :  IN  STD_LOGIC;
 		A :  IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
 		s :  IN  STD_LOGIC_VECTOR(1 DOWNTO 0);
-		Q :  OUT  STD_LOGIC_VECTOR(4 DOWNTO 0)
+		Q :  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0)
 	);
 END Posicion;
 
@@ -43,20 +43,20 @@ END COMPONENT;
 COMPONENT sumador_fivebits
 	PORT(A : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 		 B : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-		 S : OUT STD_LOGIC_VECTOR(4 DOWNTO 0)
+		 S : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 	);
 END COMPONENT;
 
 COMPONENT flipflop_d
 	PORT(clk : IN STD_LOGIC;
 		 reset : IN STD_LOGIC;
-		 D : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-		 Q : OUT STD_LOGIC_VECTOR(4 DOWNTO 0)
+		 D : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		 Q : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 	);
 END COMPONENT;
 
 SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC_VECTOR(4 DOWNTO 0);
-SIGNAL	SYNTHESIZED_WIRE_1 :  STD_LOGIC_VECTOR(4 DOWNTO 0);
+SIGNAL	SYNTHESIZED_WIRE_1 :  STD_LOGIC_VECTOR(3 DOWNTO 0);
 
 
 BEGIN 
@@ -68,13 +68,13 @@ PORT MAP(s => s,
 		 Y => SYNTHESIZED_WIRE_0);
 
 
-b2v_inst2 : sumador_fivebits
+b2v_inst1 : sumador_fivebits
 PORT MAP(A => A,
 		 B => SYNTHESIZED_WIRE_0,
 		 S => SYNTHESIZED_WIRE_1);
 
 
-b2v_inst6 : flipflop_d
+b2v_inst2 : flipflop_d
 PORT MAP(clk => LS,
 		 reset => reset,
 		 D => SYNTHESIZED_WIRE_1,

@@ -4,8 +4,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity flipflop_d is
     Port ( clk   : in  STD_LOGIC;                      -- Reloj
            reset : in  STD_LOGIC;                      -- Reset asíncrono activo alto
-           D     : in  STD_LOGIC_VECTOR(3 downto 0);   -- Entrada D (5 bits)
-           Q     : out STD_LOGIC_VECTOR(3 downto 0)    -- Salida Q (5 bits)
+           D     : in  STD_LOGIC_VECTOR(4 downto 0);   -- Entrada D (5 bits)
+           Q     : out STD_LOGIC_VECTOR(4 downto 0)    -- Salida Q (5 bits)
            );
 end flipflop_d;
 
