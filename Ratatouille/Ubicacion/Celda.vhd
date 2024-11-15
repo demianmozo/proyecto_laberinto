@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 64-Bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
--- CREATED		"Mon Nov 11 16:55:49 2024"
+-- CREATED		"Fri Nov 15 17:27:28 2024"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -35,6 +35,10 @@ ENTITY Celda IS
 		Atras :  IN  STD_LOGIC_VECTOR(2 DOWNTO 0);
 		Derecha :  IN  STD_LOGIC_VECTOR(2 DOWNTO 0);
 		Izquierda :  IN  STD_LOGIC_VECTOR(2 DOWNTO 0);
+		muro_adelante :  OUT  STD_LOGIC;
+		muro_atras :  OUT  STD_LOGIC;
+		muro_derecha :  OUT  STD_LOGIC;
+		muro_izquierda :  OUT  STD_LOGIC;
 		Peso :  OUT  STD_LOGIC_VECTOR(2 DOWNTO 0)
 	);
 END Celda;
@@ -111,6 +115,10 @@ SIGNAL	SYNTHESIZED_WIRE_8 :  STD_LOGIC_VECTOR(0 TO 2);
 
 
 BEGIN 
+muro_adelante <= DFF_inst18;
+muro_atras <= DFF_inst5;
+muro_derecha <= DFF_inst8;
+muro_izquierda <= DFF_inst11;
 SYNTHESIZED_WIRE_5 <= "111";
 SYNTHESIZED_WIRE_6 <= "111";
 SYNTHESIZED_WIRE_7 <= "111";
