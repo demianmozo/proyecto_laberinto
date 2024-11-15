@@ -1,10 +1,13 @@
 
 State Machine - |Control_Motores|Motores:inst|fstate
-Name fstate.Dobla_Derecha fstate.Dobla_Izquierda fstate.Avanza fstate.Idle 
-fstate.Idle 0 0 0 0 
-fstate.Avanza 0 0 1 1 
-fstate.Dobla_Izquierda 0 1 0 1 
-fstate.Dobla_Derecha 1 0 0 1 
+Name fstate.Ganamos fstate.Gira_180 fstate.Gira_90_der fstate.Gira_90_izq fstate.Corrige_der fstate.Corrige_izq fstate.Avanza 
+fstate.Avanza 0 0 0 0 0 0 0 
+fstate.Corrige_izq 0 0 0 0 0 1 1 
+fstate.Corrige_der 0 0 0 0 1 0 1 
+fstate.Gira_90_izq 0 0 0 1 0 0 1 
+fstate.Gira_90_der 0 0 1 0 0 0 1 
+fstate.Gira_180 0 1 0 0 0 0 1 
+fstate.Ganamos 1 0 0 0 0 0 1 
 
 State Machine - |Control_Motores|adc:inst8|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|currState
 Name currState.doneState currState.transState currState.waitState currState.resetState currState.pauseState 

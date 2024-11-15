@@ -85,7 +85,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -448 1048 -280 1064)
+	(rect -448 280 -280 296)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "CLK" (rect 5 0 26 12)(font "Arial" ))
 	(pt 168 8)
@@ -101,7 +101,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -400 232 -232 248)
+	(rect -448 312 -280 328)
 	(text "INPUT" (rect 125 6 153 16)(font "Arial" (font_size 6)))
 	(text "Set" (rect 5 4 21 16)(font "Arial" ))
 	(pt 168 8)
@@ -118,7 +118,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -408 1144 -240 1160)
+	(rect -448 352 -280 368)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "Reset" (rect 5 0 34 12)(font "Arial" ))
 	(pt 168 8)
@@ -214,57 +214,9 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 216 264 392 280)
+	(rect 928 336 1105 352)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "muro_adelante" (rect 90 0 161 12)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-)
-(pin
-	(output)
-	(rect 192 504 368 520)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "muro_atras" (rect 90 0 145 12)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-)
-(pin
-	(output)
-	(rect 176 776 352 792)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "muro_derecha" (rect 90 0 159 12)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-)
-(pin
-	(output)
-	(rect 168 1032 344 1048)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "muro_izquierda" (rect 90 0 163 12)(font "Arial" ))
+	(text "muros_ady[3..0]" (rect 90 0 171 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -793,6 +745,49 @@ applicable agreement for further details.
 		(circle (rect 28 68 36 76))
 	)
 )
+(symbol
+	(rect 736 312 912 424)
+	(text "bit_to_vector" (rect 5 0 69 12)(font "Arial" ))
+	(text "inst1" (rect 8 96 31 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "a" (rect 0 0 5 12)(font "Arial" ))
+		(text "a" (rect 21 27 26 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "b" (rect 0 0 5 12)(font "Arial" ))
+		(text "b" (rect 21 43 26 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "c" (rect 0 0 5 12)(font "Arial" ))
+		(text "c" (rect 21 59 26 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "d" (rect 0 0 5 12)(font "Arial" ))
+		(text "d" (rect 21 75 26 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 176 32)
+		(output)
+		(text "muros_ady[3..0]" (rect 0 0 81 12)(font "Arial" ))
+		(text "muros_ady[3..0]" (rect 87 27 168 39)(font "Arial" ))
+		(line (pt 176 32)(pt 160 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 160 96))
+	)
+)
 (connector
 	(pt 256 184)
 	(pt 464 184)
@@ -901,10 +896,6 @@ applicable agreement for further details.
 	(pt -152 864)
 )
 (connector
-	(pt -240 1152)
-	(pt -152 1152)
-)
-(connector
 	(pt -152 1152)
 	(pt 104 1152)
 )
@@ -921,20 +912,12 @@ applicable agreement for further details.
 	(pt -152 608)
 )
 (connector
-	(pt -152 864)
-	(pt -152 1152)
-)
-(connector
 	(pt -152 360)
 	(pt -152 608)
 )
 (connector
 	(pt -152 608)
 	(pt -152 864)
-)
-(connector
-	(pt -152 360)
-	(pt 144 360)
 )
 (connector
 	(pt 144 248)
@@ -949,10 +932,6 @@ applicable agreement for further details.
 	(pt -208 464)
 )
 (connector
-	(pt -232 240)
-	(pt -208 240)
-)
-(connector
 	(pt -208 240)
 	(pt 144 240)
 )
@@ -963,10 +942,6 @@ applicable agreement for further details.
 (connector
 	(pt 104 752)
 	(pt -208 752)
-)
-(connector
-	(pt -208 240)
-	(pt -208 464)
 )
 (connector
 	(pt 104 1016)
@@ -985,10 +960,6 @@ applicable agreement for further details.
 	(pt -208 1008)
 )
 (connector
-	(pt -280 1056)
-	(pt -240 1056)
-)
-(connector
 	(pt -240 1056)
 	(pt 72 1056)
 )
@@ -1001,24 +972,16 @@ applicable agreement for further details.
 	(pt -240 528)
 )
 (connector
-	(pt -240 800)
-	(pt -240 1056)
+	(pt 160 1040)
+	(pt 160 992)
 )
 (connector
-	(pt -240 288)
-	(pt -240 528)
-)
-(connector
-	(pt -240 528)
-	(pt -240 800)
-)
-(connector
-	(pt -240 288)
-	(pt 112 288)
-)
-(connector
-	(pt 200 272)
 	(pt 200 224)
+	(pt 200 272)
+)
+(connector
+	(pt 736 272)
+	(pt 736 344)
 )
 (connector
 	(pt 176 272)
@@ -1026,11 +989,15 @@ applicable agreement for further details.
 )
 (connector
 	(pt 200 272)
-	(pt 216 272)
+	(pt 736 272)
 )
 (connector
-	(pt 184 512)
 	(pt 184 464)
+	(pt 184 512)
+)
+(connector
+	(pt 696 512)
+	(pt 696 360)
 )
 (connector
 	(pt 160 512)
@@ -1038,11 +1005,23 @@ applicable agreement for further details.
 )
 (connector
 	(pt 184 512)
-	(pt 192 512)
+	(pt 696 512)
 )
 (connector
-	(pt 160 784)
+	(pt 696 360)
+	(pt 736 360)
+)
+(connector
+	(pt 704 376)
+	(pt 736 376)
+)
+(connector
+	(pt 704 376)
+	(pt 704 784)
+)
+(connector
 	(pt 160 736)
+	(pt 160 784)
 )
 (connector
 	(pt 136 784)
@@ -1050,11 +1029,7 @@ applicable agreement for further details.
 )
 (connector
 	(pt 160 784)
-	(pt 176 784)
-)
-(connector
-	(pt 160 1040)
-	(pt 160 992)
+	(pt 704 784)
 )
 (connector
 	(pt 136 1040)
@@ -1062,18 +1037,75 @@ applicable agreement for further details.
 )
 (connector
 	(pt 160 1040)
-	(pt 168 1040)
+	(pt 712 1040)
 )
-(junction (pt -152 1152))
+(connector
+	(pt 712 392)
+	(pt 712 1040)
+)
+(connector
+	(pt 712 392)
+	(pt 736 392)
+)
+(connector
+	(pt 912 344)
+	(pt 928 344)
+	(bus)
+)
+(connector
+	(pt -240 288)
+	(pt -240 528)
+)
+(connector
+	(pt -240 528)
+	(pt -240 800)
+)
+(connector
+	(pt -240 800)
+	(pt -240 1056)
+)
+(connector
+	(pt -280 320)
+	(pt -208 320)
+)
+(connector
+	(pt -208 240)
+	(pt -208 320)
+)
+(connector
+	(pt -208 320)
+	(pt -208 464)
+)
+(connector
+	(pt -280 288)
+	(pt -240 288)
+)
+(connector
+	(pt -240 288)
+	(pt 112 288)
+)
+(connector
+	(pt -152 864)
+	(pt -152 1152)
+)
+(connector
+	(pt -280 360)
+	(pt -152 360)
+)
+(connector
+	(pt -152 360)
+	(pt 144 360)
+)
 (junction (pt -152 864))
 (junction (pt -152 608))
-(junction (pt -208 240))
 (junction (pt -208 464))
 (junction (pt -208 752))
-(junction (pt -240 1056))
 (junction (pt -240 800))
 (junction (pt -240 528))
-(junction (pt 200 272))
 (junction (pt 184 512))
-(junction (pt 160 784))
 (junction (pt 160 1040))
+(junction (pt 200 272))
+(junction (pt 160 784))
+(junction (pt -240 288))
+(junction (pt -208 320))
+(junction (pt -152 360))

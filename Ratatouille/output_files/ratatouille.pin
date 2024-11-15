@@ -93,7 +93,7 @@ Peso[1]                      : B6        : output : 2.5 V             :         
 Derecha[0]                   : B7        : input  : 2.5 V             :         : 8         : N              
 GND+                         : B8        :        :                   :         : 8         :                
 GND+                         : B9        :        :                   :         : 7         :                
-muro_derecha                 : B10       : output : 2.5 V             :         : 7         : N              
+muros_ady[1]                 : B10       : output : 2.5 V             :         : 7         : N              
 Adelante[0]                  : B11       : input  : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : B12       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B13       :        :                   :         : 7         :                
@@ -123,8 +123,8 @@ VCCD_PLL3                    : D4        : power  :                   : 1.2V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : D5        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D6        :        :                   :         : 8         :                
 GND                          : D7        : gnd    :                   :         :           :                
-muro_atras                   : D8        : output : 2.5 V             :         : 8         : N              
-muro_izquierda               : D9        : output : 2.5 V             :         : 7         : N              
+muros_ady[2]                 : D8        : output : 2.5 V             :         : 8         : N              
+muros_ady[0]                 : D9        : output : 2.5 V             :         : 7         : N              
 GND                          : D10       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D11       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D12       :        :                   :         : 7         :                
@@ -160,7 +160,7 @@ Reset                        : F9        : input  : 2.5 V             :         
 GND                          : F10       : gnd    :                   :         :           :                
 VCCINT                       : F11       : power  :                   : 1.2V    :           :                
 VCCA2                        : F12       : power  :                   : 2.5V    :           :                
-muro_adelante                : F13       : output : 2.5 V             :         : 6         : N              
+muros_ady[3]                 : F13       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F14       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F15       :        :                   :         : 6         :                
 ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : F16       : output : 2.5 V             :         : 6         : N              

@@ -1,5 +1,8 @@
 |Celda
-muro_adelante <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+muros_ady[0] <= bit_to_vector:inst1.muros_ady[0]
+muros_ady[1] <= bit_to_vector:inst1.muros_ady[1]
+muros_ady[2] <= bit_to_vector:inst1.muros_ady[2]
+muros_ady[3] <= bit_to_vector:inst1.muros_ady[3]
 Reset => inst18.ACLR
 Reset => inst5.ACLR
 Reset => inst8.ACLR
@@ -13,11 +16,8 @@ Set => inst18.PRESET
 Set => inst5.PRESET
 Set => inst8.PRESET
 Set => inst11.PRESET
-muro_atras <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 Muro_At => inst5.DATAIN
-muro_derecha <= inst8.DB_MAX_OUTPUT_PORT_TYPE
 Muro_Der => inst8.DATAIN
-muro_izquierda <= inst11.DB_MAX_OUTPUT_PORT_TYPE
 Muro_Izq => inst11.DATAIN
 Peso[0] <= sumador_3_bits:inst16.S[0]
 Peso[1] <= sumador_3_bits:inst16.S[1]
@@ -34,6 +34,17 @@ Derecha[2] => BUSMUX:inst7.dataa[2]
 Izquierda[0] => BUSMUX:inst9.dataa[0]
 Izquierda[1] => BUSMUX:inst9.dataa[1]
 Izquierda[2] => BUSMUX:inst9.dataa[2]
+
+
+|Celda|bit_to_vector:inst1
+a => muros_ady[3].DATAIN
+b => muros_ady[2].DATAIN
+c => muros_ady[1].DATAIN
+d => muros_ady[0].DATAIN
+muros_ady[0] <= d.DB_MAX_OUTPUT_PORT_TYPE
+muros_ady[1] <= c.DB_MAX_OUTPUT_PORT_TYPE
+muros_ady[2] <= b.DB_MAX_OUTPUT_PORT_TYPE
+muros_ady[3] <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Celda|sumador_3_bits:inst16

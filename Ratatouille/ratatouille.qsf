@@ -70,8 +70,7 @@ set_global_assignment -name VHDL_FILE Ubicacion/busmux_3.vhd
 set_global_assignment -name VHDL_FILE Ubicacion/busmux_2.vhd
 set_global_assignment -name VHDL_FILE Ubicacion/busmux_1.vhd
 set_global_assignment -name VHDL_FILE Ubicacion/busmux_0.vhd
-set_global_assignment -name VHDL_FILE control.vhd
-set_global_assignment -name SMF_FILE control.smf
+set_global_assignment -name VHDL_FILE Ubicacion/bit_to_vector.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
