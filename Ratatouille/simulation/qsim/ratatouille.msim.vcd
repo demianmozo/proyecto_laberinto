@@ -1,0 +1,112 @@
+$comment
+	File created using the following command:
+		vcd file ratatouille.msim.vcd -direction
+$end
+$date
+	Mon Nov 18 22:30:07 2024
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module elijo_sentido_vlg_vec_tst $end
+$var reg 3 ! adelante [2:0] $end
+$var reg 3 " atras [2:0] $end
+$var reg 3 # derecha [2:0] $end
+$var reg 3 $ izquierda [2:0] $end
+$var wire 1 % menor_cod [1] $end
+$var wire 1 & menor_cod [0] $end
+$var wire 1 ' sampler $end
+$scope module i1 $end
+$var wire 1 ( gnd $end
+$var wire 1 ) vcc $end
+$var wire 1 * unknown $end
+$var tri1 1 + devclrn $end
+$var tri1 1 , devpor $end
+$var tri1 1 - devoe $end
+$var wire 1 . LessThan0~1_combout $end
+$var wire 1 / LessThan1~1_combout $end
+$var wire 1 0 LessThan2~4_combout $end
+$var wire 1 1 atras[2]~input_o $end
+$var wire 1 2 derecha[1]~input_o $end
+$var wire 1 3 menor_cod[0]~output_o $end
+$var wire 1 4 menor_cod[1]~output_o $end
+$var wire 1 5 izquierda[1]~input_o $end
+$var wire 1 6 adelante[1]~input_o $end
+$var wire 1 7 adelante[2]~input_o $end
+$var wire 1 8 LessThan0~0_combout $end
+$var wire 1 9 adelante[0]~input_o $end
+$var wire 1 : izquierda[0]~input_o $end
+$var wire 1 ; LessThan0~2_combout $end
+$var wire 1 < min_value~2_combout $end
+$var wire 1 = derecha[0]~input_o $end
+$var wire 1 > izquierda[2]~input_o $end
+$var wire 1 ? derecha[2]~input_o $end
+$var wire 1 @ LessThan2~2_combout $end
+$var wire 1 A min_value~1_combout $end
+$var wire 1 B LessThan2~3_combout $end
+$var wire 1 C atras[1]~input_o $end
+$var wire 1 D atras[0]~input_o $end
+$var wire 1 E LessThan2~0_combout $end
+$var wire 1 F LessThan2~1_combout $end
+$var wire 1 G min_value~0_combout $end
+$var wire 1 H LessThan1~0_combout $end
+$var wire 1 I LessThan1~2_combout $end
+$var wire 1 J LessThan1~3_combout $end
+$var wire 1 K LessThan2~5_combout $end
+$var wire 1 L cod_value~0_combout $end
+$var wire 1 M cod_value~1_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b111 !
+b1 "
+b1 #
+b10 $
+1&
+0%
+x'
+0(
+1)
+x*
+1+
+1,
+1-
+0.
+0/
+10
+01
+02
+13
+04
+15
+16
+17
+18
+19
+0:
+1;
+0<
+1=
+0>
+0?
+0@
+1A
+0B
+0C
+1D
+0E
+0F
+0G
+1H
+1I
+1J
+0K
+1L
+0M
+$end
+#1000000

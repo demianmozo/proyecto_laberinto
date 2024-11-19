@@ -1,9 +1,5 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="ratatouille">
-		<CBX_INST_ENTRY INSTANCE_NAME="|Celda|BUSMUX:inst17|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Celda|BUSMUX:inst6|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Celda|BUSMUX:inst7|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Celda|BUSMUX:inst9|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

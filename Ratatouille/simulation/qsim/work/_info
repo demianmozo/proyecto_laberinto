@@ -1,0 +1,157 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\monig\Documents\proyecto_laberinto\Ratatouille\simulation\qsim
+vdecido_accion
+Z1 !s100 dE0]l^2;65m317f5;lP1K1
+Z2 IRSBN9oB]mYH9UKf9agkEC0
+Z3 V9?KJM]mJi<G7I]lT71EEA3
+Z4 dC:\Users\monig\Documents\proyecto_laberinto\Ratatouille\simulation\qsim
+Z5 w1731979645
+Z6 8ratatouille.vo
+Z7 Fratatouille.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s108 1731979648.827000
+Z10 !s90 -work|work|ratatouille.vo|
+Z11 o-work work -O0
+Z12 !s107 ratatouille.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vdecido_accion_vlg_check_tst
+Z13 IU30ejlOCLkWD2WXT0f1l]3
+Z14 VPTVC2O[bTNbBZS::T`RIA2
+R4
+Z15 w1731979644
+Z16 8ratatouille.vt
+Z17 Fratatouille.vt
+L0 61
+R8
+r1
+31
+Z18 !s108 1731979649.935000
+Z19 !s107 ratatouille.vt|
+Z20 !s90 -work|work|ratatouille.vt|
+R11
+Z21 !s100 a:7<>9^4HcIfhF:Ol[5@U3
+!i10b 1
+!s85 0
+!s101 -O0
+vdecido_accion_vlg_sample_tst
+Z22 I^kWDbF;=?6P39WZzIKaO_2
+Z23 VjAPbe^8USMll>5=MCC8K80
+R4
+R15
+R16
+R17
+L0 29
+R8
+r1
+31
+R18
+R19
+R20
+R11
+Z24 !s100 c7fM5ESjT7=G;6SzV0C0>3
+!i10b 1
+!s85 0
+!s101 -O0
+vdecido_accion_vlg_vec_tst
+Z25 I^ikcfBEPJIE9@J;VhPMV?3
+Z26 VOadzMhehTQGS_6Tim[?;_3
+R4
+R15
+R16
+R17
+Z27 L0 173
+R8
+r1
+31
+R18
+R19
+R20
+R11
+Z28 !s100 @0]UfK`j<Oe[1ReBGH@QV1
+!i10b 1
+!s85 0
+!s101 -O0
+velijo_sentido
+Z29 I9SB64UfXWD>Zj4VT@5mUZ0
+Z30 VIBQzahLD10I5oR@na9A`13
+R4
+Z31 w1731979806
+R6
+R7
+L0 31
+R8
+r1
+31
+R10
+R11
+!i10b 1
+Z32 !s100 Yf<4goOAiIHQJkjhM32IU3
+!s85 0
+Z33 !s108 1731979807.095000
+R12
+!s101 -O0
+velijo_sentido_vlg_check_tst
+!i10b 1
+!s100 @g6=FTN=Z8[LoS2?95N0>2
+I4DkH:aSWm;S<^a[C1I3fe3
+VdCd_LWaoz^=z<klBgCR<g1
+R4
+Z34 w1731979805
+R16
+R17
+L0 63
+R8
+r1
+!s85 0
+31
+Z35 !s108 1731979807.206000
+Z36 !s107 ratatouille.vt|
+R20
+!s101 -O0
+R11
+velijo_sentido_vlg_sample_tst
+!i10b 1
+!s100 J<PAX`cJ<z<3Lm3Rn`gY<2
+IhBakCE;Gd=SkEo_Ro;WLU1
+VM`KDbTZP91]PVG<PV5lfd3
+R4
+R34
+R16
+R17
+L0 29
+R8
+r1
+!s85 0
+31
+R35
+R36
+R20
+!s101 -O0
+R11
+velijo_sentido_vlg_vec_tst
+!i10b 1
+!s100 z6N9Ti4OS=FB2T@<I45jX3
+I[3^6iQ0fRS09c^fV^3Xa>2
+V7JV4?@X3`]Y^Tf8BTPiib1
+R4
+R34
+R16
+R17
+L0 175
+R8
+r1
+!s85 0
+31
+R35
+R36
+R20
+!s101 -O0
+R11
