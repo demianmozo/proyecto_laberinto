@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect -24 160 144 176)
+	(rect -456 512 -288 528)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "Adelante[2..0]" (rect 5 0 73 12)(font "Arial" ))
 	(pt 168 8)
@@ -37,7 +37,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -40 400 128 416)
+	(rect -456 552 -288 568)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "Atras[2..0]" (rect 5 0 56 12)(font "Arial" ))
 	(pt 168 8)
@@ -53,7 +53,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -64 672 104 688)
+	(rect -456 592 -288 608)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "Derecha[2..0]" (rect 5 0 72 12)(font "Arial" ))
 	(pt 168 8)
@@ -69,7 +69,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -64 928 104 944)
+	(rect -456 624 -288 640)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "Izquierda[2..0]" (rect 5 0 74 12)(font "Arial" ))
 	(pt 168 8)
@@ -134,7 +134,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -56 264 112 280)
+	(rect -448 384 -280 400)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "Muro_Ad" (rect 5 0 47 12)(font "Arial" ))
 	(pt 168 8)
@@ -150,7 +150,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -72 504 96 520)
+	(rect -448 416 -280 432)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "Muro_At" (rect 5 0 45 12)(font "Arial" ))
 	(pt 168 8)
@@ -166,7 +166,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -96 776 72 792)
+	(rect -448 448 -280 464)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "Muro_Der" (rect 5 0 52 12)(font "Arial" ))
 	(pt 168 8)
@@ -182,7 +182,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -96 1032 72 1048)
+	(rect -448 472 -280 488)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "Muro_Izq" (rect 5 0 48 12)(font "Arial" ))
 	(pt 168 8)
@@ -1061,10 +1061,6 @@ applicable agreement for further details.
 	(pt -240 800)
 )
 (connector
-	(pt -240 800)
-	(pt -240 1056)
-)
-(connector
 	(pt -280 320)
 	(pt -208 320)
 )
@@ -1095,6 +1091,106 @@ applicable agreement for further details.
 (connector
 	(pt -152 360)
 	(pt 144 360)
+)
+(connector
+	(pt 112 272)
+	(pt 104 272)
+)
+(connector
+	(pt 104 392)
+	(pt 104 272)
+)
+(connector
+	(pt -280 392)
+	(pt 104 392)
+)
+(connector
+	(pt 96 512)
+	(pt -248 512)
+)
+(connector
+	(pt -248 424)
+	(pt -248 512)
+)
+(connector
+	(pt -280 424)
+	(pt -248 424)
+)
+(connector
+	(pt -280 456)
+	(pt -256 456)
+)
+(connector
+	(pt -256 784)
+	(pt 72 784)
+)
+(connector
+	(pt -256 456)
+	(pt -256 784)
+)
+(connector
+	(pt -240 800)
+	(pt -240 1056)
+)
+(connector
+	(pt -280 480)
+	(pt -264 480)
+)
+(connector
+	(pt -264 1040)
+	(pt 72 1040)
+)
+(connector
+	(pt -264 1040)
+	(pt -264 480)
+)
+(connector
+	(text "adelante[2..0]" (rect 120 144 187 155)(font "Intel Clear" ))
+	(pt 144 168)
+	(pt 120 168)
+	(bus)
+)
+(connector
+	(text "adelante[2..0]" (rect -288 496 -221 507)(font "Intel Clear" ))
+	(pt -288 520)
+	(pt -272 520)
+	(bus)
+)
+(connector
+	(text "atras[2..0]" (rect 104 384 153 395)(font "Intel Clear" ))
+	(pt 128 408)
+	(pt 104 408)
+	(bus)
+)
+(connector
+	(text "atras[2..0]" (rect -288 536 -239 547)(font "Intel Clear" ))
+	(pt -288 560)
+	(pt -272 560)
+	(bus)
+)
+(connector
+	(text "derecha[2..0]" (rect 72 656 135 667)(font "Intel Clear" ))
+	(pt 104 680)
+	(pt 72 680)
+	(bus)
+)
+(connector
+	(text "izquierda[2..0]" (rect -288 608 -220 619)(font "Intel Clear" ))
+	(pt -272 632)
+	(pt -288 632)
+	(bus)
+)
+(connector
+	(text "izquierda[2..0]" (rect 64 912 132 923)(font "Intel Clear" ))
+	(pt 104 936)
+	(pt 96 936)
+	(bus)
+)
+(connector
+	(text "derecha[2..0]" (rect -288 576 -225 587)(font "Intel Clear" ))
+	(pt -272 600)
+	(pt -288 600)
+	(bus)
 )
 (junction (pt -152 864))
 (junction (pt -152 608))

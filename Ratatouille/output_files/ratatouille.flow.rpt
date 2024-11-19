@@ -1,5 +1,5 @@
 Flow report for ratatouille
-Fri Nov 15 19:11:46 2024
+Mon Nov 18 22:08:16 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Fri Nov 15 19:11:42 2024           ;
+; Flow Status                        ; Successful - Mon Nov 18 22:08:12 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ratatouille                                     ;
 ; Top-level Entity Name              ; Celda                                           ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Device                             ; EP4CE22F17C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 63 / 22,320 ( < 1 % )                           ;
-;     Total combinational functions  ; 63 / 22,320 ( < 1 % )                           ;
+; Total logic elements               ; 58 / 22,320 ( < 1 % )                           ;
+;     Total combinational functions  ; 58 / 22,320 ( < 1 % )                           ;
 ;     Dedicated logic registers      ; 4 / 22,320 ( < 1 % )                            ;
 ; Total registers                    ; 4                                               ;
 ; Total pins                         ; 26 / 154 ( 17 % )                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/15/2024 19:11:28 ;
+; Start date & time ; 11/18/2024 22:07:53 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ratatouille         ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 963355883079.173170868803952          ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 31672459905691.173197847317392        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                  ; --            ; --          ; --         ;
@@ -94,11 +94,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 478 MB              ; 00:00:03                           ;
-; Fitter                    ; 00:00:08     ; 1.0                     ; 694 MB              ; 00:00:08                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 396 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 470 MB              ; 00:00:03                           ;
-; Total                     ; 00:00:16     ; --                      ; --                  ; 00:00:16                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4637 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:10     ; 1.0                     ; 4915 MB             ; 00:00:06                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4540 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4611 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:18     ; --                      ; --                  ; 00:00:12                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -107,10 +107,10 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; NB5              ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; NB5              ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; NB5              ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; NB5              ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Synthesis      ; Asus_de_Monica   ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; Asus_de_Monica   ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Asus_de_Monica   ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Asus_de_Monica   ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

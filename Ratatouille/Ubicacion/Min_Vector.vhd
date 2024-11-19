@@ -16,14 +16,14 @@ architecture Behavioral of Min_Vector is
 begin
     process(A, B, C, D)
     begin
-        if (A < B) and (A < C) and (A < D) then
-            Min_Out <= A;
-        elsif (B < A) and (B < C) and (B < D) then
-            Min_Out <= B;
-        elsif (C < A) and (C < B) and (C < D) then
-            Min_Out <= C;
-        else
-            Min_Out <= D;
-        end if;
+		if (A <= B) and (A <= C) and (A <= D) then
+			Min_Out <= A;
+		elsif (B <= A) and (B <= C) and (B <= D) then
+			Min_Out <= B;
+		elsif (C <= A) and (C <= B) and (C <= D) then
+			Min_Out <= C;
+		else
+			Min_Out <= D;
+		end if;	  
     end process;
 end Behavioral;
