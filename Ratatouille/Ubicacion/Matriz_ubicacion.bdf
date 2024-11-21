@@ -55,9 +55,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 1048 -112 1232 -96)
+	(rect 872 -136 1056 -120)
 	(text "INPUT" (rect 141 0 169 10)(font "Arial" (font_size 6)))
-	(text "SENSOR_LINEA" (rect 5 0 90 12)(font "Arial" ))
+	(text "SENSOR_LINEA" (rect 5 0 89 12)(font "Arial" ))
 	(pt 184 8)
 	(drawing
 		(line (pt 100 12)(pt 125 12))
@@ -68,13 +68,13 @@ applicable agreement for further details.
 		(line (pt 125 12)(pt 129 8))
 	)
 	(text "VCC" (rect 144 7 164 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 992 -96 1048 -80))
+	(annotation_block (location)(rect 816 -120 872 -104))
 )
 (pin
 	(input)
 	(rect 1040 -64 1224 -48)
 	(text "INPUT" (rect 141 0 169 10)(font "Arial" (font_size 6)))
-	(text "SENSOR_MURO" (rect 5 0 90 12)(font "Arial" ))
+	(text "SENSOR_MURO" (rect 5 0 89 12)(font "Arial" ))
 	(pt 184 8)
 	(drawing
 		(line (pt 100 12)(pt 125 12))
@@ -91,7 +91,7 @@ applicable agreement for further details.
 	(input)
 	(rect -264 -200 -96 -184)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Reset1" (rect 5 0 41 12)(font "Arial" ))
+	(text "Reset1" (rect 5 0 40 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -2744,6 +2744,42 @@ applicable agreement for further details.
 		(line (pt 8 8)(pt 24 8))
 	)
 )
+(symbol
+	(rect 1072 -192 1224 -80)
+	(text "AntiRebote" (rect 5 0 59 12)(font "Arial" ))
+	(text "inst28" (rect 8 96 37 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "rst" (rect 0 0 12 12)(font "Arial" ))
+		(text "rst" (rect 21 43 33 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "btn_in" (rect 0 0 29 12)(font "Arial" ))
+		(text "btn_in" (rect 21 59 50 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 152 32)
+		(output)
+		(text "btn_out" (rect 0 0 36 12)(font "Arial" ))
+		(text "btn_out" (rect 101 27 137 39)(font "Arial" ))
+		(line (pt 152 32)(pt 136 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 136 96))
+	)
+)
 (connector
 	(text "CLK" (rect -80 352 -59 364)(font "Arial" ))
 	(pt -80 368)
@@ -4227,10 +4263,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1896 -168)
-	(pt 1992 -168)
-)
-(connector
 	(pt 1896 -152)
 	(pt 1976 -152)
 )
@@ -4981,10 +5013,6 @@ applicable agreement for further details.
 	(pt 1248 -56)
 )
 (connector
-	(pt 1232 -104)
-	(pt 1248 -104)
-)
-(connector
 	(pt 1296 -104)
 	(pt 1360 -104)
 )
@@ -4995,6 +5023,41 @@ applicable agreement for further details.
 (connector
 	(pt 1568 -136)
 	(pt 1568 -72)
+)
+(connector
+	(pt 1224 -160)
+	(pt 1240 -160)
+)
+(connector
+	(pt 1248 -104)
+	(pt 1240 -104)
+)
+(connector
+	(pt 1240 -104)
+	(pt 1240 -160)
+)
+(connector
+	(pt 1072 -128)
+	(pt 1056 -128)
+)
+(connector
+	(text "10KHz" (rect 1906 -184 1937 -172)(font "Arial" ))
+	(pt 1896 -168)
+	(pt 1992 -168)
+)
+(connector
+	(text "10KHz" (rect 1050 -176 1081 -164)(font "Arial" ))
+	(pt 1072 -160)
+	(pt 1040 -160)
+)
+(connector
+	(pt 1000 -144)
+	(pt 1000 -152)
+)
+(connector
+	(text "Reset" (rect 1010 -160 1039 -148)(font "Arial" ))
+	(pt 1072 -144)
+	(pt 1000 -144)
 )
 (junction (pt 576 232))
 (junction (pt 608 320))

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ratatouille
-Thu Nov 21 17:04:17 2024
+Thu Nov 21 17:47:21 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -113,15 +113,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 21 17:04:17 2024           ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 21 17:47:21 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ratatouille                                     ;
 ; Top-level Entity Name              ; Matriz_ubicacion                                ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 862                                             ;
-;     Total combinational functions  ; 826                                             ;
-;     Dedicated logic registers      ; 232                                             ;
-; Total registers                    ; 232                                             ;
+; Total logic elements               ; 879                                             ;
+;     Total combinational functions  ; 840                                             ;
+;     Dedicated logic registers      ; 245                                             ;
+; Total registers                    ; 245                                             ;
 ; Total pins                         ; 14                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -269,6 +269,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Ubicacion/bit_to_vector.vhd                              ; yes             ; User VHDL File                     ; C:/Users/Yo/Documents/AUTOLOCO/proyecto_laberinto/Ratatouille/Ubicacion/bit_to_vector.vhd                              ;         ;
 ; control.vhd                                              ; yes             ; User VHDL File                     ; C:/Users/Yo/Documents/AUTOLOCO/proyecto_laberinto/Ratatouille/control.vhd                                              ;         ;
 ; algoritmo_decision.bdf                                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Yo/Documents/AUTOLOCO/proyecto_laberinto/Ratatouille/algoritmo_decision.bdf                                   ;         ;
+; Ubicacion/AntiRebote.vhd                                 ; yes             ; User VHDL File                     ; C:/Users/Yo/Documents/AUTOLOCO/proyecto_laberinto/Ratatouille/Ubicacion/AntiRebote.vhd                                 ;         ;
 ; altpll.tdf                                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf                                                           ;         ;
 ; aglobal130.inc                                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                       ;         ;
 ; stratix_pll.inc                                          ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc                                                      ;         ;
@@ -291,20 +292,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 862          ;
+; Estimated Total logic elements              ; 879          ;
 ;                                             ;              ;
-; Total combinational functions               ; 826          ;
+; Total combinational functions               ; 840          ;
 ; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 500          ;
-;     -- 3 input functions                    ; 109          ;
-;     -- <=2 input functions                  ; 217          ;
+;     -- 4 input functions                    ; 502          ;
+;     -- 3 input functions                    ; 110          ;
+;     -- <=2 input functions                  ; 228          ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 800          ;
-;     -- arithmetic mode                      ; 26           ;
+;     -- normal mode                          ; 805          ;
+;     -- arithmetic mode                      ; 35           ;
 ;                                             ;              ;
-; Total registers                             ; 232          ;
-;     -- Dedicated logic registers            ; 232          ;
+; Total registers                             ; 245          ;
+;     -- Dedicated logic registers            ; 245          ;
 ;     -- I/O registers                        ; 0            ;
 ;                                             ;              ;
 ; I/O pins                                    ; 14           ;
@@ -313,8 +314,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- PLLs                                 ; 1            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; Reset1~input ;
-; Maximum fan-out                             ; 176          ;
-; Total fan-out                               ; 3495         ;
+; Maximum fan-out                             ; 189          ;
+; Total fan-out                               ; 3588         ;
 ; Average fan-out                             ; 3.22         ;
 +---------------------------------------------+--------------+
 
@@ -324,7 +325,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                    ; Library Name ;
 +----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |Matriz_ubicacion                                  ; 826 (1)           ; 232 (0)      ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |Matriz_ubicacion                                                                                                                      ; work         ;
+; |Matriz_ubicacion                                  ; 840 (1)           ; 245 (0)      ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |Matriz_ubicacion                                                                                                                      ; work         ;
+;    |AntiRebote:inst28|                             ; 14 (14)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|AntiRebote:inst28                                                                                                    ; work         ;
 ;    |Celda:inst10|                                  ; 50 (0)            ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst10                                                                                                         ; work         ;
 ;       |DFF_fijo:inst11|                            ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst10|DFF_fijo:inst11                                                                                         ; work         ;
 ;       |DFF_fijo:inst3|                             ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst10|DFF_fijo:inst3                                                                                          ; work         ;
@@ -500,16 +502,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |DFF_fijo:inst3|                             ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst7|DFF_fijo:inst3                                                                                           ; work         ;
 ;       |DFF_fijo:inst5|                             ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst7|DFF_fijo:inst5                                                                                           ; work         ;
 ;       |DFF_fijo:inst8|                             ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst7|DFF_fijo:inst8                                                                                           ; work         ;
-;       |Min_Vector:inst|                            ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst7|Min_Vector:inst                                                                                          ; work         ;
+;       |Min_Vector:inst|                            ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst7|Min_Vector:inst                                                                                          ; work         ;
 ;       |busmux:inst17|                              ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst7|busmux:inst17                                                                                            ; work         ;
 ;          |lpm_mux:$00000|                          ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst7|busmux:inst17|lpm_mux:$00000                                                                             ; work         ;
 ;             |mux_9rc:auto_generated|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst7|busmux:inst17|lpm_mux:$00000|mux_9rc:auto_generated                                                      ; work         ;
 ;       |busmux:inst6|                               ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst7|busmux:inst6                                                                                             ; work         ;
 ;          |lpm_mux:$00000|                          ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst7|busmux:inst6|lpm_mux:$00000                                                                              ; work         ;
 ;             |mux_9rc:auto_generated|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst7|busmux:inst6|lpm_mux:$00000|mux_9rc:auto_generated                                                       ; work         ;
-;       |busmux:inst9|                               ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst7|busmux:inst9                                                                                             ; work         ;
-;          |lpm_mux:$00000|                          ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst7|busmux:inst9|lpm_mux:$00000                                                                              ; work         ;
-;             |mux_9rc:auto_generated|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst7|busmux:inst9|lpm_mux:$00000|mux_9rc:auto_generated                                                       ; work         ;
+;       |busmux:inst9|                               ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst7|busmux:inst9                                                                                             ; work         ;
+;          |lpm_mux:$00000|                          ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst7|busmux:inst9|lpm_mux:$00000                                                                              ; work         ;
+;             |mux_9rc:auto_generated|               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst7|busmux:inst9|lpm_mux:$00000|mux_9rc:auto_generated                                                       ; work         ;
 ;       |latcheo_salida:inst2|                       ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst7|latcheo_salida:inst2                                                                                     ; work         ;
 ;       |sumador_3_bits:inst16|                      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst7|sumador_3_bits:inst16                                                                                    ; work         ;
 ;    |Celda:inst8|                                   ; 29 (0)            ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Matriz_ubicacion|Celda:inst8                                                                                                          ; work         ;
@@ -673,12 +675,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 232   ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 245   ;
+; Number of registers using Synchronous Clear  ; 10    ;
 ; Number of registers using Synchronous Load   ; 8     ;
-; Number of registers using Asynchronous Clear ; 149   ;
+; Number of registers using Asynchronous Clear ; 162   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 88    ;
+; Number of registers using Clock Enable       ; 100   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -701,51 +703,52 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|adc:inst8|adc_adc_mega_0:adc_mega_0|CH1[2]                                              ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|adc:inst8|adc_adc_mega_0:adc_mega_0|CH1[1]                                              ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|adc:inst8|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|address[2]        ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|adc:inst8|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|counter[5]        ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|adc:inst8|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|counter[6]        ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|adc:inst8|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|sclk_counter[0]   ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|adc:inst8|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|addr_shift_reg[5] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|adc:inst8|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|addr_shift_reg[2] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|temporizador_doble:inst2|tiempo_limite[13]                                              ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|temporizador_doble:inst2|contador[15]                                                   ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Matriz_ubicacion|AntiRebote:inst28|cnt[0]                                                                                                               ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|adc:inst8|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|addr_shift_reg[4] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|adc:inst8|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|addr_shift_reg[1] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|temporizador_doble:inst2|tiempo_limite[10]                                              ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|temporizador_doble:inst2|contador[0]                                                    ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|adc:inst8|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|counter[0]        ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|algoritmo_decision:inst33|Muro_o_peso:inst1|mux_peso_o_muro:inst6|Y[2]                                                                 ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|algoritmo_decision:inst33|Muro_o_peso:inst1|mux_peso_o_muro:inst5|Y[1]                                                                 ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|algoritmo_decision:inst33|elijo_sentido:inst4|menor_cod[0]                                                                             ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida0[0]                                                                                      ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida1[0]                                                                                      ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|algoritmo_decision:inst33|Muro_o_peso:inst1|mux_peso_o_muro:inst6|Y[1]                                                                 ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|algoritmo_decision:inst33|Muro_o_peso:inst1|mux_peso_o_muro:inst5|Y[2]                                                                 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|algoritmo_decision:inst33|elijo_sentido:inst4|menor_cod[1]                                                                             ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida0[3]                                                                                      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida1[3]                                                                                      ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida2[0]                                                                                      ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida3[2]                                                                                      ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida4[0]                                                                                      ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida5[2]                                                                                      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida5[1]                                                                                      ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida6[3]                                                                                      ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida7[1]                                                                                      ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida8[0]                                                                                      ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida9[0]                                                                                      ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida10[2]                                                                                     ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida11[1]                                                                                     ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida12[1]                                                                                     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida7[3]                                                                                      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida8[1]                                                                                      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida9[3]                                                                                      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida10[1]                                                                                     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida11[0]                                                                                     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida12[3]                                                                                     ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida13[3]                                                                                     ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Matriz_ubicacion|escribe_muros:inst35|demux_4bits:inst3|salida14[2]                                                                                     ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst15|Min_Vector:inst|Min_Out[0]                                                                                                ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst15|Min_Vector:inst|Min_Out[1]                                                                                                ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|Motores:inst|reg_fstate                                                                 ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst5|Min_Vector:inst|Min_Out[0]                                                                                                 ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst10|Min_Vector:inst|Min_Out[0]                                                                                                ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst11|Min_Vector:inst|Min_Out[0]                                                                                                ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst9|Min_Vector:inst|Min_Out[0]                                                                                                 ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst6|Min_Vector:inst|Min_Out[0]                                                                                                 ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst7|Min_Vector:inst|Min_Out[2]                                                                                                 ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst7|Min_Vector:inst|Min_Out[1]                                                                                                 ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst14|Min_Vector:inst|Min_Out[0]                                                                                                ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst1|Min_Vector:inst|Min_Out[1]                                                                                                 ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst1|Min_Vector:inst|Min_Out[2]                                                                                                 ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst2|Min_Vector:inst|Min_Out[0]                                                                                                 ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst|Min_Vector:inst|Min_Out[2]                                                                                                  ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst12|Min_Vector:inst|Min_Out[1]                                                                                                ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst13|Min_Vector:inst|Min_Out[1]                                                                                                ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst8|Min_Vector:inst|Min_Out[0]                                                                                                 ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst|Min_Vector:inst|Min_Out[0]                                                                                                  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst12|Min_Vector:inst|Min_Out[0]                                                                                                ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst13|Min_Vector:inst|Min_Out[2]                                                                                                ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Matriz_ubicacion|Celda:inst8|Min_Vector:inst|Min_Out[2]                                                                                                 ;
 ; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |Matriz_ubicacion|algoritmo_decision:inst33|Muro_o_peso:inst1|mux_selector16a1:inst13|Mux2                                                               ;
 ; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Matriz_ubicacion|algoritmo_decision:inst33|Muro_o_peso:inst1|mux_peso_o_muro:inst4|Y[2]                                                                 ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Matriz_ubicacion|algoritmo_decision:inst33|Muro_o_peso:inst1|mux_peso_o_muro:inst3|Y[1]                                                                 ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Matriz_ubicacion|algoritmo_decision:inst33|Muro_o_peso:inst1|mux_peso_o_muro:inst3|Y[0]                                                                 ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |Matriz_ubicacion|algoritmo_decision:inst33|Muro_o_peso:inst1|Donde_ir:inst|mux_16to1:inst5|Mux0                                                         ;
 ; 8:1                ; 3 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; No         ; |Matriz_ubicacion|algoritmo_decision:inst33|Muro_o_peso:inst1|Donde_ir:inst|mux_16to1:inst5|Mux0                                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1797,7 +1800,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Nov 21 17:04:08 2024
+    Info: Processing started: Thu Nov 21 17:47:13 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ratatouille -c ratatouille
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file motores/bloque_adc_controller/altera_up_avalon_adv_adc.v
@@ -1910,6 +1913,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file control
     Info (12023): Found entity 1: control
 Info (12021): Found 1 design units, including 1 entities, in source file algoritmo_decision.bdf
     Info (12023): Found entity 1: algoritmo_decision
+Info (12021): Found 2 design units, including 1 entities, in source file ubicacion/antirebote.vhd
+    Info (12022): Found design unit 1: AntiRebote-Behavioral
+    Info (12023): Found entity 1: AntiRebote
 Info (12127): Elaborating entity "Matriz_ubicacion" for the top level hierarchy
 Warning (275083): Bus "P_10[2..0]" found using same base name as "P_1", which might lead to a name conflict.
 Warning (275083): Bus "P_10[2..0]" found using same base name as "P_1", which might lead to a name conflict.
@@ -2131,6 +2137,7 @@ Info (12128): Elaborating entity "seleccionadores_mux" for hierarchy "algoritmo_
 Info (12128): Elaborating entity "mux_peso_o_muro" for hierarchy "algoritmo_decision:inst33|Muro_o_peso:inst1|mux_peso_o_muro:inst4"
 Info (12128): Elaborating entity "mux_selector16a1" for hierarchy "algoritmo_decision:inst33|Muro_o_peso:inst1|mux_selector16a1:inst13"
 Info (12128): Elaborating entity "control" for hierarchy "control:inst30"
+Info (12128): Elaborating entity "AntiRebote" for hierarchy "AntiRebote:inst28"
 Info (12128): Elaborating entity "Celda" for hierarchy "Celda:inst15"
 Info (12128): Elaborating entity "bit_to_vector" for hierarchy "Celda:inst15|bit_to_vector:inst1"
 Info (12128): Elaborating entity "DFF_fijo" for hierarchy "Celda:inst15|DFF_fijo:inst3"
@@ -2184,15 +2191,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 891 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 908 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 876 logic cells
+    Info (21061): Implemented 893 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 146 warnings
     Info: Peak virtual memory: 498 megabytes
-    Info: Processing ended: Thu Nov 21 17:04:17 2024
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Processing ended: Thu Nov 21 17:47:21 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:08
 
 

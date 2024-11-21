@@ -18,7 +18,7 @@ CLK => Celda:inst4.CLK
 CLK => Celda:inst8.CLK
 CLK => Celda:inst12.CLK
 Reset1 => inst29.IN0
-SENSOR_LINEA => inst31.IN0
+SENSOR_LINEA => AntiRebote:inst28.btn_in
 SENSOR_MURO => inst32.IN0
 ADC_DOUT => algoritmo_decision:inst33.ADC_DOUT
 ADC_CS_N <= algoritmo_decision:inst33.ADC_CS_N
@@ -1877,6 +1877,39 @@ CUENTA <= CUENTA.DB_MAX_OUTPUT_PORT_TYPE
 ACT_GIRO <= ACT_GIRO.DB_MAX_OUTPUT_PORT_TYPE
 ACT_MUROS <= ACT_MUROS.DB_MAX_OUTPUT_PORT_TYPE
 ACT_SENTIDO <= ACT_SENTIDO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|AntiRebote:inst28
+clk => btn_out~reg0.CLK
+clk => btn_stable.CLK
+clk => btn_reg.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+rst => btn_out~reg0.ACLR
+rst => btn_stable.ACLR
+rst => btn_reg.ACLR
+rst => cnt[0].ACLR
+rst => cnt[1].ACLR
+rst => cnt[2].ACLR
+rst => cnt[3].ACLR
+rst => cnt[4].ACLR
+rst => cnt[5].ACLR
+rst => cnt[6].ACLR
+rst => cnt[7].ACLR
+rst => cnt[8].ACLR
+rst => cnt[9].ACLR
+btn_in => process_0.IN1
+btn_in => btn_stable.DATAA
+btn_in => btn_reg.DATAIN
+btn_out <= btn_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Matriz_ubicacion|Celda:inst15
