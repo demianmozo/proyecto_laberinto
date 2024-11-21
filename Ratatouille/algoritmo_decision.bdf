@@ -23,7 +23,7 @@ applicable agreement for further details.
 	(input)
 	(rect 112 24 280 40)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "RESET" (rect 5 0 41 12)(font "Arial" ))
+	(text "RESET" (rect 5 0 40 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -39,7 +39,7 @@ applicable agreement for further details.
 	(input)
 	(rect 112 56 280 72)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "IN_CLK" (rect 5 0 44 12)(font "Arial" ))
+	(text "IN_CLK" (rect 5 0 43 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -71,7 +71,7 @@ applicable agreement for further details.
 	(input)
 	(rect 104 88 280 104)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "ACT_SENTIDO" (rect 5 0 81 12)(font "Arial" ))
+	(text "ACT_SENTIDO" (rect 5 0 80 12)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12))
@@ -98,6 +98,7 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 696 224 752 240))
 )
 (pin
 	(input)
@@ -146,6 +147,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1280 208 1336 224))
 )
 (pin
 	(output)
@@ -162,6 +164,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1280 224 1336 240))
 )
 (pin
 	(output)
@@ -178,6 +181,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1280 240 1336 256))
 )
 (pin
 	(output)
@@ -194,6 +198,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1280 256 1336 272))
 )
 (pin
 	(output)
@@ -210,6 +215,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1280 272 1336 288))
 )
 (pin
 	(output)
@@ -226,6 +232,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1280 288 1336 304))
 )
 (pin
 	(output)
@@ -242,6 +249,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1280 304 1336 320))
 )
 (pin
 	(output)
@@ -258,12 +266,30 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1280 320 1336 336))
 )
 (pin
 	(output)
 	(rect 1104 320 1280 336)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "VELI" (rect 90 0 113 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 1280 336 1336 352))
+)
+(pin
+	(output)
+	(rect 544 376 722 392)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "sent_actual[1..0]" (rect 90 0 172 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -599,6 +625,17 @@ applicable agreement for further details.
 	(pt 920 200)
 	(pt 904 200)
 )
+(connector
+	(pt 528 232)
+	(pt 528 384)
+	(bus)
+)
+(connector
+	(pt 528 384)
+	(pt 544 384)
+	(bus)
+)
 (junction (pt 320 264))
 (junction (pt 336 32))
+(junction (pt 528 232))
 (text "ACA IRIAN LOS MUX DIABOLICOS DE IAN      " (rect -264 248 -5 262)(font "Arial" (font_size 8)))

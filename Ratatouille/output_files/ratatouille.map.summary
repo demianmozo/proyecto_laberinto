@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Wed Nov 20 19:54:06 2024
+Analysis & Synthesis Status : Successful - Thu Nov 21 01:15:16 2024
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : ratatouille
-Top-level Entity Name : Celda
+Top-level Entity Name : Control_Motores
 Family : Cyclone IV E
-Total logic elements : 53
-    Total combinational functions : 53
-    Dedicated logic registers : 7
-Total registers : 7
-Total pins : 29
+Total logic elements : 196
+    Total combinational functions : 160
+    Dedicated logic registers : 117
+Total registers : 117
+Total pins : 16
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
-Total PLLs : 0
+Total PLLs : 1

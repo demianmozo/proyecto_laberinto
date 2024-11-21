@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="ratatouille">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Control_Motores|BUSMUX:inst11|lpm_mux:$00000" CBX_FILE_NAME="mux_8rc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Control_Motores|pll1:inst4|altpll:altpll_component" CBX_FILE_NAME="pll1_altpll.v"/>
 	</PROJECT>
 </LOG_ROOT>
