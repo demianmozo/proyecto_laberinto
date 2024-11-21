@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE22F17C6
-set_global_assignment -name TOP_LEVEL_ENTITY Control_Motores
+set_global_assignment -name TOP_LEVEL_ENTITY Matriz_ubicacion
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:56:38  NOVEMBER 11, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -54,8 +54,6 @@ set_location_assignment PIN_A10 -to ADC_CS_N
 set_location_assignment PIN_B10 -to ADC_DIN
 set_location_assignment PIN_A9 -to ADC_DOUT
 set_location_assignment PIN_B14 -to ADC_SCLK
-set_location_assignment PIN_J15 -to areset
-set_location_assignment PIN_R8 -to inclk0
 set_location_assignment PIN_T15 -to MD0
 set_location_assignment PIN_F13 -to MD1
 set_location_assignment PIN_T13 -to MI0
@@ -66,6 +64,10 @@ set_global_assignment -name SIMULATION_MODE FUNCTIONAL
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Ubicacion/Waveform_celda.vwf"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VERILOG_FILE Motores/Bloque_ADC_controller/altera_up_avalon_adv_adc.v
 set_global_assignment -name VERILOG_FILE Motores/Bloque_ADC_controller/adc_adc_mega_0.v
 set_global_assignment -name VHDL_FILE Motores/Bloque_ADC_controller/adc.vhd
@@ -78,33 +80,39 @@ set_global_assignment -name VHDL_FILE Motores/generador_prueba.vhd
 set_global_assignment -name BDF_FILE Motores/Control_Motores.bdf
 set_global_assignment -name VHDL_FILE Motores/comparador_izquierda.vhd
 set_global_assignment -name VHDL_FILE Motores/comparador_derecha.vhd
-set_global_assignment -name SMF_FILE control.smf
+set_global_assignment -name VHDL_FILE Adyacentes/seleccionadores_mux.vhd
+set_global_assignment -name VHDL_FILE Adyacentes/mux_selector16a1.vhd
+set_global_assignment -name VHDL_FILE Adyacentes/mux_peso_o_muro.vhd
+set_global_assignment -name BDF_FILE Adyacentes/Muro_o_peso.bdf
+set_global_assignment -name BDF_FILE Adyacentes/Donde_ir.bdf
+set_global_assignment -name VHDL_FILE Adyacentes/Busmux_16a1.vhd
+set_global_assignment -name VHDL_FILE Posicion/sumador_fivebits.vhd
+set_global_assignment -name BDF_FILE Posicion/Posicion.bdf
+set_global_assignment -name VHDL_FILE Posicion/Mux_presuma.vhd
+set_global_assignment -name VHDL_FILE Posicion/FFD_fivebits.vhd
 set_global_assignment -name VHDL_FILE Ubicacion/sumador_3_bits.vhd
+set_global_assignment -name VHDL_FILE Ubicacion/SENT_ACTUAL.vhd
 set_global_assignment -name VHDL_FILE Ubicacion/Min_Vector.vhd
 set_global_assignment -name BDF_FILE Ubicacion/Matriz_ubicacion.bdf
+set_global_assignment -name VHDL_FILE Ubicacion/latcheo_salida.vhd
+set_global_assignment -name BDF_FILE Ubicacion/escribe_muros.bdf
 set_global_assignment -name VHDL_FILE Ubicacion/elijo_sentido.vhd
+set_global_assignment -name VHDL_FILE Ubicacion/DFF_fijo.vhd
+set_global_assignment -name VHDL_FILE Ubicacion/demux_sentido.vhd
+set_global_assignment -name VHDL_FILE Ubicacion/demux_4bits.vhd
+set_global_assignment -name VHDL_FILE Ubicacion/decido_accion.vhd
+set_global_assignment -name VHDL_FILE Ubicacion/combinador_4a1.vhd
 set_global_assignment -name BDF_FILE Ubicacion/Celda.bdf
 set_global_assignment -name VHDL_FILE Ubicacion/busmux_3.vhd
 set_global_assignment -name VHDL_FILE Ubicacion/busmux_2.vhd
 set_global_assignment -name VHDL_FILE Ubicacion/busmux_1.vhd
 set_global_assignment -name VHDL_FILE Ubicacion/busmux_0.vhd
 set_global_assignment -name VHDL_FILE Ubicacion/bit_to_vector.vhd
-set_global_assignment -name VHDL_FILE Ubicacion/decido_accion.vhd
-set_global_assignment -name VECTOR_WAVEFORM_FILE Ubicacion/Waveform_decido_accion.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Ubicacion/Waveform_elijo_sentido.vwf
-set_global_assignment -name VHDL_FILE Ubicacion/SENT_ACTUAL.vhd
+set_global_assignment -name VHDL_FILE control.vhd
+set_global_assignment -name SMF_FILE control.smf
 set_global_assignment -name BDF_FILE algoritmo_decision.bdf
-set_global_assignment -name VHDL_FILE Ubicacion/latcheo_salida.vhd
-set_global_assignment -name VHDL_FILE Ubicacion/DFF_fijo.vhd
-set_global_assignment -name VECTOR_WAVEFORM_FILE Ubicacion/Waveform_HABMURO.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Ubicacion/Waveform_celda.vwf
-set_global_assignment -name VHDL_FILE Ubicacion/constante_111.vhd
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Ubicacion/Waveform_celda.vwf"
-set_global_assignment -name VHDL_FILE Ubicacion/demux_sentido.vhd
-set_global_assignment -name VHDL_FILE Ubicacion/combinador_4a1.vhd
-set_global_assignment -name BDF_FILE Ubicacion/escribe_muros.bdf
-set_global_assignment -name VHDL_FILE Ubicacion/demux_4bits.vhd
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_R8 -to CLK
+set_location_assignment PIN_J15 -to Reset1
+set_location_assignment PIN_B8 -to SENSOR_LINEA
+set_location_assignment PIN_A8 -to SENSOR_MURO
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
