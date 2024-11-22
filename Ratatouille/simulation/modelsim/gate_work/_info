@@ -1,0 +1,89 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\monig\Documents\proyecto_laberinto\Ratatouille\simulation\modelsim
+Etb_temporizador_doble
+Z1 w1732243498
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\monig\Documents\proyecto_laberinto\Ratatouille\simulation\modelsim
+Z6 8C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Motores/tb_temporizador_doble.vhd
+Z7 FC:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Motores/tb_temporizador_doble.vhd
+l0
+L5
+VAjWV:Zf<P@`_0C>Ri?`6f3
+!s100 7NgoNS3;>MIHiFmc:DAoX2
+Z8 OV;C;10.1d;51
+31
+!i10b 1
+Z9 !s108 1732243606.623000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Motores/tb_temporizador_doble.vhd|
+Z11 !s107 C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Motores/tb_temporizador_doble.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 21 tb_temporizador_doble 0 22 AjWV:Zf<P@`_0C>Ri?`6f3
+l28
+L9
+VUh]geR;NB7G6iO1Yn9B2D3
+!s100 TQ;R:6i^7mR4gXa^j^6B:1
+R8
+31
+!i10b 1
+R9
+R10
+R11
+R12
+R13
+Etemporizador_doble
+Z14 w1732243509
+Z15 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 Pha:T]_MmzTJCYhSbeLPQ1
+Z16 DPx10 cycloneive 21 cycloneive_components 0 22 mVG;b;]=zAIVfAk:WJ`El1
+Z17 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z18 DPx6 altera 11 dffeas_pack 0 22 Giz7C_dB_=WZS^1=3P8073
+Z19 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+R3
+R4
+Z20 DPx6 altera 28 altera_primitives_components 0 22 W]_:GkoiISnEn83KNb:3:2
+R5
+Z21 8ratatouille.vho
+Z22 Fratatouille.vho
+l0
+L36
+Vdo7J5K2_lcJP4ZC9m7n:Z3
+R8
+31
+Z23 !s108 1732243606.527000
+Z24 !s90 -reportprogress|300|-93|-work|work|ratatouille.vho|
+Z25 !s107 ratatouille.vho|
+R12
+R13
+!s100 780UCcFeNJ:1596>:9i>30
+!i10b 1
+Astructure
+R15
+R16
+R17
+R18
+R19
+R3
+R4
+R20
+DEx4 work 18 temporizador_doble 0 22 do7J5K2_lcJP4ZC9m7n:Z3
+l150
+L53
+V<RI@kzEzE[9ZcVn:1anIC1
+R8
+31
+R23
+R24
+R25
+R12
+R13
+!s100 NVmJMWMT5RHkUhZB[?Ah31
+!i10b 1

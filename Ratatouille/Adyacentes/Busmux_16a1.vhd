@@ -3,33 +3,33 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity mux_16to1 is
     Port ( S   : in  STD_LOGIC_VECTOR(3 downto 0);  -- Señales de selección (4 bits)
-           I0  : in  STD_LOGIC_VECTOR(3 downto 0);  -- Entrada 0 (4 bits)
-           I1  : in  STD_LOGIC_VECTOR(3 downto 0);  -- Entrada 1 (4 bits)
-           I2  : in  STD_LOGIC_VECTOR(3 downto 0);  -- Entrada 2 (4 bits)
-           I3  : in  STD_LOGIC_VECTOR(3 downto 0);  -- Entrada 3 (4 bits)
-           I4  : in  STD_LOGIC_VECTOR(3 downto 0);  -- Entrada 4 (4 bits)
-           I5  : in  STD_LOGIC_VECTOR(3 downto 0);  -- Entrada 5 (4 bits)
-           I6  : in  STD_LOGIC_VECTOR(3 downto 0);  -- Entrada 6 (4 bits)
-           I7  : in  STD_LOGIC_VECTOR(3 downto 0);  -- Entrada 7 (4 bits)
-           I8  : in  STD_LOGIC_VECTOR(3 downto 0);  -- Entrada 8 (4 bits)
-           I9  : in  STD_LOGIC_VECTOR(3 downto 0);  -- Entrada 9 (4 bits)
-           I10 : in  STD_LOGIC_VECTOR(3 downto 0);  -- Entrada 10 (4 bits)
-           I11 : in  STD_LOGIC_VECTOR(3 downto 0);  -- Entrada 11 (4 bits)
-           I12 : in  STD_LOGIC_VECTOR(3 downto 0);  -- Entrada 12 (4 bits)
-           I13 : in  STD_LOGIC_VECTOR(3 downto 0);  -- Entrada 13 (4 bits)
-           I14 : in  STD_LOGIC_VECTOR(3 downto 0);  -- Entrada 14 (4 bits)
-           I15 : in  STD_LOGIC_VECTOR(3 downto 0);  -- Entrada 15 (4 bits)
-           Y   : out STD_LOGIC_VECTOR(3 downto 0)    -- Salida (4 bits)
+           I0  : in  STD_LOGIC_VECTOR(2 downto 0);  -- Entrada 0 (3 bits)
+           En  : in  STD_LOGIC_VECTOR(2 downto 0);  -- Entrada 1 (3 bits)
+           I2  : in  STD_LOGIC_VECTOR(2 downto 0);  -- Entrada 2 (3 bits)
+           I3  : in  STD_LOGIC_VECTOR(2 downto 0);  -- Entrada 3 (3 bits)
+           I4  : in  STD_LOGIC_VECTOR(2 downto 0);  -- Entrada 4 (3 bits)
+           I5  : in  STD_LOGIC_VECTOR(2 downto 0);  -- Entrada 5 (3 bits)
+           I6  : in  STD_LOGIC_VECTOR(2 downto 0);  -- Entrada 6 (3 bits)
+           I7  : in  STD_LOGIC_VECTOR(2 downto 0);  -- Entrada 7 (3 bits)
+           I8  : in  STD_LOGIC_VECTOR(2 downto 0);  -- Entrada 8 (3 bits)
+           I9  : in  STD_LOGIC_VECTOR(2 downto 0);  -- Entrada 9 (3 bits)
+           I10 : in  STD_LOGIC_VECTOR(2 downto 0);  -- Entrada 10 (3 bits)
+           I11 : in  STD_LOGIC_VECTOR(2 downto 0);  -- Entrada 11 (3 bits)
+           I12 : in  STD_LOGIC_VECTOR(2 downto 0);  -- Entrada 12 (3 bits)
+           I13 : in  STD_LOGIC_VECTOR(2 downto 0);  -- Entrada 13 (3 bits)
+           I14 : in  STD_LOGIC_VECTOR(2 downto 0);  -- Entrada 14 (3 bits)
+           I15 : in  STD_LOGIC_VECTOR(2 downto 0);  -- Entrada 15 (3 bits)
+           Y   : out STD_LOGIC_VECTOR(2 downto 0)    -- Salida (3 bits)
            );
 end mux_16to1;
 
 architecture Behavioral of mux_16to1 is
 begin
-    process(S, I0, I1, I2, I3, I4, I5, I6, I7, I8, I9, I10, I11, I12, I13, I14, I15)
+    process(S, I0, En, I2, I3, I4, I5, I6, I7, I8, I9, I10, I11, I12, I13, I14, I15)
     begin
         case S is
             when "0000" => Y <= I0;  -- Selección 0, salida es I0
-            when "0001" => Y <= I1;  -- Selección 1, salida es I1
+            when "0001" => Y <= En;  -- Selección 1, salida es I1
             when "0010" => Y <= I2;  -- Selección 2, salida es I2
             when "0011" => Y <= I3;  -- Selección 3, salida es I3
             when "0100" => Y <= I4;  -- Selección 4, salida es I4

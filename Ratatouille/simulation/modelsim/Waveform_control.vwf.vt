@@ -1,0 +1,347 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "11/22/2024 15:37:00"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    control
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module control_vlg_sample_tst(
+	clock,
+	fin_gir,
+	LINEA,
+	MURO,
+	reset,
+	sampler_tx
+);
+input  clock;
+input  fin_gir;
+input  LINEA;
+input  MURO;
+input  reset;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(clock or fin_gir or LINEA or MURO or reset)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module control_vlg_check_tst (
+	ACT_GIRO,
+	ACT_MUROS,
+	ACT_SENTIDO,
+	CUENTA,
+	sampler_rx
+);
+input  ACT_GIRO;
+input  ACT_MUROS;
+input  ACT_SENTIDO;
+input  CUENTA;
+input sampler_rx;
+
+reg  ACT_GIRO_expected;
+reg  ACT_MUROS_expected;
+reg  ACT_SENTIDO_expected;
+reg  CUENTA_expected;
+
+reg  ACT_GIRO_prev;
+reg  ACT_MUROS_prev;
+reg  ACT_SENTIDO_prev;
+reg  CUENTA_prev;
+
+reg  ACT_GIRO_expected_prev;
+reg  ACT_MUROS_expected_prev;
+reg  ACT_SENTIDO_expected_prev;
+reg  CUENTA_expected_prev;
+
+reg  last_ACT_GIRO_exp;
+reg  last_ACT_MUROS_exp;
+reg  last_ACT_SENTIDO_exp;
+reg  last_CUENTA_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:4] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 4'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	ACT_GIRO_prev = ACT_GIRO;
+	ACT_MUROS_prev = ACT_MUROS;
+	ACT_SENTIDO_prev = ACT_SENTIDO;
+	CUENTA_prev = CUENTA;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	ACT_GIRO_expected_prev = ACT_GIRO_expected;
+	ACT_MUROS_expected_prev = ACT_MUROS_expected;
+	ACT_SENTIDO_expected_prev = ACT_SENTIDO_expected;
+	CUENTA_expected_prev = CUENTA_expected;
+end
+
+
+
+// expected ACT_GIRO
+initial
+begin
+	ACT_GIRO_expected = 1'bX;
+	ACT_GIRO_expected = #999000 1'b0;
+end 
+
+// expected ACT_MUROS
+initial
+begin
+	ACT_MUROS_expected = 1'bX;
+	ACT_MUROS_expected = #999000 1'b0;
+end 
+
+// expected ACT_SENTIDO
+initial
+begin
+	ACT_SENTIDO_expected = 1'bX;
+	ACT_SENTIDO_expected = #999000 1'b0;
+end 
+
+// expected CUENTA
+initial
+begin
+	CUENTA_expected = 1'bX;
+	CUENTA_expected = #999000 1'b0;
+end 
+// generate trigger
+always @(ACT_GIRO_expected or ACT_GIRO or ACT_MUROS_expected or ACT_MUROS or ACT_SENTIDO_expected or ACT_SENTIDO or CUENTA_expected or CUENTA)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected ACT_GIRO = %b | expected ACT_MUROS = %b | expected ACT_SENTIDO = %b | expected CUENTA = %b | ",ACT_GIRO_expected_prev,ACT_MUROS_expected_prev,ACT_SENTIDO_expected_prev,CUENTA_expected_prev);
+	$display("| real ACT_GIRO = %b | real ACT_MUROS = %b | real ACT_SENTIDO = %b | real CUENTA = %b | ",ACT_GIRO_prev,ACT_MUROS_prev,ACT_SENTIDO_prev,CUENTA_prev);
+`endif
+	if (
+		( ACT_GIRO_expected_prev !== 1'bx ) && ( ACT_GIRO_prev !== ACT_GIRO_expected_prev )
+		&& ((ACT_GIRO_expected_prev !== last_ACT_GIRO_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ACT_GIRO :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ACT_GIRO_expected_prev);
+		$display ("     Real value = %b", ACT_GIRO_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_ACT_GIRO_exp = ACT_GIRO_expected_prev;
+	end
+	if (
+		( ACT_MUROS_expected_prev !== 1'bx ) && ( ACT_MUROS_prev !== ACT_MUROS_expected_prev )
+		&& ((ACT_MUROS_expected_prev !== last_ACT_MUROS_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ACT_MUROS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ACT_MUROS_expected_prev);
+		$display ("     Real value = %b", ACT_MUROS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_ACT_MUROS_exp = ACT_MUROS_expected_prev;
+	end
+	if (
+		( ACT_SENTIDO_expected_prev !== 1'bx ) && ( ACT_SENTIDO_prev !== ACT_SENTIDO_expected_prev )
+		&& ((ACT_SENTIDO_expected_prev !== last_ACT_SENTIDO_exp) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ACT_SENTIDO :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ACT_SENTIDO_expected_prev);
+		$display ("     Real value = %b", ACT_SENTIDO_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_ACT_SENTIDO_exp = ACT_SENTIDO_expected_prev;
+	end
+	if (
+		( CUENTA_expected_prev !== 1'bx ) && ( CUENTA_prev !== CUENTA_expected_prev )
+		&& ((CUENTA_expected_prev !== last_CUENTA_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CUENTA :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CUENTA_expected_prev);
+		$display ("     Real value = %b", CUENTA_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_CUENTA_exp = CUENTA_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#100000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module control_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clock;
+reg fin_gir;
+reg LINEA;
+reg MURO;
+reg reset;
+// wires                                               
+wire ACT_GIRO;
+wire ACT_MUROS;
+wire ACT_SENTIDO;
+wire CUENTA;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+control i1 (
+// port map - connection between master ports and signals/registers   
+	.ACT_GIRO(ACT_GIRO),
+	.ACT_MUROS(ACT_MUROS),
+	.ACT_SENTIDO(ACT_SENTIDO),
+	.clock(clock),
+	.CUENTA(CUENTA),
+	.fin_gir(fin_gir),
+	.LINEA(LINEA),
+	.MURO(MURO),
+	.reset(reset)
+);
+
+// clock
+always
+begin
+	clock = 1'b0;
+	clock = #500000 1'b1;
+	#500000;
+end 
+
+// reset
+initial
+begin
+	reset = 1'b1;
+	reset = #2000000 1'b0;
+	reset = #95000000 1'b1;
+end 
+
+// LINEA
+initial
+begin
+	LINEA = 1'b0;
+	LINEA = #8500000 1'b1;
+	# 1500000;
+	repeat(3)
+	begin
+		LINEA = 1'b0;
+		LINEA = #28500000 1'b1;
+		# 1500000;
+	end
+end 
+
+// MURO
+initial
+begin
+	MURO = 1'b0;
+	MURO = #18200000 1'b1;
+	MURO = #1800000 1'b0;
+	MURO = #58200000 1'b1;
+	MURO = #1800000 1'b0;
+end 
+
+// fin_gir
+initial
+begin
+	fin_gir = 1'b1;
+	# 2000000;
+	repeat(19)
+	begin
+		fin_gir = 1'b0;
+		fin_gir = #2500000 1'b1;
+		# 2500000;
+	end
+	fin_gir = 1'b0;
+	fin_gir = #2500000 1'b1;
+end 
+
+control_vlg_sample_tst tb_sample (
+	.clock(clock),
+	.fin_gir(fin_gir),
+	.LINEA(LINEA),
+	.MURO(MURO),
+	.reset(reset),
+	.sampler_tx(sampler)
+);
+
+control_vlg_check_tst tb_out(
+	.ACT_GIRO(ACT_GIRO),
+	.ACT_MUROS(ACT_MUROS),
+	.ACT_SENTIDO(ACT_SENTIDO),
+	.CUENTA(CUENTA),
+	.sampler_rx(sampler)
+);
+endmodule
+

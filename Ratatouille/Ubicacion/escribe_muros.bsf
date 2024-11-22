@@ -1,0 +1,190 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 248 400)
+	(text "escribe_muros" (rect 5 0 89 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 368 25 380)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "SENTIDO[1..0]" (rect 0 0 79 14)(font "Arial" (font_size 8)))
+		(text "SENTIDO[1..0]" (rect 21 27 100 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "POSICION[3..0]" (rect 0 0 83 14)(font "Arial" (font_size 8)))
+		(text "POSICION[3..0]" (rect 21 43 104 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "hay_muro" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "hay_muro" (rect 21 59 77 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 232 32)
+		(output)
+		(text "muro_ad" (rect 0 0 49 14)(font "Arial" (font_size 8)))
+		(text "muro_ad" (rect 162 27 211 41)(font "Arial" (font_size 8)))
+		(line (pt 232 32)(pt 216 32))
+	)
+	(port
+		(pt 232 48)
+		(output)
+		(text "muro_at" (rect 0 0 46 14)(font "Arial" (font_size 8)))
+		(text "muro_at" (rect 165 43 211 57)(font "Arial" (font_size 8)))
+		(line (pt 232 48)(pt 216 48))
+	)
+	(port
+		(pt 232 64)
+		(output)
+		(text "muro_der" (rect 0 0 54 14)(font "Arial" (font_size 8)))
+		(text "muro_der" (rect 157 59 211 73)(font "Arial" (font_size 8)))
+		(line (pt 232 64)(pt 216 64))
+	)
+	(port
+		(pt 232 80)
+		(output)
+		(text "muro_izq" (rect 0 0 51 14)(font "Arial" (font_size 8)))
+		(text "muro_izq" (rect 160 75 211 89)(font "Arial" (font_size 8)))
+		(line (pt 232 80)(pt 216 80))
+	)
+	(port
+		(pt 232 96)
+		(output)
+		(text "H_CELDA0[3..0]" (rect 0 0 90 14)(font "Arial" (font_size 8)))
+		(text "H_CELDA0[3..0]" (rect 121 91 211 105)(font "Arial" (font_size 8)))
+		(line (pt 232 96)(pt 216 96)(line_width 3))
+	)
+	(port
+		(pt 232 112)
+		(output)
+		(text "H_CELDA1[3..0]" (rect 0 0 90 14)(font "Arial" (font_size 8)))
+		(text "H_CELDA1[3..0]" (rect 121 107 211 121)(font "Arial" (font_size 8)))
+		(line (pt 232 112)(pt 216 112)(line_width 3))
+	)
+	(port
+		(pt 232 128)
+		(output)
+		(text "H_CELDA2[3..0]" (rect 0 0 90 14)(font "Arial" (font_size 8)))
+		(text "H_CELDA2[3..0]" (rect 121 123 211 137)(font "Arial" (font_size 8)))
+		(line (pt 232 128)(pt 216 128)(line_width 3))
+	)
+	(port
+		(pt 232 144)
+		(output)
+		(text "H_CELDA3[3..0]" (rect 0 0 90 14)(font "Arial" (font_size 8)))
+		(text "H_CELDA3[3..0]" (rect 121 139 211 153)(font "Arial" (font_size 8)))
+		(line (pt 232 144)(pt 216 144)(line_width 3))
+	)
+	(port
+		(pt 232 160)
+		(output)
+		(text "H_CELDA4[3..0]" (rect 0 0 90 14)(font "Arial" (font_size 8)))
+		(text "H_CELDA4[3..0]" (rect 121 155 211 169)(font "Arial" (font_size 8)))
+		(line (pt 232 160)(pt 216 160)(line_width 3))
+	)
+	(port
+		(pt 232 176)
+		(output)
+		(text "H_CELDA5[3..0]" (rect 0 0 90 14)(font "Arial" (font_size 8)))
+		(text "H_CELDA5[3..0]" (rect 121 171 211 185)(font "Arial" (font_size 8)))
+		(line (pt 232 176)(pt 216 176)(line_width 3))
+	)
+	(port
+		(pt 232 192)
+		(output)
+		(text "H_CELDA6[3..0]" (rect 0 0 90 14)(font "Arial" (font_size 8)))
+		(text "H_CELDA6[3..0]" (rect 121 187 211 201)(font "Arial" (font_size 8)))
+		(line (pt 232 192)(pt 216 192)(line_width 3))
+	)
+	(port
+		(pt 232 208)
+		(output)
+		(text "H_CELDA7[3..0]" (rect 0 0 90 14)(font "Arial" (font_size 8)))
+		(text "H_CELDA7[3..0]" (rect 121 203 211 217)(font "Arial" (font_size 8)))
+		(line (pt 232 208)(pt 216 208)(line_width 3))
+	)
+	(port
+		(pt 232 224)
+		(output)
+		(text "H_CELDA8[3..0]" (rect 0 0 90 14)(font "Arial" (font_size 8)))
+		(text "H_CELDA8[3..0]" (rect 121 219 211 233)(font "Arial" (font_size 8)))
+		(line (pt 232 224)(pt 216 224)(line_width 3))
+	)
+	(port
+		(pt 232 240)
+		(output)
+		(text "H_CELDA9[3..0]" (rect 0 0 90 14)(font "Arial" (font_size 8)))
+		(text "H_CELDA9[3..0]" (rect 121 235 211 249)(font "Arial" (font_size 8)))
+		(line (pt 232 240)(pt 216 240)(line_width 3))
+	)
+	(port
+		(pt 232 256)
+		(output)
+		(text "H_CELDA10[3..0]" (rect 0 0 97 14)(font "Arial" (font_size 8)))
+		(text "H_CELDA10[3..0]" (rect 114 251 211 265)(font "Arial" (font_size 8)))
+		(line (pt 232 256)(pt 216 256)(line_width 3))
+	)
+	(port
+		(pt 232 272)
+		(output)
+		(text "H_CELDA11[3..0]" (rect 0 0 97 14)(font "Arial" (font_size 8)))
+		(text "H_CELDA11[3..0]" (rect 114 267 211 281)(font "Arial" (font_size 8)))
+		(line (pt 232 272)(pt 216 272)(line_width 3))
+	)
+	(port
+		(pt 232 288)
+		(output)
+		(text "H_CELDA12[3..0]" (rect 0 0 97 14)(font "Arial" (font_size 8)))
+		(text "H_CELDA12[3..0]" (rect 114 283 211 297)(font "Arial" (font_size 8)))
+		(line (pt 232 288)(pt 216 288)(line_width 3))
+	)
+	(port
+		(pt 232 304)
+		(output)
+		(text "H_CELDA13[3..0]" (rect 0 0 97 14)(font "Arial" (font_size 8)))
+		(text "H_CELDA13[3..0]" (rect 114 299 211 313)(font "Arial" (font_size 8)))
+		(line (pt 232 304)(pt 216 304)(line_width 3))
+	)
+	(port
+		(pt 232 320)
+		(output)
+		(text "H_CELDA14[3..0]" (rect 0 0 97 14)(font "Arial" (font_size 8)))
+		(text "H_CELDA14[3..0]" (rect 114 315 211 329)(font "Arial" (font_size 8)))
+		(line (pt 232 320)(pt 216 320)(line_width 3))
+	)
+	(port
+		(pt 232 336)
+		(output)
+		(text "H_CELDA15[3..0]" (rect 0 0 97 14)(font "Arial" (font_size 8)))
+		(text "H_CELDA15[3..0]" (rect 114 331 211 345)(font "Arial" (font_size 8)))
+		(line (pt 232 336)(pt 216 336)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 216 368))
+	)
+)

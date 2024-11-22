@@ -1,0 +1,26 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity mux_selector16a1 is
+    Port (
+        A    : in  STD_LOGIC_VECTOR(3 downto 0);  -- Entrada A (4 bits)
+        Sel  : in  STD_LOGIC;                      -- Señal de selección
+        Y    : out STD_LOGIC_VECTOR(3 downto 0)    -- Salida Y (4 bits)
+    );
+end mux_selector16a1;
+
+architecture Behavioral of mux_selector16a1 is
+    -- Señal fija para B con valor '1111'
+    constant B : STD_LOGIC_VECTOR(3 downto 0) := "1111";
+begin
+    process (A, Sel)
+    begin
+        if Sel = '0' then
+            Y <= A;  -- Si Sel es 0, la salida es A
+        else
+            Y <= B;  -- Si Sel es 1, la salida es B (fija a "1111")
+        end if;
+    end process;
+end Behavioral;
