@@ -11,6 +11,10 @@ end generador_prueba;
 architecture Behavioral of generador_prueba is
 begin
     -- Asignación concurrente
+<<<<<<< HEAD
     prueba <= "11";  -- Asigna el valor binario '10' (equivalente a 2 en decimal)
+=======
+    prueba <= "10";  -- Asigna el valor binario '10' (equivalente a 2 en decimal)
+>>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
     
 end Behavioral;

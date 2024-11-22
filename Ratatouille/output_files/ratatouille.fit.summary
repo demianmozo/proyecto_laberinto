@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Fitter Status : Successful - Fri Nov 22 18:03:03 2024
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : ratatouille
@@ -10,7 +11,21 @@ Total logic elements : 750 / 22,320 ( 3 % )
     Dedicated logic registers : 597 / 22,320 ( 3 % )
 Total registers : 597
 Total pins : 20 / 154 ( 13 % )
+=======
+Fitter Status : Successful - Fri Nov 22 01:23:09 2024
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : ratatouille
+Top-level Entity Name : Matriz_ubicacion
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 879 / 22,320 ( 4 % )
+    Total combinational functions : 839 / 22,320 ( 4 % )
+    Dedicated logic registers : 245 / 22,320 ( 1 % )
+Total registers : 245
+Total pins : 24 / 154 ( 16 % )
+>>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 Total virtual pins : 0
 Total memory bits : 69,632 / 608,256 ( 11 % )
 Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
-Total PLLs : 0 / 4 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )

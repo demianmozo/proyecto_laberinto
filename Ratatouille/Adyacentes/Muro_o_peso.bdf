@@ -659,6 +659,7 @@ applicable agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
+<<<<<<< HEAD
 (pin
 	(output)
 	(rect 592 592 768 608)
@@ -723,6 +724,8 @@ applicable agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
+=======
+>>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 (symbol
 	(rect 608 40 768 120)
 	(text "mux_peso_o_muro" (rect 5 0 98 12)(font "Arial" ))
@@ -1150,6 +1153,39 @@ applicable agreement for further details.
 	)
 )
 (connector
+<<<<<<< HEAD
+=======
+	(pt 592 160)
+	(pt 608 160)
+	(bus)
+)
+(connector
+	(pt 592 160)
+	(pt 592 88)
+	(bus)
+)
+(connector
+	(pt 584 104)
+	(pt 584 240)
+	(bus)
+)
+(connector
+	(pt 584 240)
+	(pt 608 240)
+	(bus)
+)
+(connector
+	(pt 576 120)
+	(pt 576 320)
+	(bus)
+)
+(connector
+	(pt 576 320)
+	(pt 608 320)
+	(bus)
+)
+(connector
+>>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	(pt 608 88)
 	(pt 600 88)
 )
@@ -1184,6 +1220,29 @@ applicable agreement for further details.
 	(pt 536 336)
 )
 (connector
+<<<<<<< HEAD
+=======
+	(pt 480 72)
+	(pt 608 72)
+	(bus)
+)
+(connector
+	(pt 592 88)
+	(pt 480 88)
+	(bus)
+)
+(connector
+	(pt 480 104)
+	(pt 584 104)
+	(bus)
+)
+(connector
+	(pt 480 120)
+	(pt 576 120)
+	(bus)
+)
+(connector
+>>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	(pt 480 136)
 	(pt 504 136)
 	(bus)
@@ -1213,6 +1272,7 @@ applicable agreement for further details.
 	(pt 808 408)
 	(bus)
 )
+<<<<<<< HEAD
 (connector
 	(pt 592 72)
 	(pt 592 120)
@@ -1277,4 +1337,6 @@ applicable agreement for further details.
 	(pt 592 120)
 	(bus)
 )
+=======
+>>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 (junction (pt 504 408))

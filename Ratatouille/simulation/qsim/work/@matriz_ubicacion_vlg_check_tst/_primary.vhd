@@ -12,20 +12,26 @@ entity Matriz_ubicacion_vlg_check_tst is
         MI0             : in     vl_logic;
         MI1             : in     vl_logic;
         MUROO           : in     vl_logic;
+<<<<<<< HEAD
         P_ad            : in     vl_logic_vector(2 downto 0);
         P_at            : in     vl_logic_vector(2 downto 0);
         P_der           : in     vl_logic_vector(2 downto 0);
         P_izq           : in     vl_logic_vector(2 downto 0);
         PARED           : in     vl_logic;
+=======
+>>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
         pos_act         : in     vl_logic_vector(3 downto 0);
         sent_act        : in     vl_logic_vector(1 downto 0);
         SENTIDOO        : in     vl_logic;
         VELD            : in     vl_logic;
         VELI            : in     vl_logic;
+<<<<<<< HEAD
         Yaba            : in     vl_logic_vector(2 downto 0);
         Yarr            : in     vl_logic_vector(2 downto 0);
         Yder            : in     vl_logic_vector(2 downto 0);
         Yizq            : in     vl_logic_vector(2 downto 0);
+=======
+>>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
         sampler_rx      : in     vl_logic
     );
 end Matriz_ubicacion_vlg_check_tst;
