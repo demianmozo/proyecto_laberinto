@@ -64,32 +64,24 @@ set_global_assignment -name SIMULATION_MODE FUNCTIONAL
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Ubicacion/Waveform_celda.vwf"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VERILOG_FILE Motores/Bloque_ADC_controller/altera_up_avalon_adv_adc.v
-set_global_assignment -name VERILOG_FILE Motores/Bloque_ADC_controller/adc_adc_mega_0.v
-set_global_assignment -name VHDL_FILE Motores/Bloque_ADC_controller/adc.vhd
-set_global_assignment -name VHDL_FILE Motores/temporizador_doble.vhd
-set_global_assignment -name VHDL_FILE Motores/pll1.vhd
-set_global_assignment -name SOURCE_FILE Motores/pll1.cmp
-set_global_assignment -name VHDL_FILE Motores/Motores.vhd
-set_global_assignment -name SMF_FILE Motores/Motores.smf
-set_global_assignment -name VHDL_FILE Motores/generador_prueba.vhd
-set_global_assignment -name BDF_FILE Motores/Control_Motores.bdf
-set_global_assignment -name VHDL_FILE Motores/comparador_izquierda.vhd
-set_global_assignment -name VHDL_FILE Motores/comparador_derecha.vhd
-set_global_assignment -name VHDL_FILE Adyacentes/seleccionadores_mux.vhd
-set_global_assignment -name VHDL_FILE Adyacentes/mux_selector16a1.vhd
-set_global_assignment -name VHDL_FILE Adyacentes/mux_peso_o_muro.vhd
-set_global_assignment -name BDF_FILE Adyacentes/Muro_o_peso.bdf
-set_global_assignment -name BDF_FILE Adyacentes/Donde_ir.bdf
-set_global_assignment -name VHDL_FILE Adyacentes/Busmux_16a1.vhd
-set_global_assignment -name VHDL_FILE Posicion/sumador_fivebits.vhd
-set_global_assignment -name BDF_FILE Posicion/Posicion.bdf
-set_global_assignment -name VHDL_FILE Posicion/Mux_presuma.vhd
-set_global_assignment -name VHDL_FILE Posicion/FFD_fivebits.vhd
+set_location_assignment PIN_R8 -to CLK
+set_location_assignment PIN_J15 -to Reset1
+set_location_assignment PIN_B8 -to SENSOR_LINEA
+set_location_assignment PIN_A8 -to SENSOR_MURO
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH tb_Control_Motores -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME tb_temporizador_doble -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME uut -section_id tb_temporizador_doble
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "3 s" -section_id tb_temporizador_doble
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_temporizador_doble -section_id tb_temporizador_doble
+set_global_assignment -name EDA_TEST_BENCH_NAME tb_Control_Motores -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME uut -section_id tb_Control_Motores
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "5 s" -section_id tb_Control_Motores
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_Control_Motores -section_id tb_Control_Motores
+set_global_assignment -name EDA_TEST_BENCH_FILE Motores/tb_temporizador_doble.vhd -section_id tb_temporizador_doble
+set_global_assignment -name EDA_TEST_BENCH_FILE Motores/tb_Control_Motores.vhd -section_id tb_Control_Motores
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform_todo.vwf
 set_global_assignment -name VHDL_FILE Ubicacion/sumador_3_bits.vhd
 set_global_assignment -name VHDL_FILE Ubicacion/SENT_ACTUAL.vhd
 set_global_assignment -name VHDL_FILE Ubicacion/Min_Vector.vhd
@@ -108,12 +100,38 @@ set_global_assignment -name VHDL_FILE Ubicacion/busmux_2.vhd
 set_global_assignment -name VHDL_FILE Ubicacion/busmux_1.vhd
 set_global_assignment -name VHDL_FILE Ubicacion/busmux_0.vhd
 set_global_assignment -name VHDL_FILE Ubicacion/bit_to_vector.vhd
+set_global_assignment -name VHDL_FILE Ubicacion/AntiRebote.vhd
 set_global_assignment -name VHDL_FILE control.vhd
 set_global_assignment -name SMF_FILE control.smf
 set_global_assignment -name BDF_FILE algoritmo_decision.bdf
-set_location_assignment PIN_R8 -to CLK
-set_location_assignment PIN_J15 -to Reset1
-set_location_assignment PIN_B8 -to SENSOR_LINEA
-set_location_assignment PIN_A8 -to SENSOR_MURO
-set_global_assignment -name VHDL_FILE Ubicacion/AntiRebote.vhd
+set_global_assignment -name VHDL_FILE Posicion/sumador_fivebits.vhd
+set_global_assignment -name BDF_FILE Posicion/Posicion.bdf
+set_global_assignment -name VHDL_FILE Posicion/Mux_presuma.vhd
+set_global_assignment -name VHDL_FILE Posicion/FFD_fivebits.vhd
+set_global_assignment -name VHDL_FILE Adyacentes/seleccionadores_mux.vhd
+set_global_assignment -name VHDL_FILE Adyacentes/mux_selector16a1.vhd
+set_global_assignment -name VHDL_FILE Adyacentes/mux_peso_o_muro.vhd
+set_global_assignment -name BDF_FILE Adyacentes/Muro_o_peso.bdf
+set_global_assignment -name BDF_FILE Adyacentes/Donde_ir.bdf
+set_global_assignment -name VHDL_FILE Adyacentes/Busmux_16a1.vhd
+set_global_assignment -name VERILOG_FILE Motores/Bloque_ADC_controller/altera_up_avalon_adv_adc.v
+set_global_assignment -name VERILOG_FILE Motores/Bloque_ADC_controller/adc_adc_mega_0.v
+set_global_assignment -name VHDL_FILE Motores/Bloque_ADC_controller/adc.vhd
+set_global_assignment -name VHDL_FILE Motores/PRUEBA_Control_Motores.vhd
+set_global_assignment -name VHDL_FILE Motores/comparador_izquierda.vhd
+set_global_assignment -name VHDL_FILE Motores/comparador_derecha.vhd
+set_global_assignment -name SMF_FILE Motores/Motores.smf
+set_global_assignment -name VHDL_FILE Motores/Motores.vhd
+set_global_assignment -name VHDL_FILE Motores/generador_prueba.vhd
+set_global_assignment -name VHDL_FILE Motores/pll1.vhd
+set_global_assignment -name SOURCE_FILE Motores/pll1.cmp
+set_global_assignment -name VHDL_FILE Motores/temporizador_doble.vhd
+set_global_assignment -name VHDL_FILE Motores/tb_temporizador_doble.vhd
+set_global_assignment -name VHDL_FILE Motores/tb_Control_Motores.vhd
+set_global_assignment -name BDF_FILE Motores/Control_Motores.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform_control.vwf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Waveform_todo.vwf"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -8,7 +8,7 @@ fstate.se_choca 0 0 1 0 0 1
 fstate.decide 0 1 0 0 0 1 
 fstate.girando 1 0 0 0 0 1 
 
-State Machine - |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|Motores:inst|fstate
+State Machine - |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst3|Motores:inst|fstate
 Name fstate.Ganamos fstate.Gira_180 fstate.Gira_90_der fstate.Gira_90_izq fstate.Corrige_der fstate.Corrige_izq fstate.Avanza 
 fstate.Avanza 0 0 0 0 0 0 0 
 fstate.Corrige_izq 0 0 0 0 0 1 1 
@@ -18,7 +18,7 @@ fstate.Gira_90_der 0 0 1 0 0 0 1
 fstate.Gira_180 0 1 0 0 0 0 1 
 fstate.Ganamos 1 0 0 0 0 0 1 
 
-State Machine - |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|adc:inst8|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|currState
+State Machine - |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst3|adc:inst8|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|currState
 Name currState.doneState currState.transState currState.waitState currState.resetState currState.pauseState 
 currState.resetState 0 0 0 0 0 
 currState.waitState 0 0 1 1 0 

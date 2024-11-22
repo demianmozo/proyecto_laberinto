@@ -257,9 +257,25 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect -528 16 -352 32)
+	(rect -544 16 -368 32)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "CLK10KHz" (rect 90 0 143 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect -544 40 -368 56)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "CLK20KHz" (rect 90 0 143 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -863,10 +879,6 @@ applicable agreement for further details.
 	(pt -616 112)
 )
 (connector
-	(pt -624 0)
-	(pt -624 384)
-)
-(connector
 	(pt 352 232)
 	(pt 328 232)
 )
@@ -875,23 +887,9 @@ applicable agreement for further details.
 	(pt -616 -24)
 )
 (connector
-	(pt -696 0)
-	(pt -624 0)
-)
-(connector
-	(text "clk_10KHz" (rect 314 136 365 148)(font "Arial" ))
-	(pt 352 152)
-	(pt 304 152)
-)
-(connector
 	(text "clk_10KHz" (rect 352 456 403 468)(font "Arial" ))
 	(pt 352 472)
 	(pt 360 472)
-)
-(connector
-	(text "clk_10KHz" (rect -694 8 -643 20)(font "Arial" ))
-	(pt -696 24)
-	(pt -528 24)
 )
 (connector
 	(pt -192 576)
@@ -1029,6 +1027,34 @@ applicable agreement for further details.
 	(pt -336 160)
 	(bus)
 )
+(connector
+	(text "clk_20KHz" (rect 314 136 365 148)(font "Arial" ))
+	(pt 352 152)
+	(pt 304 152)
+)
+(connector
+	(text "clk_20KHz" (rect -694 -16 -643 -4)(font "Arial" ))
+	(pt -696 0)
+	(pt -624 0)
+)
+(connector
+	(text "clk_10KHz" (rect -710 8 -659 20)(font "Arial" ))
+	(pt -696 24)
+	(pt -544 24)
+)
+(connector
+	(pt -624 48)
+	(pt -544 48)
+)
+(connector
+	(pt -624 0)
+	(pt -624 48)
+)
+(connector
+	(pt -624 48)
+	(pt -624 384)
+)
 (junction (pt -1064 96))
 (junction (pt 712 544))
+(junction (pt -624 48))
 (text "VOLVER A CRONOMETRAR GIRO!!!    !" (rect -320 696 -103 710)(font "Arial" (font_size 8)))

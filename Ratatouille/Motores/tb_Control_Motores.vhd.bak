@@ -1,0 +1,98 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity tb_Control_Motores is
+    -- El testbench no tiene puertos
+end tb_Control_Motores;
+
+architecture Behavioral of tb_Control_Motores is
+    -- Componentes y señales para conectar el DUT (Device Under Test)
+    component Control_Motores
+        port (
+            llego : in std_logic;
+            SR : in std_logic;
+            SL : in std_logic;
+            clock : in std_logic;
+            reset : in std_logic;
+            SEL : in std_logic_vector(1 downto 0);
+            MD0 : out std_logic;
+            MI0 : out std_logic;
+            MD1 : out std_logic;
+            MI1 : out std_logic
+        );
+    end component;
+
+    -- Señales de prueba
+    signal llego_tb : std_logic := '0'; -- Siempre en bajo
+    signal SR_tb : std_logic := '1';   -- Siempre en alto
+    signal SL_tb : std_logic := '1';   -- Siempre en alto
+    signal clock_tb : std_logic := '0'; -- Reloj
+    signal reset_tb : std_logic := '0'; -- Reset
+    signal SEL_tb : std_logic_vector(1 downto 0) := "00"; -- Selección
+
+    signal MD0_tb : std_logic; -- Salidas del DUT
+    signal MI0_tb : std_logic;
+    signal MD1_tb : std_logic;
+    signal MI1_tb : std_logic;
+
+    -- Constante para definir el periodo del reloj (10 kHz = 100 µs)
+    constant clk_period : time := 100 us;
+
+begin
+
+    -- Instancia del DUT
+    DUT: Control_Motores
+        port map (
+            llego => llego_tb,
+            SR => SR_tb,
+            SL => SL_tb,
+            clock => clock_tb,
+            reset => reset_tb,
+            SEL => SEL_tb,
+            MD0 => MD0_tb,
+            MI0 => MI0_tb,
+            MD1 => MD1_tb,
+            MI1 => MI1_tb
+        );
+
+    -- Generador de reloj
+    clk_process: process
+    begin
+        while true loop
+            clock_tb <= '0';
+            wait for clk_period / 2;
+            clock_tb <= '1';
+            wait for clk_period / 2;
+        end loop;
+    end process;
+
+    -- Estímulos de prueba
+    stimulus_process: process
+    begin
+        -- Caso 1: Reset activo
+        reset_tb <= '1';
+        wait for 2 * clk_period;
+        reset_tb <= '0';
+
+        -- Caso 2: SEL = "00" (Adelante)
+        SEL_tb <= "00";
+        wait for 10 * clk_period;
+
+        -- Caso 3: SEL = "01" (Atrás)
+        SEL_tb <= "01";
+        wait for 10 * clk_period;
+
+        -- Caso 4: SEL = "10" (Derecha)
+        SEL_tb <= "10";
+        wait for 10 * clk_period;
+
+        -- Caso 5: SEL = "11" (Izquierda)
+        SEL_tb <= "11";
+        wait for 10 * clk_period;
+
+        -- Finaliza la simulación
+        wait;
+    end process;
+
+end Behavioral;

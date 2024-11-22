@@ -1,0 +1,112 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\monig\Documents\proyecto_laberinto\Ratatouille\simulation\modelsim
+Emotores
+Z1 w1731621694
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\monig\Documents\proyecto_laberinto\Ratatouille\simulation\modelsim
+Z5 8C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Motores/Motores.vhd
+Z6 FC:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Motores/Motores.vhd
+l0
+L21
+Vb`cR]nEfa5BXZPQz=<V001
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1732246843.434000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Motores/Motores.vhd|
+Z10 !s107 C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Motores/Motores.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 Z`ZT[7NMMI3Z8gd[z_3]10
+!i10b 1
+Abehavior
+R2
+R3
+DEx4 work 7 motores 0 22 b`cR]nEfa5BXZPQz=<V001
+l42
+L38
+VkIX=0I1W`8>P^O2`VfLB<1
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 nD:BmB3HUMDI]A9HFXI:g1
+!i10b 1
+Etb_control_motores
+Z13 w1732246823
+R2
+R3
+R4
+Z14 8C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Motores/tb_Control_Motores.vhd
+Z15 FC:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Motores/tb_Control_Motores.vhd
+l0
+L4
+V8C;7l5`@8LLkGH7gE6C7F2
+!s100 CnaG8G@:of`4W92[99B@M0
+R7
+31
+!i10b 1
+Z16 !s108 1732246843.532000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Motores/tb_Control_Motores.vhd|
+Z18 !s107 C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Motores/tb_Control_Motores.vhd|
+R11
+R12
+Abehavior
+R2
+R3
+DEx4 work 18 tb_control_motores 0 22 8C;7l5`@8LLkGH7gE6C7F2
+l34
+L7
+Vd843<jdUZ7S<:oW74AUVc0
+!s100 `PWbBVdm]BW@NoY6X22KE3
+R7
+31
+!i10b 1
+R16
+R17
+R18
+R11
+R12
+Etemporizador_doble
+Z19 w1732245401
+Z20 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z21 8C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Motores/temporizador_doble.vhd
+Z22 FC:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Motores/temporizador_doble.vhd
+l0
+L5
+VabP<QfDoo;AoFQEYo>5R@0
+R7
+31
+Z23 !s108 1732246843.487000
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Motores/temporizador_doble.vhd|
+Z25 !s107 C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Motores/temporizador_doble.vhd|
+R11
+R12
+!s100 <[lFjR]E[_1i^Gem:dchK3
+!i10b 1
+Abehavioral
+R20
+R2
+R3
+DEx4 work 18 temporizador_doble 0 22 abP<QfDoo;AoFQEYo>5R@0
+l23
+L14
+VT;Y12fM<c<ndS>N`YSagb3
+R7
+31
+R23
+R24
+R25
+R11
+R12
+!s100 3zVR^c4JO9hBDad>dcYUL3
+!i10b 1

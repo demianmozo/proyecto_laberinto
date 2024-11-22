@@ -1,7 +1,6 @@
 |Matriz_ubicacion
 ADC_SCLK <= algoritmo_decision:inst33.ADC_SCLK
 CLK => algoritmo_decision:inst33.IN_CLK
-CLK => control:inst30.clock
 CLK => Celda:inst15.CLK
 CLK => Celda:inst11.CLK
 CLK => Celda:inst7.CLK
@@ -29,16 +28,26 @@ MI0 <= algoritmo_decision:inst33.MI0
 MI1 <= algoritmo_decision:inst33.MI1
 VELD <= algoritmo_decision:inst33.VELD
 VELI <= algoritmo_decision:inst33.VELI
+GIROO <= control:inst30.ACT_GIRO
+SENTIDOO <= control:inst30.ACT_SENTIDO
+MUROO <= act_muro.DB_MAX_OUTPUT_PORT_TYPE
+CUENTAA <= control:inst30.CUENTA
+pos_act[0] <= pos_actual[0].DB_MAX_OUTPUT_PORT_TYPE
+pos_act[1] <= pos_actual[1].DB_MAX_OUTPUT_PORT_TYPE
+pos_act[2] <= pos_actual[2].DB_MAX_OUTPUT_PORT_TYPE
+pos_act[3] <= pos_actual[3].DB_MAX_OUTPUT_PORT_TYPE
+sent_act[0] <= actual[0].DB_MAX_OUTPUT_PORT_TYPE
+sent_act[1] <= actual[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Matriz_ubicacion|algoritmo_decision:inst33
-CLK10KHz <= Control_Motores:inst.CLK10KHz
-IN_CLK => Control_Motores:inst.inclk0
-RESET => Control_Motores:inst.areset
+CLK10KHz <= Control_Motores:inst3.CLK10KHz
+IN_CLK => Control_Motores:inst3.inclk0
+RESET => Control_Motores:inst3.areset
 RESET => SENT_ACTUAL:inst6.reset
 RESET => Muro_o_peso:inst1.reset
-ADC_DOUT => Control_Motores:inst.ADC_DOUT
-llego => Control_Motores:inst.llego
+ADC_DOUT => Control_Motores:inst3.ADC_DOUT
+llego => Control_Motores:inst3.llego
 ACT_GIRO => decido_accion:inst5.habilitacion
 ACT_SENTIDO => SENT_ACTUAL:inst6.clk
 sensor_linea => Muro_o_peso:inst1.LS
@@ -156,15 +165,16 @@ P_3[1] => Muro_o_peso:inst1.I9[1]
 P_3[2] => Muro_o_peso:inst1.I9[2]
 sentido[0] => Muro_o_peso:inst1.s[0]
 sentido[1] => Muro_o_peso:inst1.s[1]
-ADC_SCLK <= Control_Motores:inst.ADC_SCLK
-ADC_CS_N <= Control_Motores:inst.ADC_CS_N
-ADC_DIN <= Control_Motores:inst.ADC_DIN
-MD0 <= Control_Motores:inst.MD0
-MD1 <= Control_Motores:inst.MD1
-MI0 <= Control_Motores:inst.MI0
-MI1 <= Control_Motores:inst.MI1
-VELD <= Control_Motores:inst.VELD
-VELI <= Control_Motores:inst.VELI
+ADC_SCLK <= Control_Motores:inst3.ADC_SCLK
+ADC_CS_N <= Control_Motores:inst3.ADC_CS_N
+ADC_DIN <= Control_Motores:inst3.ADC_DIN
+MD0 <= Control_Motores:inst3.MD0
+MD1 <= Control_Motores:inst3.MD1
+MI0 <= Control_Motores:inst3.MI0
+MI1 <= Control_Motores:inst3.MI1
+VELD <= Control_Motores:inst3.VELD
+VELI <= Control_Motores:inst3.VELI
+CLK20KHz <= Control_Motores:inst3.CLK20KHz
 pos_actual[0] <= Muro_o_peso:inst1.celda_actual[0]
 pos_actual[1] <= Muro_o_peso:inst1.celda_actual[1]
 pos_actual[2] <= Muro_o_peso:inst1.celda_actual[2]
@@ -173,7 +183,7 @@ sent_actual[0] <= SENT_ACTUAL:inst6.q_out[0]
 sent_actual[1] <= SENT_ACTUAL:inst6.q_out[1]
 
 
-|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst
+|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst3
 ADC_SCLK <= adc:inst8.ADC_SCLK
 inclk0 => pll1:inst4.inclk0
 areset => pll1:inst4.areset
@@ -184,8 +194,8 @@ areset => BUSMUX:inst11.sel
 ADC_DOUT => adc:inst8.ADC_DOUT
 ADC_CS_N <= adc:inst8.ADC_CS_N
 ADC_DIN <= adc:inst8.ADC_DIN
-VELD <= pll1:inst4.c1
-VELI <= pll1:inst4.c1
+VELD <= clk_20KHz.DB_MAX_OUTPUT_PORT_TYPE
+VELI <= clk_20KHz.DB_MAX_OUTPUT_PORT_TYPE
 MD0 <= Motores:inst.MD0
 llego => Motores:inst.llego
 SEL[0] => Motores:inst.SEL[0]
@@ -194,9 +204,10 @@ MI0 <= Motores:inst.MI0
 MD1 <= Motores:inst.MD1
 MI1 <= Motores:inst.MI1
 CLK10KHz <= clk_10KHz.DB_MAX_OUTPUT_PORT_TYPE
+CLK20KHz <= clk_20KHz.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|adc:inst8
+|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst3|adc:inst8
 CLOCK => adc_adc_mega_0:adc_mega_0.CLOCK
 ADC_SCLK <= adc_adc_mega_0:adc_mega_0.ADC_SCLK
 ADC_CS_N <= adc_adc_mega_0:adc_mega_0.ADC_CS_N
@@ -301,7 +312,7 @@ CH7[11] <= adc_adc_mega_0:adc_mega_0.CH7[11]
 RESET => adc_adc_mega_0:adc_mega_0.RESET
 
 
-|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|adc:inst8|adc_adc_mega_0:adc_mega_0
+|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst3|adc:inst8|adc_adc_mega_0:adc_mega_0
 CLOCK => CLOCK.IN1
 RESET => RESET.IN1
 ADC_CS_N <= altera_up_avalon_adv_adc:ADC_CTRL.port4
@@ -406,7 +417,7 @@ CH7[10] <= CH7[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 CH7[11] <= CH7[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|adc:inst8|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL
+|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst3|adc:inst8|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL
 clock => next_addr[0].CLK
 clock => next_addr[1].CLK
 clock => next_addr[2].CLK
@@ -665,7 +676,7 @@ reading7[10] <= reading7[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 reading7[11] <= reading7[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|pll1:inst4
+|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst3|pll1:inst4
 areset => altpll:altpll_component.areset
 inclk0 => altpll:altpll_component.inclk[0]
 c0 <= altpll:altpll_component.clk[0]
@@ -674,7 +685,7 @@ c2 <= altpll:altpll_component.clk[2]
 locked <= altpll:altpll_component.locked
 
 
-|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|pll1:inst4|altpll:altpll_component
+|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst3|pll1:inst4|altpll:altpll_component
 inclk[0] => pll1_altpll:auto_generated.inclk[0]
 inclk[1] => pll1_altpll:auto_generated.inclk[1]
 fbin => ~NO_FANOUT~
@@ -734,7 +745,7 @@ fref <= <GND>
 icdrclk <= <GND>
 
 
-|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|pll1:inst4|altpll:altpll_component|pll1_altpll:auto_generated
+|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst3|pll1:inst4|altpll:altpll_component|pll1_altpll:auto_generated
 areset => pll_lock_sync.ACLR
 areset => pll1.ARESET
 clk[0] <= pll1.CLK
@@ -747,7 +758,7 @@ inclk[1] => pll1.CLK1
 locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|Motores:inst
+|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst3|Motores:inst
 reset => fstate~3.DATAIN
 clock => fstate~1.DATAIN
 SR => process_1.IN1
@@ -804,7 +815,7 @@ h_giro[0] <= h_giro.DB_MAX_OUTPUT_PORT_TYPE
 h_giro[1] <= h_giro[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|comparador_derecha:inst9
+|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst3|comparador_derecha:inst9
 a[0] => LessThan0.IN24
 a[1] => LessThan0.IN23
 a[2] => LessThan0.IN22
@@ -820,7 +831,7 @@ a[11] => LessThan0.IN13
 o <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|comparador_izquierda:inst10
+|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst3|comparador_izquierda:inst10
 a[0] => LessThan0.IN24
 a[1] => LessThan0.IN23
 a[2] => LessThan0.IN22
@@ -836,7 +847,7 @@ a[11] => LessThan0.IN13
 o <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|temporizador_doble:inst2
+|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst3|temporizador_doble:inst2
 clk => tiempo_limite[0].CLK
 clk => tiempo_limite[1].CLK
 clk => tiempo_limite[2].CLK
@@ -916,7 +927,7 @@ hab[1] => Equal2.IN1
 fin <= fin_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|BUSMUX:inst11
+|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst3|BUSMUX:inst11
 dataa[0] => lpm_mux:$00000.data[0][0]
 dataa[1] => lpm_mux:$00000.data[0][1]
 datab[0] => lpm_mux:$00000.data[1][0]
@@ -926,7 +937,7 @@ result[0] <= result[0].DB_MAX_OUTPUT_PORT_TYPE
 result[1] <= result[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|BUSMUX:inst11|lpm_mux:$00000
+|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst3|BUSMUX:inst11|lpm_mux:$00000
 data[0][0] => mux_8rc:auto_generated.data[0]
 data[0][1] => mux_8rc:auto_generated.data[1]
 data[1][0] => mux_8rc:auto_generated.data[2]
@@ -939,7 +950,7 @@ result[0] <= mux_8rc:auto_generated.result[0]
 result[1] <= mux_8rc:auto_generated.result[1]
 
 
-|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|BUSMUX:inst11|lpm_mux:$00000|mux_8rc:auto_generated
+|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst3|BUSMUX:inst11|lpm_mux:$00000|mux_8rc:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[1].IN1
 data[2] => result_node[0].IN1
@@ -952,7 +963,7 @@ sel[0] => result_node[0].IN0
 sel[0] => _.IN0
 
 
-|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|generador_prueba:inst7
+|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst3|generador_prueba:inst7
 prueba[0] <= <GND>
 prueba[1] <= <VCC>
 

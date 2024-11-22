@@ -11,7 +11,6 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst10|BUSMUX:inst6|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst1|BUSMUX:inst6|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst|BUSMUX:inst7|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|BUSMUX:inst11|lpm_mux:$00000" CBX_FILE_NAME="mux_8rc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst10|BUSMUX:inst7|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst11|BUSMUX:inst6|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst1|BUSMUX:inst7|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
@@ -30,6 +29,7 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst1|BUSMUX:inst9|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst2|BUSMUX:inst17|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst4|BUSMUX:inst6|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst3|BUSMUX:inst11|lpm_mux:$00000" CBX_FILE_NAME="mux_8rc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst11|BUSMUX:inst9|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst12|BUSMUX:inst17|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst13|BUSMUX:inst7|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
@@ -44,7 +44,6 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst4|BUSMUX:inst17|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst5|BUSMUX:inst7|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst6|BUSMUX:inst6|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|pll1:inst4|altpll:altpll_component" CBX_FILE_NAME="pll1_altpll.v"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst13|BUSMUX:inst9|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst14|BUSMUX:inst17|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst15|BUSMUX:inst7|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
@@ -63,5 +62,6 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst7|BUSMUX:inst17|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst8|BUSMUX:inst7|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|Celda:inst9|BUSMUX:inst6|lpm_mux:$00000" CBX_FILE_NAME="mux_9rc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst3|pll1:inst4|altpll:altpll_component" CBX_FILE_NAME="pll1_altpll.v"/>
 	</PROJECT>
 </LOG_ROOT>

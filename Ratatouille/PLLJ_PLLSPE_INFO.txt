@@ -1,4 +1,4 @@
-PLL_Name	algoritmo_decision:inst33|Control_Motores:inst|pll1:inst4|altpll:altpll_component|pll1_altpll:auto_generated|pll1
+PLL_Name	algoritmo_decision:inst33|Control_Motores:inst3|pll1:inst4|altpll:altpll_component|pll1_altpll:auto_generated|pll1
 PLLJITTER	51
 PLLSPEmax	84
 PLLSPEmin	-53

@@ -18,44 +18,32 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/20/2024 19:55:10"
+// Generated on "11/22/2024 01:21:03"
                                                                         
-// Verilog Self-Checking Test Bench (with test vectors) for design :    Celda
+// Verilog Self-Checking Test Bench (with test vectors) for design :    Matriz_ubicacion
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module Celda_vlg_sample_tst(
-	Adelante,
-	Atras,
+module Matriz_ubicacion_vlg_sample_tst(
+	ADC_DOUT,
 	CLK,
-	Derecha,
-	hab_escrit,
-	Izquierda,
-	Muro_Ad,
-	Muro_At,
-	Muro_Der,
-	Muro_Izq,
-	Reset,
+	Reset1,
+	SENSOR_LINEA,
+	SENSOR_MURO,
 	sampler_tx
 );
-input [2:0] Adelante;
-input [2:0] Atras;
+input  ADC_DOUT;
 input  CLK;
-input [2:0] Derecha;
-input [3:0] hab_escrit;
-input [2:0] Izquierda;
-input  Muro_Ad;
-input  Muro_At;
-input  Muro_Der;
-input  Muro_Izq;
-input  Reset;
+input  Reset1;
+input  SENSOR_LINEA;
+input  SENSOR_MURO;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(Adelante or Atras or CLK or Derecha or hab_escrit or Izquierda or Muro_Ad or Muro_At or Muro_Der or Muro_Izq or Reset)
+always @(ADC_DOUT or CLK or Reset1 or SENSOR_LINEA or SENSOR_MURO)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -74,33 +62,101 @@ end
 assign sampler_tx = sample;
 endmodule
 
-module Celda_vlg_check_tst (
-	muros_ady,
-	Peso,
+module Matriz_ubicacion_vlg_check_tst (
+	ADC_CS_N,
+	ADC_DIN,
+	ADC_SCLK,
+	CUENTAA,
+	GIROO,
+	MD0,
+	MD1,
+	MI0,
+	MI1,
+	MUROO,
+	pos_act,
+	sent_act,
+	SENTIDOO,
+	VELD,
+	VELI,
 	sampler_rx
 );
-input [3:0] muros_ady;
-input [2:0] Peso;
+input  ADC_CS_N;
+input  ADC_DIN;
+input  ADC_SCLK;
+input  CUENTAA;
+input  GIROO;
+input  MD0;
+input  MD1;
+input  MI0;
+input  MI1;
+input  MUROO;
+input [3:0] pos_act;
+input [1:0] sent_act;
+input  SENTIDOO;
+input  VELD;
+input  VELI;
 input sampler_rx;
 
-reg [3:0] muros_ady_expected;
-reg [2:0] Peso_expected;
+reg  ADC_CS_N_expected;
+reg  ADC_DIN_expected;
+reg  ADC_SCLK_expected;
+reg  CUENTAA_expected;
+reg  GIROO_expected;
+reg  MD0_expected;
+reg  MD1_expected;
+reg  MI0_expected;
+reg  MI1_expected;
+reg  MUROO_expected;
+reg [3:0] pos_act_expected;
+reg [1:0] sent_act_expected;
+reg  SENTIDOO_expected;
+reg  VELD_expected;
+reg  VELI_expected;
 
-reg [3:0] muros_ady_prev;
-reg [2:0] Peso_prev;
+reg  ADC_CS_N_prev;
+reg  ADC_DIN_prev;
+reg  ADC_SCLK_prev;
+reg  CUENTAA_prev;
+reg  GIROO_prev;
+reg  MD0_prev;
+reg  MD1_prev;
+reg  MI0_prev;
+reg  MI1_prev;
+reg  MUROO_prev;
+reg [3:0] pos_act_prev;
+reg [1:0] sent_act_prev;
+reg  SENTIDOO_prev;
+reg  VELD_prev;
+reg  VELI_prev;
 
-reg [3:0] muros_ady_expected_prev;
-reg [2:0] Peso_expected_prev;
+reg  CUENTAA_expected_prev;
+reg  GIROO_expected_prev;
+reg  MD0_expected_prev;
+reg  MD1_expected_prev;
+reg  MI0_expected_prev;
+reg  MI1_expected_prev;
+reg  MUROO_expected_prev;
+reg [3:0] pos_act_expected_prev;
+reg [1:0] sent_act_expected_prev;
+reg  SENTIDOO_expected_prev;
 
-reg [3:0] last_muros_ady_exp;
-reg [2:0] last_Peso_exp;
+reg  last_CUENTAA_exp;
+reg  last_GIROO_exp;
+reg  last_MD0_exp;
+reg  last_MD1_exp;
+reg  last_MI0_exp;
+reg  last_MI1_exp;
+reg  last_MUROO_exp;
+reg [3:0] last_pos_act_exp;
+reg [1:0] last_sent_act_exp;
+reg  last_SENTIDOO_exp;
 
 reg trigger;
 
 integer i;
 integer nummismatches;
 
-reg [1:2] on_first_change ;
+reg [1:15] on_first_change ;
 
 
 initial
@@ -108,63 +164,131 @@ begin
 trigger = 0;
 i = 0;
 nummismatches = 0;
-on_first_change = 2'b1;
+on_first_change = 15'b1;
 end
 
 // update real /o prevs
 
 always @(trigger)
 begin
-	muros_ady_prev = muros_ady;
-	Peso_prev = Peso;
+	ADC_CS_N_prev = ADC_CS_N;
+	ADC_DIN_prev = ADC_DIN;
+	ADC_SCLK_prev = ADC_SCLK;
+	CUENTAA_prev = CUENTAA;
+	GIROO_prev = GIROO;
+	MD0_prev = MD0;
+	MD1_prev = MD1;
+	MI0_prev = MI0;
+	MI1_prev = MI1;
+	MUROO_prev = MUROO;
+	pos_act_prev = pos_act;
+	sent_act_prev = sent_act;
+	SENTIDOO_prev = SENTIDOO;
+	VELD_prev = VELD;
+	VELI_prev = VELI;
 end
 
 // update expected /o prevs
 
 always @(trigger)
 begin
-	muros_ady_expected_prev = muros_ady_expected;
-	Peso_expected_prev = Peso_expected;
+	CUENTAA_expected_prev = CUENTAA_expected;
+	GIROO_expected_prev = GIROO_expected;
+	MD0_expected_prev = MD0_expected;
+	MD1_expected_prev = MD1_expected;
+	MI0_expected_prev = MI0_expected;
+	MI1_expected_prev = MI1_expected;
+	MUROO_expected_prev = MUROO_expected;
+	pos_act_expected_prev = pos_act_expected;
+	sent_act_expected_prev = sent_act_expected;
+	SENTIDOO_expected_prev = SENTIDOO_expected;
 end
 
 
-// expected muros_ady[ 3 ]
+
+// expected MD0
 initial
 begin
-	muros_ady_expected[3] = 1'bX;
+	MD0_expected = 1'bX;
+	MD0_expected = #999000 1'b0;
 end 
-// expected muros_ady[ 2 ]
+
+// expected MD1
 initial
 begin
-	muros_ady_expected[2] = 1'bX;
+	MD1_expected = 1'bX;
+	MD1_expected = #999000 1'b0;
 end 
-// expected muros_ady[ 1 ]
+
+// expected MI0
 initial
 begin
-	muros_ady_expected[1] = 1'bX;
+	MI0_expected = 1'bX;
+	MI0_expected = #999000 1'b0;
 end 
-// expected muros_ady[ 0 ]
+
+// expected MI1
 initial
 begin
-	muros_ady_expected[0] = 1'bX;
+	MI1_expected = 1'bX;
+	MI1_expected = #999000 1'b0;
 end 
-// expected Peso[ 2 ]
+
+// expected CUENTAA
 initial
 begin
-	Peso_expected[2] = 1'bX;
+	CUENTAA_expected = 1'bX;
 end 
-// expected Peso[ 1 ]
+
+// expected GIROO
 initial
 begin
-	Peso_expected[1] = 1'bX;
+	GIROO_expected = 1'bX;
 end 
-// expected Peso[ 0 ]
+
+// expected MUROO
 initial
 begin
-	Peso_expected[0] = 1'bX;
+	MUROO_expected = 1'bX;
+end 
+
+// expected SENTIDOO
+initial
+begin
+	SENTIDOO_expected = 1'bX;
+end 
+// expected pos_act[ 3 ]
+initial
+begin
+	pos_act_expected[3] = 1'bX;
+end 
+// expected pos_act[ 2 ]
+initial
+begin
+	pos_act_expected[2] = 1'bX;
+end 
+// expected pos_act[ 1 ]
+initial
+begin
+	pos_act_expected[1] = 1'bX;
+end 
+// expected pos_act[ 0 ]
+initial
+begin
+	pos_act_expected[0] = 1'bX;
+end 
+// expected sent_act[ 1 ]
+initial
+begin
+	sent_act_expected[1] = 1'bX;
+end 
+// expected sent_act[ 0 ]
+initial
+begin
+	sent_act_expected[0] = 1'bX;
 end 
 // generate trigger
-always @(muros_ady_expected or muros_ady or Peso_expected or Peso)
+always @(ADC_CS_N_expected or ADC_CS_N or ADC_DIN_expected or ADC_DIN or ADC_SCLK_expected or ADC_SCLK or CUENTAA_expected or CUENTAA or GIROO_expected or GIROO or MD0_expected or MD0 or MD1_expected or MD1 or MI0_expected or MI0 or MI1_expected or MI1 or MUROO_expected or MUROO or pos_act_expected or pos_act or sent_act_expected or sent_act or SENTIDOO_expected or SENTIDOO or VELD_expected or VELD or VELI_expected or VELI)
 begin
 	trigger <= ~trigger;
 end
@@ -174,99 +298,190 @@ begin
 `ifdef debug_tbench
 	$display("Scanning pattern %d @time = %t",i,$realtime );
 	i = i + 1;
-	$display("| expected muros_ady = %b | expected Peso = %b | ",muros_ady_expected_prev,Peso_expected_prev);
-	$display("| real muros_ady = %b | real Peso = %b | ",muros_ady_prev,Peso_prev);
+	$display("| expected ADC_CS_N = %b | expected ADC_DIN = %b | expected ADC_SCLK = %b | expected CUENTAA = %b | expected GIROO = %b | expected MD0 = %b | expected MD1 = %b | expected MI0 = %b | expected MI1 = %b | expected MUROO = %b | expected pos_act = %b | expected sent_act = %b | expected SENTIDOO = %b | expected VELD = %b | expected VELI = %b | ",ADC_CS_N_expected_prev,ADC_DIN_expected_prev,ADC_SCLK_expected_prev,CUENTAA_expected_prev,GIROO_expected_prev,MD0_expected_prev,MD1_expected_prev,MI0_expected_prev,MI1_expected_prev,MUROO_expected_prev,pos_act_expected_prev,sent_act_expected_prev,SENTIDOO_expected_prev,VELD_expected_prev,VELI_expected_prev);
+	$display("| real ADC_CS_N = %b | real ADC_DIN = %b | real ADC_SCLK = %b | real CUENTAA = %b | real GIROO = %b | real MD0 = %b | real MD1 = %b | real MI0 = %b | real MI1 = %b | real MUROO = %b | real pos_act = %b | real sent_act = %b | real SENTIDOO = %b | real VELD = %b | real VELI = %b | ",ADC_CS_N_prev,ADC_DIN_prev,ADC_SCLK_prev,CUENTAA_prev,GIROO_prev,MD0_prev,MD1_prev,MI0_prev,MI1_prev,MUROO_prev,pos_act_prev,sent_act_prev,SENTIDOO_prev,VELD_prev,VELI_prev);
 `endif
 	if (
-		( muros_ady_expected_prev[0] !== 1'bx ) && ( muros_ady_prev[0] !== muros_ady_expected_prev[0] )
-		&& ((muros_ady_expected_prev[0] !== last_muros_ady_exp[0]) ||
-			on_first_change[1])
+		( CUENTAA_expected_prev !== 1'bx ) && ( CUENTAA_prev !== CUENTAA_expected_prev )
+		&& ((CUENTAA_expected_prev !== last_CUENTAA_exp) ||
+			on_first_change[4])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port muros_ady[0] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", muros_ady_expected_prev);
-		$display ("     Real value = %b", muros_ady_prev);
+		$display ("ERROR! Vector Mismatch for output port CUENTAA :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CUENTAA_expected_prev);
+		$display ("     Real value = %b", CUENTAA_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_muros_ady_exp[0] = muros_ady_expected_prev[0];
+		on_first_change[4] = 1'b0;
+		last_CUENTAA_exp = CUENTAA_expected_prev;
 	end
 	if (
-		( muros_ady_expected_prev[1] !== 1'bx ) && ( muros_ady_prev[1] !== muros_ady_expected_prev[1] )
-		&& ((muros_ady_expected_prev[1] !== last_muros_ady_exp[1]) ||
-			on_first_change[1])
+		( GIROO_expected_prev !== 1'bx ) && ( GIROO_prev !== GIROO_expected_prev )
+		&& ((GIROO_expected_prev !== last_GIROO_exp) ||
+			on_first_change[5])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port muros_ady[1] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", muros_ady_expected_prev);
-		$display ("     Real value = %b", muros_ady_prev);
+		$display ("ERROR! Vector Mismatch for output port GIROO :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", GIROO_expected_prev);
+		$display ("     Real value = %b", GIROO_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_muros_ady_exp[1] = muros_ady_expected_prev[1];
+		on_first_change[5] = 1'b0;
+		last_GIROO_exp = GIROO_expected_prev;
 	end
 	if (
-		( muros_ady_expected_prev[2] !== 1'bx ) && ( muros_ady_prev[2] !== muros_ady_expected_prev[2] )
-		&& ((muros_ady_expected_prev[2] !== last_muros_ady_exp[2]) ||
-			on_first_change[1])
+		( MD0_expected_prev !== 1'bx ) && ( MD0_prev !== MD0_expected_prev )
+		&& ((MD0_expected_prev !== last_MD0_exp) ||
+			on_first_change[6])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port muros_ady[2] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", muros_ady_expected_prev);
-		$display ("     Real value = %b", muros_ady_prev);
+		$display ("ERROR! Vector Mismatch for output port MD0 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", MD0_expected_prev);
+		$display ("     Real value = %b", MD0_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_muros_ady_exp[2] = muros_ady_expected_prev[2];
+		on_first_change[6] = 1'b0;
+		last_MD0_exp = MD0_expected_prev;
 	end
 	if (
-		( muros_ady_expected_prev[3] !== 1'bx ) && ( muros_ady_prev[3] !== muros_ady_expected_prev[3] )
-		&& ((muros_ady_expected_prev[3] !== last_muros_ady_exp[3]) ||
-			on_first_change[1])
+		( MD1_expected_prev !== 1'bx ) && ( MD1_prev !== MD1_expected_prev )
+		&& ((MD1_expected_prev !== last_MD1_exp) ||
+			on_first_change[7])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port muros_ady[3] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", muros_ady_expected_prev);
-		$display ("     Real value = %b", muros_ady_prev);
+		$display ("ERROR! Vector Mismatch for output port MD1 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", MD1_expected_prev);
+		$display ("     Real value = %b", MD1_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_muros_ady_exp[3] = muros_ady_expected_prev[3];
+		on_first_change[7] = 1'b0;
+		last_MD1_exp = MD1_expected_prev;
 	end
 	if (
-		( Peso_expected_prev[0] !== 1'bx ) && ( Peso_prev[0] !== Peso_expected_prev[0] )
-		&& ((Peso_expected_prev[0] !== last_Peso_exp[0]) ||
-			on_first_change[2])
+		( MI0_expected_prev !== 1'bx ) && ( MI0_prev !== MI0_expected_prev )
+		&& ((MI0_expected_prev !== last_MI0_exp) ||
+			on_first_change[8])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port Peso[0] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", Peso_expected_prev);
-		$display ("     Real value = %b", Peso_prev);
+		$display ("ERROR! Vector Mismatch for output port MI0 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", MI0_expected_prev);
+		$display ("     Real value = %b", MI0_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[2] = 1'b0;
-		last_Peso_exp[0] = Peso_expected_prev[0];
+		on_first_change[8] = 1'b0;
+		last_MI0_exp = MI0_expected_prev;
 	end
 	if (
-		( Peso_expected_prev[1] !== 1'bx ) && ( Peso_prev[1] !== Peso_expected_prev[1] )
-		&& ((Peso_expected_prev[1] !== last_Peso_exp[1]) ||
-			on_first_change[2])
+		( MI1_expected_prev !== 1'bx ) && ( MI1_prev !== MI1_expected_prev )
+		&& ((MI1_expected_prev !== last_MI1_exp) ||
+			on_first_change[9])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port Peso[1] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", Peso_expected_prev);
-		$display ("     Real value = %b", Peso_prev);
+		$display ("ERROR! Vector Mismatch for output port MI1 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", MI1_expected_prev);
+		$display ("     Real value = %b", MI1_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[2] = 1'b0;
-		last_Peso_exp[1] = Peso_expected_prev[1];
+		on_first_change[9] = 1'b0;
+		last_MI1_exp = MI1_expected_prev;
 	end
 	if (
-		( Peso_expected_prev[2] !== 1'bx ) && ( Peso_prev[2] !== Peso_expected_prev[2] )
-		&& ((Peso_expected_prev[2] !== last_Peso_exp[2]) ||
-			on_first_change[2])
+		( MUROO_expected_prev !== 1'bx ) && ( MUROO_prev !== MUROO_expected_prev )
+		&& ((MUROO_expected_prev !== last_MUROO_exp) ||
+			on_first_change[10])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port Peso[2] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", Peso_expected_prev);
-		$display ("     Real value = %b", Peso_prev);
+		$display ("ERROR! Vector Mismatch for output port MUROO :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", MUROO_expected_prev);
+		$display ("     Real value = %b", MUROO_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[2] = 1'b0;
-		last_Peso_exp[2] = Peso_expected_prev[2];
+		on_first_change[10] = 1'b0;
+		last_MUROO_exp = MUROO_expected_prev;
+	end
+	if (
+		( pos_act_expected_prev[0] !== 1'bx ) && ( pos_act_prev[0] !== pos_act_expected_prev[0] )
+		&& ((pos_act_expected_prev[0] !== last_pos_act_exp[0]) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port pos_act[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", pos_act_expected_prev);
+		$display ("     Real value = %b", pos_act_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_pos_act_exp[0] = pos_act_expected_prev[0];
+	end
+	if (
+		( pos_act_expected_prev[1] !== 1'bx ) && ( pos_act_prev[1] !== pos_act_expected_prev[1] )
+		&& ((pos_act_expected_prev[1] !== last_pos_act_exp[1]) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port pos_act[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", pos_act_expected_prev);
+		$display ("     Real value = %b", pos_act_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_pos_act_exp[1] = pos_act_expected_prev[1];
+	end
+	if (
+		( pos_act_expected_prev[2] !== 1'bx ) && ( pos_act_prev[2] !== pos_act_expected_prev[2] )
+		&& ((pos_act_expected_prev[2] !== last_pos_act_exp[2]) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port pos_act[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", pos_act_expected_prev);
+		$display ("     Real value = %b", pos_act_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_pos_act_exp[2] = pos_act_expected_prev[2];
+	end
+	if (
+		( pos_act_expected_prev[3] !== 1'bx ) && ( pos_act_prev[3] !== pos_act_expected_prev[3] )
+		&& ((pos_act_expected_prev[3] !== last_pos_act_exp[3]) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port pos_act[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", pos_act_expected_prev);
+		$display ("     Real value = %b", pos_act_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_pos_act_exp[3] = pos_act_expected_prev[3];
+	end
+	if (
+		( sent_act_expected_prev[0] !== 1'bx ) && ( sent_act_prev[0] !== sent_act_expected_prev[0] )
+		&& ((sent_act_expected_prev[0] !== last_sent_act_exp[0]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sent_act[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sent_act_expected_prev);
+		$display ("     Real value = %b", sent_act_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_sent_act_exp[0] = sent_act_expected_prev[0];
+	end
+	if (
+		( sent_act_expected_prev[1] !== 1'bx ) && ( sent_act_prev[1] !== sent_act_expected_prev[1] )
+		&& ((sent_act_expected_prev[1] !== last_sent_act_exp[1]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sent_act[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sent_act_expected_prev);
+		$display ("     Real value = %b", sent_act_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_sent_act_exp[1] = sent_act_expected_prev[1];
+	end
+	if (
+		( SENTIDOO_expected_prev !== 1'bx ) && ( SENTIDOO_prev !== SENTIDOO_expected_prev )
+		&& ((SENTIDOO_expected_prev !== last_SENTIDOO_exp) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port SENTIDOO :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", SENTIDOO_expected_prev);
+		$display ("     Real value = %b", SENTIDOO_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_SENTIDOO_exp = SENTIDOO_expected_prev;
 	end
 
 	trigger <= ~trigger;
@@ -275,7 +490,7 @@ initial
 
 begin 
 $timeformat(-12,3," ps",6);
-#1000000;
+#10000000;
 if (nummismatches > 0)
 	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
 else
@@ -284,879 +499,126 @@ $finish;
 end 
 endmodule
 
-module Celda_vlg_vec_tst();
+module Matriz_ubicacion_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg [2:0] Adelante;
-reg [2:0] Atras;
+reg ADC_DOUT;
 reg CLK;
-reg [2:0] Derecha;
-reg [3:0] hab_escrit;
-reg [2:0] Izquierda;
-reg Muro_Ad;
-reg Muro_At;
-reg Muro_Der;
-reg Muro_Izq;
-reg Reset;
+reg Reset1;
+reg SENSOR_LINEA;
+reg SENSOR_MURO;
 // wires                                               
-wire [3:0] muros_ady;
-wire [2:0] Peso;
+wire ADC_CS_N;
+wire ADC_DIN;
+wire ADC_SCLK;
+wire CUENTAA;
+wire GIROO;
+wire MD0;
+wire MD1;
+wire MI0;
+wire MI1;
+wire MUROO;
+wire [3:0] pos_act;
+wire [1:0] sent_act;
+wire SENTIDOO;
+wire VELD;
+wire VELI;
 
 wire sampler;                             
 
 // assign statements (if any)                          
-Celda i1 (
+Matriz_ubicacion i1 (
 // port map - connection between master ports and signals/registers   
-	.Adelante(Adelante),
-	.Atras(Atras),
+	.ADC_CS_N(ADC_CS_N),
+	.ADC_DIN(ADC_DIN),
+	.ADC_DOUT(ADC_DOUT),
+	.ADC_SCLK(ADC_SCLK),
 	.CLK(CLK),
-	.Derecha(Derecha),
-	.hab_escrit(hab_escrit),
-	.Izquierda(Izquierda),
-	.Muro_Ad(Muro_Ad),
-	.Muro_At(Muro_At),
-	.Muro_Der(Muro_Der),
-	.Muro_Izq(Muro_Izq),
-	.muros_ady(muros_ady),
-	.Peso(Peso),
-	.Reset(Reset)
+	.CUENTAA(CUENTAA),
+	.GIROO(GIROO),
+	.MD0(MD0),
+	.MD1(MD1),
+	.MI0(MI0),
+	.MI1(MI1),
+	.MUROO(MUROO),
+	.pos_act(pos_act),
+	.Reset1(Reset1),
+	.SENSOR_LINEA(SENSOR_LINEA),
+	.SENSOR_MURO(SENSOR_MURO),
+	.sent_act(sent_act),
+	.SENTIDOO(SENTIDOO),
+	.VELD(VELD),
+	.VELI(VELI)
 );
-// Adelante[ 2 ]
-initial
-begin
-	Adelante[2] = 1'b0;
-end 
-// Adelante[ 1 ]
-initial
-begin
-	Adelante[1] = 1'b1;
-end 
-// Adelante[ 0 ]
-initial
-begin
-	Adelante[0] = 1'b1;
-end 
-// Atras[ 2 ]
-initial
-begin
-	Atras[2] = 1'b1;
-end 
-// Atras[ 1 ]
-initial
-begin
-	Atras[1] = 1'b0;
-end 
-// Atras[ 0 ]
-initial
-begin
-	Atras[0] = 1'b1;
-end 
 
 // CLK
-always
+initial
 begin
+	repeat(333)
+	begin
+		CLK = 1'b0;
+		CLK = #15000 1'b1;
+		# 15000;
+	end
 	CLK = 1'b0;
-	CLK = #5000 1'b1;
-	#5000;
-end 
-// Derecha[ 2 ]
-initial
-begin
-	Derecha[2] = 1'b1;
-end 
-// Derecha[ 1 ]
-initial
-begin
-	Derecha[1] = 1'b0;
-end 
-// Derecha[ 0 ]
-initial
-begin
-	Derecha[0] = 1'b1;
-end 
-// hab_escrit[ 3 ]
-initial
-begin
-	hab_escrit[3] = 1'b1;
-end 
-// hab_escrit[ 2 ]
-initial
-begin
-	hab_escrit[2] = 1'b0;
-end 
-// hab_escrit[ 1 ]
-initial
-begin
-	hab_escrit[1] = 1'b0;
-end 
-// hab_escrit[ 0 ]
-initial
-begin
-	hab_escrit[0] = 1'b1;
-end 
-// Izquierda[ 2 ]
-initial
-begin
-	Izquierda[2] = 1'b0;
-end 
-// Izquierda[ 1 ]
-initial
-begin
-	Izquierda[1] = 1'b1;
-end 
-// Izquierda[ 0 ]
-initial
-begin
-	Izquierda[0] = 1'b1;
 end 
 
-// Muro_Ad
+// Reset1
 initial
 begin
-	Muro_Ad = 1'b1;
+	Reset1 = 1'b0;
+	Reset1 = #300000 1'b1;
 end 
 
-// Muro_At
+// SENSOR_LINEA
 initial
 begin
-	Muro_At = 1'b1;
-	Muro_At = #3960 1'b0;
-	Muro_At = #10200 1'b1;
-	Muro_At = #5840 1'b0;
-	Muro_At = #11943 1'b1;
-	Muro_At = #7400 1'b0;
-	Muro_At = #1042 1'b1;
-	# 3199;
+	SENSOR_LINEA = 1'b0;
+	SENSOR_LINEA = #2700000 1'b1;
+	# 300000;
 	repeat(2)
 	begin
-		Muro_At = 1'b0;
-		Muro_At = #3467 1'b1;
-		# 3199;
+		SENSOR_LINEA = 1'b0;
+		SENSOR_LINEA = #2700000 1'b1;
+		# 300000;
 	end
-	Muro_At = 1'b0;
-	Muro_At = #5763 1'b1;
-	Muro_At = #3900 1'b0;
-	Muro_At = #6100 1'b1;
-	Muro_At = #3900 1'b0;
-	Muro_At = #4479 1'b1;
-	Muro_At = #4800 1'b0;
-	Muro_At = #9417 1'b1;
-	Muro_At = #3600 1'b0;
-	Muro_At = #2505 1'b1;
-	Muro_At = #2650 1'b0;
-	Muro_At = #2350 1'b1;
-	Muro_At = #2650 1'b0;
-	Muro_At = #970 1'b1;
-	Muro_At = #3104 1'b0;
-	Muro_At = #6700 1'b1;
-	Muro_At = #196 1'b0;
-	Muro_At = #408 1'b1;
-	Muro_At = #5800 1'b0;
-	Muro_At = #4200 1'b1;
-	Muro_At = #5800 1'b0;
-	Muro_At = #3792 1'b1;
-	Muro_At = #5405 1'b0;
-	Muro_At = #4400 1'b1;
-	Muro_At = #9857 1'b0;
-	Muro_At = #10200 1'b1;
-	Muro_At = #138 1'b0;
-	Muro_At = #712 1'b1;
-	# 2133;
-	repeat(2)
-	begin
-		Muro_At = 1'b0;
-		Muro_At = #4533 1'b1;
-		# 2133;
-	end
-	Muro_At = 1'b0;
-	Muro_At = #3823 1'b1;
-	Muro_At = #1984 1'b0;
-	Muro_At = #6700 1'b1;
-	Muro_At = #3300 1'b0;
-	Muro_At = #6700 1'b1;
-	Muro_At = #1316 1'b0;
-	Muro_At = #284 1'b1;
-	Muro_At = #2100 1'b0;
-	Muro_At = #2900 1'b1;
-	Muro_At = #2100 1'b0;
-	Muro_At = #2616 1'b1;
-	Muro_At = #220 1'b0;
-	Muro_At = #6000 1'b1;
-	Muro_At = #6215 1'b0;
-	Muro_At = #2500 1'b1;
-	Muro_At = #2500 1'b0;
-	Muro_At = #2500 1'b1;
-	Muro_At = #319 1'b0;
-	Muro_At = #1600 1'b1;
-	Muro_At = #1733 1'b0;
-	Muro_At = #1600 1'b1;
-	Muro_At = #1733 1'b0;
-	Muro_At = #1600 1'b1;
-	Muro_At = #1480 1'b0;
-	Muro_At = #2475 1'b1;
-	Muro_At = #4200 1'b0;
-	Muro_At = #5800 1'b1;
-	Muro_At = #4200 1'b0;
-	Muro_At = #6416 1'b1;
-	# 2133;
-	repeat(2)
-	begin
-		Muro_At = 1'b0;
-		Muro_At = #4533 1'b1;
-		# 2133;
-	end
-	Muro_At = 1'b0;
-	Muro_At = #6042 1'b1;
-	Muro_At = #3100 1'b0;
-	Muro_At = #5729 1'b1;
-	# 2466;
-	repeat(2)
-	begin
-		Muro_At = 1'b0;
-		Muro_At = #4200 1'b1;
-		# 2466;
-	end
-	Muro_At = 1'b0;
-	Muro_At = #6601 1'b1;
-	Muro_At = #3200 1'b0;
-	Muro_At = #6800 1'b1;
-	Muro_At = #3200 1'b0;
-	Muro_At = #1298 1'b1;
-	# 1366;
-	repeat(2)
-	begin
-		Muro_At = 1'b0;
-		Muro_At = #1967 1'b1;
-		# 1366;
-	end
-	Muro_At = 1'b0;
-	Muro_At = #1644 1'b1;
-	Muro_At = #9148 1'b0;
-	Muro_At = #10800 1'b1;
-	Muro_At = #52 1'b0;
-	Muro_At = #3906 1'b1;
-	Muro_At = #3700 1'b0;
-	Muro_At = #6300 1'b1;
-	Muro_At = #3700 1'b0;
-	Muro_At = #7349 1'b1;
-	Muro_At = #9600 1'b0;
-	Muro_At = #6766 1'b1;
-	# 1599;
-	repeat(2)
-	begin
-		Muro_At = 1'b0;
-		Muro_At = #1734 1'b1;
-		# 1599;
-	end
-	Muro_At = 1'b0;
-	Muro_At = #986 1'b1;
-	# 2466;
-	repeat(2)
-	begin
-		Muro_At = 1'b0;
-		Muro_At = #4200 1'b1;
-		# 2466;
-	end
-	Muro_At = 1'b0;
-	Muro_At = #10153 1'b1;
-	Muro_At = #10800 1'b0;
-	Muro_At = #3265 1'b1;
-	# 1566;
-	repeat(2)
-	begin
-		Muro_At = 1'b0;
-		Muro_At = #1767 1'b1;
-		# 1566;
-	end
-	Muro_At = 1'b0;
-	Muro_At = #4259 1'b1;
-	# 2599;
-	repeat(2)
-	begin
-		Muro_At = 1'b0;
-		Muro_At = #4067 1'b1;
-		# 2599;
-	end
-	Muro_At = 1'b0;
-	Muro_At = #990 1'b1;
-	# 1275;
-	repeat(2)
-	begin
-		Muro_At = 1'b0;
-		Muro_At = #4533 1'b1;
-		# 2133;
-	end
-	Muro_At = 1'b0;
-	Muro_At = #4533 1'b1;
-	Muro_At = #860 1'b0;
-	Muro_At = #1595 1'b1;
-	# 1299;
-	repeat(2)
-	begin
-		Muro_At = 1'b0;
-		Muro_At = #2034 1'b1;
-		# 1299;
-	end
-	Muro_At = 1'b0;
-	Muro_At = #2584 1'b1;
-	Muro_At = #3900 1'b0;
-	Muro_At = #6100 1'b1;
-	Muro_At = #3900 1'b0;
-	Muro_At = #3956 1'b1;
-	Muro_At = #1806 1'b0;
-	Muro_At = #5400 1'b1;
-	Muro_At = #4600 1'b0;
-	Muro_At = #5400 1'b1;
-	Muro_At = #2794 1'b0;
-	Muro_At = #1293 1'b1;
-	Muro_At = #8400 1'b0;
-	Muro_At = #10307 1'b1;
-	Muro_At = #2457 1'b0;
-	Muro_At = #11000 1'b1;
-	Muro_At = #6725 1'b0;
-	Muro_At = #2550 1'b1;
-	Muro_At = #2450 1'b0;
-	Muro_At = #2550 1'b1;
-	Muro_At = #4262 1'b0;
-	Muro_At = #10200 1'b1;
-	Muro_At = #7806 1'b0;
-	Muro_At = #743 1'b1;
-	# 2266;
-	repeat(2)
-	begin
-		Muro_At = 1'b0;
-		Muro_At = #4400 1'b1;
-		# 2266;
-	end
-	Muro_At = 1'b0;
-	Muro_At = #5237 1'b1;
-	Muro_At = #2250 1'b0;
-	Muro_At = #2750 1'b1;
-	Muro_At = #2250 1'b0;
-	Muro_At = #1172 1'b1;
-	Muro_At = #973 1'b0;
-	Muro_At = #2500 1'b1;
-	Muro_At = #2500 1'b0;
-	Muro_At = #2500 1'b1;
-	Muro_At = #1729 1'b0;
-	Muro_At = #5200 1'b1;
-	Muro_At = #4800 1'b0;
-	Muro_At = #5200 1'b1;
-	Muro_At = #4598 1'b0;
-	Muro_At = #3288 1'b1;
-	Muro_At = #6400 1'b0;
-	Muro_At = #10793 1'b1;
-	Muro_At = #1750 1'b0;
-	Muro_At = #3250 1'b1;
-	Muro_At = #1750 1'b0;
-	Muro_At = #3794 1'b1;
-	# 1133;
-	repeat(2)
-	begin
-		Muro_At = 1'b0;
-		Muro_At = #2200 1'b1;
-		# 1133;
-	end
-	Muro_At = 1'b0;
-	Muro_At = #1176 1'b1;
-	Muro_At = #4649 1'b0;
-	Muro_At = #10200 1'b1;
-	Muro_At = #7090 1'b0;
-	Muro_At = #3467 1'b1;
-	Muro_At = #3199 1'b0;
-	Muro_At = #3467 1'b1;
-	Muro_At = #3199 1'b0;
-	Muro_At = #3467 1'b1;
-	Muro_At = #1262 1'b0;
-	Muro_At = #1866 1'b1;
-	# 1066;
-	repeat(2)
-	begin
-		Muro_At = 1'b0;
-		Muro_At = #2267 1'b1;
-		# 1066;
-	end
-	Muro_At = 1'b0;
-	Muro_At = #414 1'b1;
-	# 1999;
-	repeat(2)
-	begin
-		Muro_At = 1'b0;
-		Muro_At = #1334 1'b1;
-		# 1999;
-	end
-	Muro_At = 1'b0;
-	Muro_At = #1323 1'b1;
-	Muro_At = #2820 1'b0;
-	Muro_At = #13200 1'b1;
-	Muro_At = #5697 1'b0;
-	Muro_At = #4700 1'b1;
-	Muro_At = #3583 1'b0;
-	Muro_At = #262 1'b1;
-	# 999;
-	repeat(2)
-	begin
-		Muro_At = 1'b0;
-		Muro_At = #2334 1'b1;
-		# 999;
-	end
-	Muro_At = 1'b0;
-	Muro_At = #2598 1'b1;
-	Muro_At = #4400 1'b0;
-	Muro_At = #5600 1'b1;
-	Muro_At = #4400 1'b0;
-	Muro_At = #9396 1'b1;
-	Muro_At = #7000 1'b0;
-	Muro_At = #8679 1'b1;
-	Muro_At = #3465 1'b0;
-	Muro_At = #5300 1'b1;
-	Muro_At = #1482 1'b0;
-	Muro_At = #2800 1'b1;
-	Muro_At = #3866 1'b0;
-	Muro_At = #2800 1'b1;
-	Muro_At = #3866 1'b0;
-	Muro_At = #2800 1'b1;
-	Muro_At = #5497 1'b0;
-	Muro_At = #6300 1'b1;
-	Muro_At = #1824 1'b0;
-	Muro_At = #1217 1'b1;
-	# 1866;
-	repeat(2)
-	begin
-		Muro_At = 1'b0;
-		Muro_At = #1467 1'b1;
-		# 1866;
-	end
-	Muro_At = 1'b0;
-	Muro_At = #1288 1'b1;
-	Muro_At = #5200 1'b0;
-	Muro_At = #4910 1'b1;
-	Muro_At = #5000 1'b0;
-	Muro_At = #3853 1'b1;
-	Muro_At = #401 1'b0;
-	Muro_At = #2600 1'b1;
-	Muro_At = #2400 1'b0;
-	Muro_At = #2600 1'b1;
-	Muro_At = #1999 1'b0;
-	Muro_At = #1975 1'b1;
-	Muro_At = #2500 1'b0;
-	Muro_At = #2500 1'b1;
-	Muro_At = #2500 1'b0;
-	Muro_At = #525 1'b1;
-	Muro_At = #1406 1'b0;
-	Muro_At = #5300 1'b1;
-	Muro_At = #3294 1'b0;
-	Muro_At = #1699 1'b1;
-	Muro_At = #3900 1'b0;
-	Muro_At = #4401 1'b1;
-	Muro_At = #1673 1'b0;
-	Muro_At = #5100 1'b1;
-	Muro_At = #4900 1'b0;
-	Muro_At = #5100 1'b1;
+	SENSOR_LINEA = 1'b0;
 end 
 
-// Muro_Der
+// SENSOR_MURO
 initial
 begin
-	Muro_Der = 1'b0;
+	SENSOR_MURO = 1'b0;
+	SENSOR_MURO = #4500000 1'b1;
+	SENSOR_MURO = #500000 1'b0;
+	SENSOR_MURO = #4500000 1'b1;
 end 
 
-// Muro_Izq
-initial
-begin
-	Muro_Izq = 1'b1;
-	Muro_Izq = #3135 1'b0;
-	Muro_Izq = #13800 1'b1;
-	Muro_Izq = #3781 1'b0;
-	Muro_Izq = #5500 1'b1;
-	Muro_Izq = #6004 1'b0;
-	Muro_Izq = #13600 1'b1;
-	Muro_Izq = #4180 1'b0;
-	Muro_Izq = #1072 1'b1;
-	Muro_Izq = #5400 1'b0;
-	Muro_Izq = #4600 1'b1;
-	Muro_Izq = #5400 1'b0;
-	Muro_Izq = #4361 1'b1;
-	Muro_Izq = #10400 1'b0;
-	Muro_Izq = #8767 1'b1;
-	Muro_Izq = #3973 1'b0;
-	Muro_Izq = #5500 1'b1;
-	Muro_Izq = #4500 1'b0;
-	Muro_Izq = #5500 1'b1;
-	Muro_Izq = #527 1'b0;
-	Muro_Izq = #5647 1'b1;
-	Muro_Izq = #4000 1'b0;
-	Muro_Izq = #6000 1'b1;
-	Muro_Izq = #4000 1'b0;
-	Muro_Izq = #353 1'b1;
-	# 277;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #4467 1'b1;
-		# 2199;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #4467 1'b1;
-	Muro_Izq = #1924 1'b0;
-	Muro_Izq = #7450 1'b1;
-	Muro_Izq = #6000 1'b0;
-	Muro_Izq = #6550 1'b1;
-	Muro_Izq = #1195 1'b0;
-	Muro_Izq = #6100 1'b1;
-	Muro_Izq = #2705 1'b0;
-	Muro_Izq = #3761 1'b1;
-	# 2599;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #4067 1'b1;
-		# 2599;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #1901 1'b1;
-	# 1333;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #2000 1'b1;
-		# 1333;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #3051 1'b1;
-	Muro_Izq = #3100 1'b0;
-	Muro_Izq = #4257 1'b1;
-	Muro_Izq = #1677 1'b0;
-	Muro_Izq = #2850 1'b1;
-	Muro_Izq = #2150 1'b0;
-	Muro_Izq = #2850 1'b1;
-	Muro_Izq = #4207 1'b0;
-	Muro_Izq = #5400 1'b1;
-	Muro_Izq = #2138 1'b0;
-	Muro_Izq = #7000 1'b1;
-	Muro_Izq = #3000 1'b0;
-	Muro_Izq = #7000 1'b1;
-	Muro_Izq = #1728 1'b0;
-	Muro_Izq = #82 1'b1;
-	# 1766;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #1567 1'b1;
-		# 1766;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #4074 1'b1;
-	Muro_Izq = #2250 1'b0;
-	Muro_Izq = #2750 1'b1;
-	Muro_Izq = #2250 1'b0;
-	Muro_Izq = #162 1'b1;
-	# 890;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #3533 1'b1;
-		# 3133;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #3533 1'b1;
-	Muro_Izq = #2245 1'b0;
-	Muro_Izq = #487 1'b1;
-	Muro_Izq = #2900 1'b0;
-	Muro_Izq = #2100 1'b1;
-	Muro_Izq = #2900 1'b0;
-	Muro_Izq = #1658 1'b1;
-	Muro_Izq = #3700 1'b0;
-	Muro_Izq = #8100 1'b1;
-	Muro_Izq = #4400 1'b0;
-	Muro_Izq = #5600 1'b1;
-	Muro_Izq = #4400 1'b0;
-	Muro_Izq = #3941 1'b1;
-	# 2199;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #4467 1'b1;
-		# 2199;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #4283 1'b1;
-	Muro_Izq = #2311 1'b0;
-	Muro_Izq = #6300 1'b1;
-	Muro_Izq = #3556 1'b0;
-	Muro_Izq = #6300 1'b1;
-	Muro_Izq = #1533 1'b0;
-	Muro_Izq = #1085 1'b1;
-	# 1466;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #1867 1'b1;
-		# 1466;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #3718 1'b1;
-	Muro_Izq = #3000 1'b0;
-	Muro_Izq = #7000 1'b1;
-	Muro_Izq = #3000 1'b0;
-	Muro_Izq = #5384 1'b1;
-	Muro_Izq = #4200 1'b0;
-	Muro_Izq = #5800 1'b1;
-	Muro_Izq = #4200 1'b0;
-	Muro_Izq = #4769 1'b1;
-	# 1233;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #2100 1'b1;
-		# 1233;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #2119 1'b1;
-	Muro_Izq = #3900 1'b0;
-	Muro_Izq = #5794 1'b1;
-	Muro_Izq = #3461 1'b0;
-	Muro_Izq = #8200 1'b1;
-	Muro_Izq = #8339 1'b0;
-	Muro_Izq = #3684 1'b1;
-	Muro_Izq = #3300 1'b0;
-	Muro_Izq = #3016 1'b1;
-	Muro_Izq = #7593 1'b0;
-	Muro_Izq = #10000 1'b1;
-	Muro_Izq = #3354 1'b0;
-	Muro_Izq = #5300 1'b1;
-	Muro_Izq = #4700 1'b0;
-	Muro_Izq = #5300 1'b1;
-	Muro_Izq = #4188 1'b0;
-	Muro_Izq = #1834 1'b1;
-	Muro_Izq = #1499 1'b0;
-	Muro_Izq = #1834 1'b1;
-	Muro_Izq = #1499 1'b0;
-	Muro_Izq = #1834 1'b1;
-	Muro_Izq = #1065 1'b0;
-	Muro_Izq = #2782 1'b1;
-	# 2733;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #3933 1'b1;
-		# 2733;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #1153 1'b1;
-	Muro_Izq = #830 1'b0;
-	Muro_Izq = #2600 1'b1;
-	Muro_Izq = #2400 1'b0;
-	Muro_Izq = #2600 1'b1;
-	Muro_Izq = #2197 1'b0;
-	Muro_Izq = #2134 1'b1;
-	Muro_Izq = #1199 1'b0;
-	Muro_Izq = #2134 1'b1;
-	Muro_Izq = #1199 1'b0;
-	Muro_Izq = #2134 1'b1;
-	Muro_Izq = #2529 1'b0;
-	Muro_Izq = #4333 1'b1;
-	Muro_Izq = #2333 1'b0;
-	Muro_Izq = #4333 1'b1;
-	Muro_Izq = #2333 1'b0;
-	Muro_Izq = #4333 1'b1;
-	Muro_Izq = #379 1'b0;
-	Muro_Izq = #1327 1'b1;
-	# 2199;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #4467 1'b1;
-		# 2199;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #4228 1'b1;
-	Muro_Izq = #5700 1'b0;
-	Muro_Izq = #3997 1'b1;
-	# 2199;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #4467 1'b1;
-		# 2199;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #5310 1'b1;
-	Muro_Izq = #1600 1'b0;
-	Muro_Izq = #3400 1'b1;
-	Muro_Izq = #1600 1'b0;
-	Muro_Izq = #1776 1'b1;
-	# 1437;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #4200 1'b1;
-		# 2466;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #4200 1'b1;
-	Muro_Izq = #3809 1'b0;
-	Muro_Izq = #14000 1'b1;
-	Muro_Izq = #3222 1'b0;
-	Muro_Izq = #6083 1'b1;
-	Muro_Izq = #3000 1'b0;
-	Muro_Izq = #7000 1'b1;
-	Muro_Izq = #3000 1'b0;
-	Muro_Izq = #12223 1'b1;
-	Muro_Izq = #7600 1'b0;
-	Muro_Izq = #1094 1'b1;
-	Muro_Izq = #2035 1'b0;
-	Muro_Izq = #4300 1'b1;
-	Muro_Izq = #5700 1'b0;
-	Muro_Izq = #4300 1'b1;
-	Muro_Izq = #3665 1'b0;
-	Muro_Izq = #3473 1'b1;
-	# 2066;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #4600 1'b1;
-		# 2066;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #1276 1'b1;
-	# 1066;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #2267 1'b1;
-		# 1066;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #2121 1'b1;
-	# 1961;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #3800 1'b1;
-		# 2866;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #3800 1'b1;
-	Muro_Izq = #1873 1'b0;
-	Muro_Izq = #2267 1'b1;
-	Muro_Izq = #1066 1'b0;
-	Muro_Izq = #2267 1'b1;
-	Muro_Izq = #1066 1'b0;
-	Muro_Izq = #2267 1'b1;
-	Muro_Izq = #101 1'b0;
-	Muro_Izq = #1578 1'b1;
-	Muro_Izq = #9600 1'b0;
-	Muro_Izq = #8822 1'b1;
-	Muro_Izq = #2253 1'b0;
-	Muro_Izq = #5700 1'b1;
-	Muro_Izq = #4300 1'b0;
-	Muro_Izq = #5700 1'b1;
-	Muro_Izq = #2047 1'b0;
-	Muro_Izq = #288 1'b1;
-	# 1066;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #2267 1'b1;
-		# 1066;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #1980 1'b1;
-	# 1668;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #4267 1'b1;
-		# 2399;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #4267 1'b1;
-	Muro_Izq = #5288 1'b0;
-	Muro_Izq = #5200 1'b1;
-	Muro_Izq = #4800 1'b0;
-	Muro_Izq = #5200 1'b1;
-	Muro_Izq = #245 1'b0;
-	Muro_Izq = #1649 1'b1;
-	# 1199;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #2134 1'b1;
-		# 1199;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #708 1'b1;
-	# 1199;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #2134 1'b1;
-		# 1199;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #3198 1'b1;
-	Muro_Izq = #1800 1'b0;
-	Muro_Izq = #3200 1'b1;
-	Muro_Izq = #1800 1'b0;
-	Muro_Izq = #1915 1'b1;
-	# 869;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #1967 1'b1;
-		# 1366;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #1967 1'b1;
-	Muro_Izq = #498 1'b0;
-	Muro_Izq = #5097 1'b1;
-	Muro_Izq = #4000 1'b0;
-	Muro_Izq = #6000 1'b1;
-	Muro_Izq = #4000 1'b0;
-	Muro_Izq = #903 1'b1;
-	# 696;
-	repeat(2)
-	begin
-		Muro_Izq = 1'b0;
-		Muro_Izq = #1700 1'b1;
-		# 1633;
-	end
-	Muro_Izq = 1'b0;
-	Muro_Izq = #1700 1'b1;
-	Muro_Izq = #2738 1'b0;
-	Muro_Izq = #5900 1'b1;
-	Muro_Izq = #4100 1'b0;
-	Muro_Izq = #5900 1'b1;
-	Muro_Izq = #2300 1'b0;
-	Muro_Izq = #3447 1'b1;
-	Muro_Izq = #4900 1'b0;
-end 
-
-// Reset
-initial
-begin
-	Reset = 1'b0;
-end 
-
-Celda_vlg_sample_tst tb_sample (
-	.Adelante(Adelante),
-	.Atras(Atras),
+Matriz_ubicacion_vlg_sample_tst tb_sample (
+	.ADC_DOUT(ADC_DOUT),
 	.CLK(CLK),
-	.Derecha(Derecha),
-	.hab_escrit(hab_escrit),
-	.Izquierda(Izquierda),
-	.Muro_Ad(Muro_Ad),
-	.Muro_At(Muro_At),
-	.Muro_Der(Muro_Der),
-	.Muro_Izq(Muro_Izq),
-	.Reset(Reset),
+	.Reset1(Reset1),
+	.SENSOR_LINEA(SENSOR_LINEA),
+	.SENSOR_MURO(SENSOR_MURO),
 	.sampler_tx(sampler)
 );
 
-Celda_vlg_check_tst tb_out(
-	.muros_ady(muros_ady),
-	.Peso(Peso),
+Matriz_ubicacion_vlg_check_tst tb_out(
+	.ADC_CS_N(ADC_CS_N),
+	.ADC_DIN(ADC_DIN),
+	.ADC_SCLK(ADC_SCLK),
+	.CUENTAA(CUENTAA),
+	.GIROO(GIROO),
+	.MD0(MD0),
+	.MD1(MD1),
+	.MI0(MI0),
+	.MI1(MI1),
+	.MUROO(MUROO),
+	.pos_act(pos_act),
+	.sent_act(sent_act),
+	.SENTIDOO(SENTIDOO),
+	.VELD(VELD),
+	.VELI(VELI),
 	.sampler_rx(sampler)
 );
 endmodule
