@@ -181,19 +181,7 @@ TRANSITION_LIST("fin_gir")
 	NODE
 	{
 		REPEAT = 1;
-<<<<<<< HEAD
 		LEVEL 1 FOR 100000.0;
-=======
-		LEVEL 1 FOR 2000.0;
-		NODE
-		{
-			REPEAT = 19;
-			LEVEL 0 FOR 2500.0;
-			LEVEL 1 FOR 2500.0;
-		}
-		LEVEL 0 FOR 2500.0;
-		LEVEL 1 FOR 500.0;
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	}
 }
 

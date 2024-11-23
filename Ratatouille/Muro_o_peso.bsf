@@ -303,7 +303,6 @@ applicable agreement for further details.
 		(text "celda_actual[3..0]" (rect 95 91 195 105)(font "Arial" (font_size 8)))
 		(line (pt 216 96)(pt 200 96)(line_width 3))
 	)
-<<<<<<< HEAD
 	(port
 		(pt 216 112)
 		(output)
@@ -332,8 +331,6 @@ applicable agreement for further details.
 		(text "Yaba[2..0]" (rect 136 155 195 169)(font "Arial" (font_size 8)))
 		(line (pt 216 160)(pt 200 160)(line_width 3))
 	)
-=======
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	(drawing
 		(rectangle (rect 16 16 200 592))
 	)

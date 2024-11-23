@@ -232,7 +232,6 @@ SIGNAL("SENTIDOO")
 	PARENT = "";
 }
 
-<<<<<<< HEAD
 SIGNAL("ADC_SCLK")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -563,8 +562,6 @@ SIGNAL("Yizq[0]")
 	PARENT = "Yizq";
 }
 
-=======
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 TRANSITION_LIST("CLK")
 {
 	NODE
@@ -572,18 +569,10 @@ TRANSITION_LIST("CLK")
 		REPEAT = 1;
 		NODE
 		{
-<<<<<<< HEAD
 			REPEAT = 500;
 			LEVEL 0 FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}
-=======
-			REPEAT = 333;
-			LEVEL 0 FOR 15.0;
-			LEVEL 1 FOR 15.0;
-		}
-		LEVEL 0 FOR 10.0;
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	}
 }
 
@@ -642,7 +631,6 @@ TRANSITION_LIST("SENSOR_LINEA")
 	NODE
 	{
 		REPEAT = 1;
-<<<<<<< HEAD
 		LEVEL 1 FOR 2700.0;
 		LEVEL 0 FOR 300.0;
 		NODE
@@ -652,17 +640,6 @@ TRANSITION_LIST("SENSOR_LINEA")
 			LEVEL 0 FOR 300.0;
 		}
 		LEVEL 1 FOR 1000.0;
-=======
-		LEVEL 0 FOR 2700.0;
-		LEVEL 1 FOR 300.0;
-		NODE
-		{
-			REPEAT = 2;
-			LEVEL 0 FOR 2700.0;
-			LEVEL 1 FOR 300.0;
-		}
-		LEVEL 0 FOR 1000.0;
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	}
 }
 
@@ -671,14 +648,7 @@ TRANSITION_LIST("SENSOR_MURO")
 	NODE
 	{
 		REPEAT = 1;
-<<<<<<< HEAD
 		LEVEL 1 FOR 10000.0;
-=======
-		LEVEL 0 FOR 4500.0;
-		LEVEL 1 FOR 500.0;
-		LEVEL 0 FOR 4500.0;
-		LEVEL 1 FOR 500.0;
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	}
 }
 
@@ -772,7 +742,6 @@ TRANSITION_LIST("SENTIDOO")
 	}
 }
 
-<<<<<<< HEAD
 TRANSITION_LIST("ADC_SCLK")
 {
 	NODE
@@ -998,8 +967,6 @@ TRANSITION_LIST("Yizq[0]")
 	}
 }
 
-=======
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 DISPLAY_LINE
 {
 	CHANNEL = "CLK";
@@ -1188,7 +1155,6 @@ DISPLAY_LINE
 	PARENT = 17;
 }
 
-<<<<<<< HEAD
 DISPLAY_LINE
 {
 	CHANNEL = "ADC_SCLK";
@@ -1518,8 +1484,6 @@ DISPLAY_LINE
 	PARENT = 49;
 }
 
-=======
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 TIME_BAR
 {
 	TIME = 0;

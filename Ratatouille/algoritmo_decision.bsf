@@ -394,7 +394,6 @@ applicable agreement for further details.
 		(text "pos_actual[3..0]" (rect 121 219 211 233)(font "Arial" (font_size 8)))
 		(line (pt 232 224)(pt 216 224)(line_width 3))
 	)
-<<<<<<< HEAD
 	(port
 		(pt 232 240)
 		(output)
@@ -451,8 +450,6 @@ applicable agreement for further details.
 		(text "Yaba[2..0]" (rect 152 347 211 361)(font "Arial" (font_size 8)))
 		(line (pt 232 352)(pt 216 352)(line_width 3))
 	)
-=======
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	(drawing
 		(rectangle (rect 16 16 216 688))
 	)

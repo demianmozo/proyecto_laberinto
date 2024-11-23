@@ -1,10 +1,6 @@
 <sld_project_info>
   <project>
-<<<<<<< HEAD
     <hash md5_digest_80b="4dd969287c688190daa9"/>
-=======
-    <hash md5_digest_80b="89261cacac926e4dc6fd"/>
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
   </project>
   <file_info>
     <file device="EP4CE22F17C6" path="ratatouille.sof" usercode="0xFFFFFFFF"/>

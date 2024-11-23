@@ -38,11 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE22F17C6
-<<<<<<< HEAD
 set_global_assignment -name TOP_LEVEL_ENTITY seleccionadores_mux
-=======
-set_global_assignment -name TOP_LEVEL_ENTITY Matriz_ubicacion
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:56:38  NOVEMBER 11, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -68,11 +64,6 @@ set_global_assignment -name SIMULATION_MODE FUNCTIONAL
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
-<<<<<<< HEAD
-=======
-set_location_assignment PIN_R8 -to CLK
-set_location_assignment PIN_J15 -to Reset1
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 set_location_assignment PIN_B8 -to SENSOR_LINEA
 set_location_assignment PIN_A8 -to SENSOR_MURO
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
@@ -137,7 +128,6 @@ set_global_assignment -name VHDL_FILE Motores/tb_temporizador_doble.vhd
 set_global_assignment -name VHDL_FILE Motores/tb_Control_Motores.vhd
 set_global_assignment -name BDF_FILE Motores/Control_Motores.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform_control.vwf
-<<<<<<< HEAD
 set_location_assignment PIN_E1 -to prueba
 set_global_assignment -name VECTOR_WAVEFORM_FILE Ubicacion/Waveform_accion.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Ubicacion/Waveform_sentactual.vwf
@@ -217,10 +207,3 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Posicion/Waveform_posicion.vwf
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/LSC/Desktop/proyecto_laberinto-master/Ratatouille/Posicion/Waveform_posicion.vwf"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SLD_FILE "C:/Users/LSC/Desktop/proyecto_laberinto-master/Ratatouille/output_files/stp1_auto_stripped.stp"
-=======
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Waveform_todo.vwf"
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041

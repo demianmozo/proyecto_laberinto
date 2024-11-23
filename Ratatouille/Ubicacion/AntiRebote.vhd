@@ -12,11 +12,7 @@ end AntiRebote;
 
 architecture Behavioral of AntiRebote is
     -- Parámetro de tiempo de espera (100 ms a 10 kHz)
-<<<<<<< HEAD
     constant CNT_MAX : integer := 200;  -- 100 ms con reloj de 10 kHz
-=======
-    constant CNT_MAX : integer := 1000;  -- 100 ms con reloj de 10 kHz
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
     signal cnt      : integer range 0 to CNT_MAX := 0;
     signal btn_reg  : STD_LOGIC := '0';  -- Registro de la señal del botón
     signal btn_stable : STD_LOGIC := '0'; -- Señal estabilizada

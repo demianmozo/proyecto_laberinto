@@ -351,7 +351,6 @@ applicable agreement for further details.
 		(line (pt 78 4)(pt 82 8))
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
-<<<<<<< HEAD
 	)
 )
 (pin
@@ -497,8 +496,6 @@ applicable agreement for further details.
 		(line (pt 78 4)(pt 82 8))
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
-=======
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	)
 )
 (symbol
@@ -2617,45 +2614,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-<<<<<<< HEAD
-=======
-	(rect 1072 -192 1224 -80)
-	(text "AntiRebote" (rect 5 0 59 12)(font "Arial" ))
-	(text "inst28" (rect 8 96 37 108)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 27 35 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "rst" (rect 0 0 12 12)(font "Arial" ))
-		(text "rst" (rect 21 43 33 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "btn_in" (rect 0 0 29 12)(font "Arial" ))
-		(text "btn_in" (rect 21 59 50 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 152 32)
-		(output)
-		(text "btn_out" (rect 0 0 36 12)(font "Arial" ))
-		(text "btn_out" (rect 101 27 137 39)(font "Arial" ))
-		(line (pt 152 32)(pt 136 32))
-	)
-	(drawing
-		(rectangle (rect 16 16 136 96))
-	)
-)
-(symbol
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	(rect 1664 -200 1896 504)
 	(text "algoritmo_decision" (rect 5 0 110 14)(font "Arial" (font_size 8)))
 	(text "inst33" (rect 8 688 37 700)(font "Arial" ))
@@ -3030,7 +2988,6 @@ applicable agreement for further details.
 		(text "pos_actual[3..0]" (rect 121 219 211 233)(font "Arial" (font_size 8)))
 		(line (pt 232 224)(pt 216 224)(line_width 3))
 	)
-<<<<<<< HEAD
 	(port
 		(pt 232 240)
 		(output)
@@ -3126,11 +3083,6 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 136 96))
 	)
-=======
-	(drawing
-		(rectangle (rect 16 16 216 688))
-	)
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 )
 (connector
 	(text "CLK" (rect -80 352 -59 364)(font "Arial" ))
@@ -5251,13 +5203,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-<<<<<<< HEAD
-=======
-	(pt 1224 -56)
-	(pt 1248 -56)
-)
-(connector
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	(pt 1296 -104)
 	(pt 1360 -104)
 )
@@ -5278,13 +5223,6 @@ applicable agreement for further details.
 	(pt 1240 -160)
 )
 (connector
-<<<<<<< HEAD
-=======
-	(pt 1072 -128)
-	(pt 1056 -128)
-)
-(connector
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	(text "10KHz" (rect 1050 -176 1081 -164)(font "Arial" ))
 	(pt 1072 -160)
 	(pt 1040 -160)
@@ -5369,14 +5307,6 @@ applicable agreement for further details.
 	(pt 1896 -168)
 )
 (connector
-<<<<<<< HEAD
-=======
-	(text "20KHz" (rect 1346 -136 1377 -124)(font "Arial" ))
-	(pt 1360 -120)
-	(pt 1336 -120)
-)
-(connector
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	(text "pos_actual[3..0]" (rect 1898 8 1977 20)(font "Arial" ))
 	(pt 1896 24)
 	(pt 1976 24)
@@ -5481,7 +5411,6 @@ applicable agreement for further details.
 	(pt 1608 -120)
 	(pt 1664 -120)
 )
-<<<<<<< HEAD
 (connector
 	(pt 1240 0)
 	(pt 1232 0)
@@ -5536,8 +5465,6 @@ applicable agreement for further details.
 	(pt 976 -296)
 	(pt 952 -296)
 )
-=======
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 (junction (pt 576 232))
 (junction (pt 608 320))
 (junction (pt 568 376))
@@ -5578,9 +5505,6 @@ applicable agreement for further details.
 (junction (pt 1568 -72))
 (junction (pt 1600 -88))
 (junction (pt 1608 -120))
-<<<<<<< HEAD
 (junction (pt 1232 -56))
 (text "ACORDATE DE PONERLE EL CLK DE 20K CUANDO LO USEMOS" (rect 1360 -192 1723 -178)(font "Arial" (font_size 8)))
 (text "ESTAN MAL, SON LOS PESOS, PONER POSICIONES DSP" (rect 2088 128 2411 142)(font "Arial" (font_size 8)))
-=======
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041

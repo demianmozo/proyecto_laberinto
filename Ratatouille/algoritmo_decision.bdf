@@ -847,11 +847,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-<<<<<<< HEAD
 	(rect 64 464 240 480)
-=======
-	(rect 64 704 240 720)
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "pos_actual[3..0]" (rect 90 0 169 12)(font "Arial" ))
 	(pt 0 8)
@@ -881,7 +877,6 @@ applicable agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
-<<<<<<< HEAD
 (pin
 	(output)
 	(rect 72 496 248 512)
@@ -1010,8 +1005,6 @@ applicable agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
-=======
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 (symbol
 	(rect 80 232 296 344)
 	(text "elijo_sentido" (rect 5 0 65 12)(font "Arial" ))
@@ -1128,7 +1121,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-<<<<<<< HEAD
 	(rect 920 152 1104 376)
 	(text "Control_Motores" (rect 5 0 98 14)(font "Arial" (font_size 8)))
 	(text "inst3" (rect 8 208 31 220)(font "Arial" ))
@@ -1249,8 +1241,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-=======
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	(rect -224 112 -8 720)
 	(text "Muro_o_peso" (rect 5 0 82 14)(font "Arial" (font_size 8)))
 	(text "inst1" (rect 8 592 31 604)(font "Arial" ))
@@ -1534,7 +1524,6 @@ applicable agreement for further details.
 		(text "celda_actual[3..0]" (rect 95 91 195 105)(font "Arial" (font_size 8)))
 		(line (pt 216 96)(pt 200 96)(line_width 3))
 	)
-<<<<<<< HEAD
 	(port
 		(pt 216 112)
 		(output)
@@ -1563,135 +1552,10 @@ applicable agreement for further details.
 		(text "Yaba[2..0]" (rect 136 155 195 169)(font "Arial" (font_size 8)))
 		(line (pt 216 160)(pt 200 160)(line_width 3))
 	)
-=======
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	(drawing
 		(rectangle (rect 16 16 200 592))
 	)
 )
-<<<<<<< HEAD
-=======
-(symbol
-	(rect 920 152 1104 376)
-	(text "Control_Motores" (rect 5 0 98 14)(font "Arial" (font_size 8)))
-	(text "inst3" (rect 8 208 31 220)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "inclk0" (rect 0 0 31 14)(font "Arial" (font_size 8)))
-		(text "inclk0" (rect 21 27 52 41)(font "Arial" (font_size 8)))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "areset" (rect 0 0 36 14)(font "Arial" (font_size 8)))
-		(text "areset" (rect 21 43 57 57)(font "Arial" (font_size 8)))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "ADC_DOUT" (rect 0 0 66 14)(font "Arial" (font_size 8)))
-		(text "ADC_DOUT" (rect 21 59 87 73)(font "Arial" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "SEL[1..0]" (rect 0 0 50 14)(font "Arial" (font_size 8)))
-		(text "SEL[1..0]" (rect 21 75 71 89)(font "Arial" (font_size 8)))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "llego" (rect 0 0 25 14)(font "Arial" (font_size 8)))
-		(text "llego" (rect 21 91 46 105)(font "Arial" (font_size 8)))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 184 32)
-		(output)
-		(text "CLK10KHz" (rect 0 0 61 14)(font "Arial" (font_size 8)))
-		(text "CLK10KHz" (rect 102 27 163 41)(font "Arial" (font_size 8)))
-		(line (pt 184 32)(pt 168 32))
-	)
-	(port
-		(pt 184 48)
-		(output)
-		(text "CLK20KHz" (rect 0 0 61 14)(font "Arial" (font_size 8)))
-		(text "CLK20KHz" (rect 102 43 163 57)(font "Arial" (font_size 8)))
-		(line (pt 184 48)(pt 168 48))
-	)
-	(port
-		(pt 184 64)
-		(output)
-		(text "ADC_SCLK" (rect 0 0 64 14)(font "Arial" (font_size 8)))
-		(text "ADC_SCLK" (rect 99 59 163 73)(font "Arial" (font_size 8)))
-		(line (pt 184 64)(pt 168 64))
-	)
-	(port
-		(pt 184 80)
-		(output)
-		(text "ADC_CS_N" (rect 0 0 64 14)(font "Arial" (font_size 8)))
-		(text "ADC_CS_N" (rect 99 75 163 89)(font "Arial" (font_size 8)))
-		(line (pt 184 80)(pt 168 80))
-	)
-	(port
-		(pt 184 96)
-		(output)
-		(text "ADC_DIN" (rect 0 0 51 14)(font "Arial" (font_size 8)))
-		(text "ADC_DIN" (rect 112 91 163 105)(font "Arial" (font_size 8)))
-		(line (pt 184 96)(pt 168 96))
-	)
-	(port
-		(pt 184 112)
-		(output)
-		(text "MD0" (rect 0 0 24 14)(font "Arial" (font_size 8)))
-		(text "MD0" (rect 139 107 163 121)(font "Arial" (font_size 8)))
-		(line (pt 184 112)(pt 168 112))
-	)
-	(port
-		(pt 184 128)
-		(output)
-		(text "MD1" (rect 0 0 24 14)(font "Arial" (font_size 8)))
-		(text "MD1" (rect 139 123 163 137)(font "Arial" (font_size 8)))
-		(line (pt 184 128)(pt 168 128))
-	)
-	(port
-		(pt 184 144)
-		(output)
-		(text "MI0" (rect 0 0 18 14)(font "Arial" (font_size 8)))
-		(text "MI0" (rect 145 139 163 153)(font "Arial" (font_size 8)))
-		(line (pt 184 144)(pt 168 144))
-	)
-	(port
-		(pt 184 160)
-		(output)
-		(text "MI1" (rect 0 0 18 14)(font "Arial" (font_size 8)))
-		(text "MI1" (rect 145 155 163 169)(font "Arial" (font_size 8)))
-		(line (pt 184 160)(pt 168 160))
-	)
-	(port
-		(pt 184 176)
-		(output)
-		(text "VELD" (rect 0 0 31 14)(font "Arial" (font_size 8)))
-		(text "VELD" (rect 132 171 163 185)(font "Arial" (font_size 8)))
-		(line (pt 184 176)(pt 168 176))
-	)
-	(port
-		(pt 184 192)
-		(output)
-		(text "VELI" (rect 0 0 25 14)(font "Arial" (font_size 8)))
-		(text "VELI" (rect 138 187 163 201)(font "Arial" (font_size 8)))
-		(line (pt 184 192)(pt 168 192))
-	)
-	(drawing
-		(rectangle (rect 16 16 168 208))
-	)
-)
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 (connector
 	(pt 808 232)
 	(pt 920 232)
@@ -1879,29 +1743,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-<<<<<<< HEAD
-=======
-	(pt -8 144)
-	(pt 56 144)
-	(bus)
-)
-(connector
-	(pt -8 160)
-	(pt 72 160)
-	(bus)
-)
-(connector
-	(pt -8 176)
-	(pt 48 176)
-	(bus)
-)
-(connector
-	(pt -8 192)
-	(pt 40 192)
-	(bus)
-)
-(connector
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	(pt -240 176)
 	(pt -224 176)
 	(bus)
@@ -2073,7 +1914,6 @@ applicable agreement for further details.
 )
 (connector
 	(pt 16 208)
-<<<<<<< HEAD
 	(pt 16 472)
 	(bus)
 )
@@ -2128,14 +1968,6 @@ applicable agreement for further details.
 	(text "Yaba[2..0]" (rect -8 256 43 268)(font "Arial" ))
 	(pt -8 272)
 	(pt 8 272)
-=======
-	(pt 16 712)
-	(bus)
-)
-(connector
-	(pt 16 712)
-	(pt 64 712)
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	(bus)
 )
 (junction (pt 320 264))

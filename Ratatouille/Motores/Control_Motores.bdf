@@ -883,7 +883,6 @@ applicable agreement for further details.
 	(pt 328 232)
 )
 (connector
-<<<<<<< HEAD
 	(text "clk_10KHz" (rect 352 456 403 468)(font "Arial" ))
 	(pt 352 472)
 	(pt 360 472)
@@ -899,32 +898,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-=======
-	(pt -696 -24)
-	(pt -616 -24)
-)
-(connector
-	(text "clk_10KHz" (rect 352 456 403 468)(font "Arial" ))
-	(pt 352 472)
-	(pt 360 472)
-)
-(connector
-	(pt -192 576)
-	(pt -104 576)
-	(bus)
-)
-(connector
-	(pt -104 544)
-	(pt -136 544)
-	(bus)
-)
-(connector
-	(text "rst" (rect -64 595 -52 607)(font "Arial" )(vertical))
-	(pt -48 600)
-	(pt -48 616)
-)
-(connector
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	(pt 16 560)
 	(pt 16 536)
 	(bus)
@@ -936,25 +909,10 @@ applicable agreement for further details.
 )
 (connector
 	(pt 312 608)
-<<<<<<< HEAD
-=======
-	(pt 312 200)
-	(bus)
-)
-(connector
-	(pt 312 608)
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	(pt 288 608)
 	(bus)
 )
 (connector
-<<<<<<< HEAD
-=======
-	(pt 328 648)
-	(pt 328 232)
-)
-(connector
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	(pt 280 648)
 	(pt 328 648)
 )
@@ -1052,14 +1010,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-<<<<<<< HEAD
-=======
-	(text "clk_20KHz" (rect 314 136 365 148)(font "Arial" ))
-	(pt 352 152)
-	(pt 304 152)
-)
-(connector
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 	(text "clk_20KHz" (rect -694 -16 -643 -4)(font "Arial" ))
 	(pt -696 0)
 	(pt -624 0)
@@ -1081,7 +1031,6 @@ applicable agreement for further details.
 	(pt -624 48)
 	(pt -624 384)
 )
-<<<<<<< HEAD
 (connector
 	(pt 312 200)
 	(pt 312 608)
@@ -1109,9 +1058,4 @@ applicable agreement for further details.
 (junction (pt 712 544))
 (junction (pt -624 48))
 (junction (pt -616 -24))
-=======
-(junction (pt -1064 96))
-(junction (pt 712 544))
-(junction (pt -624 48))
->>>>>>> 9b7ff377bc77e1fe38980f10943eaabc3df35041
 (text "VOLVER A CRONOMETRAR GIRO!!!    !" (rect -320 696 -103 710)(font "Arial" (font_size 8)))
