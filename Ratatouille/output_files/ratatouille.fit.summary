@@ -1,16 +1,16 @@
-Fitter Status : Successful - Fri Nov 22 18:03:03 2024
+Fitter Status : Successful - Sun Nov 24 15:31:18 2024
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : ratatouille
-Top-level Entity Name : seleccionadores_mux
+Top-level Entity Name : Matriz_ubicacion
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 750 / 22,320 ( 3 % )
-    Total combinational functions : 453 / 22,320 ( 2 % )
-    Dedicated logic registers : 597 / 22,320 ( 3 % )
-Total registers : 597
-Total pins : 20 / 154 ( 13 % )
+Total logic elements : 860 / 22,320 ( 4 % )
+    Total combinational functions : 820 / 22,320 ( 4 % )
+    Dedicated logic registers : 220 / 22,320 ( < 1 % )
+Total registers : 220
+Total pins : 53 / 154 ( 34 % )
 Total virtual pins : 0
-Total memory bits : 69,632 / 608,256 ( 11 % )
+Total memory bits : 0 / 608,256 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
-Total PLLs : 0 / 4 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )

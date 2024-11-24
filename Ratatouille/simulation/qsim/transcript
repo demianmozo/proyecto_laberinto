@@ -2,45 +2,44 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module seleccionadores_mux
+# -- Compiling module Matriz_ubicacion
 # 
 # Top level modules:
-# 	seleccionadores_mux
+# 	Matriz_ubicacion
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module seleccionadores_mux_vlg_sample_tst
-# -- Compiling module seleccionadores_mux_vlg_check_tst
-# -- Compiling module seleccionadores_mux_vlg_vec_tst
+# -- Compiling module Matriz_ubicacion_vlg_sample_tst
+# -- Compiling module Matriz_ubicacion_vlg_check_tst
+# -- Compiling module Matriz_ubicacion_vlg_vec_tst
 # 
 # Top level modules:
-# 	seleccionadores_mux_vlg_vec_tst
-# vsim -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.seleccionadores_mux_vlg_vec_tst 
-# Loading work.seleccionadores_mux_vlg_vec_tst
-# Loading work.seleccionadores_mux
-# Loading cycloneive_ver.cycloneive_jtag
+# 	Matriz_ubicacion_vlg_vec_tst
+# vsim -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.Matriz_ubicacion_vlg_vec_tst 
+# Loading work.Matriz_ubicacion_vlg_vec_tst
+# Loading work.Matriz_ubicacion
+# Loading cycloneive_ver.cycloneive_pll
+# Loading cycloneive_ver.cycloneive_m_cntr
+# Loading cycloneive_ver.cycloneive_n_cntr
+# Loading cycloneive_ver.cycloneive_scale_cntr
 # Loading altera_ver.dffeas
 # Loading cycloneive_ver.cycloneive_lcell_comb
-# Loading cycloneive_ver.cycloneive_ram_block
-# Loading cycloneive_ver.cycloneive_ram_register
-# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# Loading cycloneive_ver.cycloneive_io_ibuf
 # Loading cycloneive_ver.cycloneive_clkctrl
 # Loading cycloneive_ver.cycloneive_mux41
 # Loading cycloneive_ver.cycloneive_ena_reg
 # Loading cycloneive_ver.cycloneive_io_obuf
-# Loading cycloneive_ver.cycloneive_io_ibuf
-# Loading work.seleccionadores_mux_vlg_sample_tst
-# Loading work.seleccionadores_mux_vlg_check_tst
-# ** Warning: (vsim-3017) ratatouille.vt(465): [TFMPC] - Too few port connections. Expected 9, found 5.
-# 
-#         Region: /seleccionadores_mux_vlg_vec_tst/i1
-# ** Warning: (vsim-3722) ratatouille.vt(465): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
-# 
-# ** Warning: (vsim-3722) ratatouille.vt(465): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
-# 
-# ** Warning: (vsim-3722) ratatouille.vt(465): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
-# 
-# ** Warning: (vsim-3722) ratatouille.vt(465): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
-# 
+# Loading work.Matriz_ubicacion_vlg_sample_tst
+# Loading work.Matriz_ubicacion_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
-# Simulation passed !
-# ** Note: $finish    : ratatouille.vt(441)
-#    Time: 1 us  Iteration: 0  Instance: /seleccionadores_mux_vlg_vec_tst/tb_out
+#  Note : Cycloneive PLL was reset
+# Time: 0.000 ps  Instance: Matriz_ubicacion_vlg_vec_tst.i1.\inst33|inst3|inst4|altpll_component|auto_generated|pll1 
+#  Note : Cycloneive PLL locked to incoming clock
+# Time: 470000.000 ps  Instance: Matriz_ubicacion_vlg_vec_tst.i1.\inst33|inst3|inst4|altpll_component|auto_generated|pll1 
+# ERROR! Vector Mismatch for output port MD0 :: @time = 1000000.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port MI0 :: @time = 1000000.000 ps
+#      Expected value = 0
+#      Real value = 1
+#           2 mismatched vectors : Simulation failed !
+# ** Note: $finish    : ratatouille.vt(1071)
+#    Time: 10 us  Iteration: 0  Instance: /Matriz_ubicacion_vlg_vec_tst/tb_out

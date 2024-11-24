@@ -1,46 +1,3 @@
-/*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off ratatouille -c ratatouille --vector_source="//Mac/Home/Desktop/LABORATORIO_LABERINTO/Ratatouille/Waveform_todo.vwf" --testbench_file="//Mac/Home/Desktop/LABORATORIO_LABERINTO/Ratatouille/simulation/qsim/Waveform_todo.vwf.vht"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off ratatouille -c ratatouille --vector_source="//Mac/Home/Desktop/LABORATORIO_LABERINTO/Ratatouille/Waveform_todo.vwf" --testbench_file="//Mac/Home/Desktop/LABORATORIO_LABERINTO/Ratatouille/simulation/qsim/Waveform_todo.vwf.vht"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="//Mac/Home/Desktop/LABORATORIO_LABERINTO/Ratatouille/simulation/qsim/" ratatouille -c ratatouille</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="//Mac/Home/Desktop/LABORATORIO_LABERINTO/Ratatouille/simulation/qsim/" ratatouille -c ratatouille</tnetlist_cmd>
-<modelsim_script>onerror {exit -code 1}
-vlib work
-vcom -work work ratatouille.vho
-vcom -work work Waveform_todo.vwf.vht
-vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Matriz_ubicacion_vhd_vec_tst
-vcd file -direction ratatouille.msim.vcd
-vcd add -internal Matriz_ubicacion_vhd_vec_tst/*
-vcd add -internal Matriz_ubicacion_vhd_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
-run -all
-quit -f
-</modelsim_script>
-<modelsim_script_timing>onerror {exit -code 1}
-vlib work
-vcom -work work ratatouille.vho
-vcom -work work Waveform_todo.vwf.vht
-vsim -novopt -c -t 1ps -sdfmax Matriz_ubicacion_vhd_vec_tst/i1=ratatouille_vhd.sdo -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Matriz_ubicacion_vhd_vec_tst
-vcd file -direction ratatouille.msim.vcd
-vcd add -internal Matriz_ubicacion_vhd_vec_tst/*
-vcd add -internal Matriz_ubicacion_vhd_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
-run -all
-quit -f
-</modelsim_script_timing>
-<hdl_lang>vhdl</hdl_lang>
-</simulation_settings>*/
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
 editor if you plan to continue editing the block that represents it in
@@ -48,20 +5,19 @@ the Block Editor! File corruption is VERY likely to occur.
 */
 
 /*
-Copyright (C) 2024  Intel Corporation. All rights reserved.
-Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Intel Program License 
-Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
-agreement, including, without limitation, that your use is for
-the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
 */
 
 HEADER
@@ -1180,7 +1136,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "pos_act";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 12;
 	TREE_LEVEL = 0;
 	CHILDREN = 13, 14, 15, 16;
@@ -1190,7 +1146,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "pos_act[3]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 13;
 	TREE_LEVEL = 1;
 	PARENT = 12;
@@ -1200,7 +1156,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "pos_act[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 14;
 	TREE_LEVEL = 1;
 	PARENT = 12;
@@ -1210,7 +1166,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "pos_act[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 15;
 	TREE_LEVEL = 1;
 	PARENT = 12;
@@ -1220,7 +1176,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "pos_act[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 16;
 	TREE_LEVEL = 1;
 	PARENT = 12;

@@ -5,6 +5,10 @@ entity Matriz_ubicacion_vlg_check_tst is
         ADC_CS_N        : in     vl_logic;
         ADC_DIN         : in     vl_logic;
         ADC_SCLK        : in     vl_logic;
+        C_ad            : in     vl_logic_vector(3 downto 0);
+        C_at            : in     vl_logic_vector(3 downto 0);
+        C_der           : in     vl_logic_vector(3 downto 0);
+        C_izq           : in     vl_logic_vector(3 downto 0);
         CUENTAA         : in     vl_logic;
         GIROO           : in     vl_logic;
         MD0             : in     vl_logic;
@@ -22,10 +26,6 @@ entity Matriz_ubicacion_vlg_check_tst is
         SENTIDOO        : in     vl_logic;
         VELD            : in     vl_logic;
         VELI            : in     vl_logic;
-        Yaba            : in     vl_logic_vector(2 downto 0);
-        Yarr            : in     vl_logic_vector(2 downto 0);
-        Yder            : in     vl_logic_vector(2 downto 0);
-        Yizq            : in     vl_logic_vector(2 downto 0);
         sampler_rx      : in     vl_logic
     );
 end Matriz_ubicacion_vlg_check_tst;
