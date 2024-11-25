@@ -313,8 +313,8 @@ applicable agreement for further details.
 	(port
 		(pt 232 48)
 		(output)
-		(text "CLK20KHz" (rect 0 0 61 14)(font "Arial" (font_size 8)))
-		(text "CLK20KHz" (rect 150 43 211 57)(font "Arial" (font_size 8)))
+		(text "CLK1MHz" (rect 0 0 55 14)(font "Arial" (font_size 8)))
+		(text "CLK1MHz" (rect 156 43 211 57)(font "Arial" (font_size 8)))
 		(line (pt 232 48)(pt 216 48))
 	)
 	(port
@@ -449,6 +449,20 @@ applicable agreement for further details.
 		(text "C_at[3..0]" (rect 0 0 54 14)(font "Arial" (font_size 8)))
 		(text "C_at[3..0]" (rect 157 347 211 361)(font "Arial" (font_size 8)))
 		(line (pt 232 352)(pt 216 352)(line_width 3))
+	)
+	(port
+		(pt 232 368)
+		(output)
+		(text "CH0[11..0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "CH0[11..0]" (rect 152 363 211 377)(font "Arial" (font_size 8)))
+		(line (pt 232 368)(pt 216 368)(line_width 3))
+	)
+	(port
+		(pt 232 384)
+		(output)
+		(text "CH1[11..0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "CH1[11..0]" (rect 152 379 211 393)(font "Arial" (font_size 8)))
+		(line (pt 232 384)(pt 216 384)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 216 688))

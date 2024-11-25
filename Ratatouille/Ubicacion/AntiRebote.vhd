@@ -26,8 +26,8 @@ begin
             -- Reinicia el contador y las señales
             cnt <= 0;
             btn_reg <= '0';
-            btn_stable <= '0';
-            btn_out <= '0';
+            btn_stable <= '1';
+            btn_out <= '1';
         elsif rising_edge(clk) then
             if btn_in = btn_reg then
                 -- Si el botón sigue igual, incrementamos el contador

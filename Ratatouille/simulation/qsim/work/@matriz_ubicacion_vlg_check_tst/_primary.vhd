@@ -20,7 +20,6 @@ entity Matriz_ubicacion_vlg_check_tst is
         P_at            : in     vl_logic_vector(2 downto 0);
         P_der           : in     vl_logic_vector(2 downto 0);
         P_izq           : in     vl_logic_vector(2 downto 0);
-        PARED           : in     vl_logic;
         pos_act         : in     vl_logic_vector(3 downto 0);
         sent_act        : in     vl_logic_vector(1 downto 0);
         SENTIDOO        : in     vl_logic;

@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 200 240)
+	(rect 16 16 200 272)
 	(text "Control_Motores" (rect 5 0 98 14)(font "Arial" (font_size 8)))
-	(text "inst" (rect 8 208 25 220)(font "Arial" ))
+	(text "inst" (rect 8 240 25 252)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -68,8 +68,8 @@ applicable agreement for further details.
 	(port
 		(pt 184 48)
 		(output)
-		(text "CLK20KHz" (rect 0 0 61 14)(font "Arial" (font_size 8)))
-		(text "CLK20KHz" (rect 102 43 163 57)(font "Arial" (font_size 8)))
+		(text "CLK1MHz" (rect 0 0 55 14)(font "Arial" (font_size 8)))
+		(text "CLK1MHz" (rect 108 43 163 57)(font "Arial" (font_size 8)))
 		(line (pt 184 48)(pt 168 48))
 	)
 	(port
@@ -135,7 +135,21 @@ applicable agreement for further details.
 		(text "VELI" (rect 138 187 163 201)(font "Arial" (font_size 8)))
 		(line (pt 184 192)(pt 168 192))
 	)
+	(port
+		(pt 184 208)
+		(output)
+		(text "CH0[11..0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "CH0[11..0]" (rect 104 203 163 217)(font "Arial" (font_size 8)))
+		(line (pt 184 208)(pt 168 208)(line_width 3))
+	)
+	(port
+		(pt 184 224)
+		(output)
+		(text "CH1[11..0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "CH1[11..0]" (rect 104 219 163 233)(font "Arial" (font_size 8)))
+		(line (pt 184 224)(pt 168 224)(line_width 3))
+	)
 	(drawing
-		(rectangle (rect 16 16 168 208))
+		(rectangle (rect 16 16 168 240))
 	)
 )

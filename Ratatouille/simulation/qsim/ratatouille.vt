@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/24/2024 15:32:24"
+// Generated on "11/25/2024 18:04:05"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    Matriz_ubicacion
 // 
@@ -81,7 +81,6 @@ module Matriz_ubicacion_vlg_check_tst (
 	P_at,
 	P_der,
 	P_izq,
-	PARED,
 	pos_act,
 	sent_act,
 	SENTIDOO,
@@ -107,7 +106,6 @@ input [2:0] P_ad;
 input [2:0] P_at;
 input [2:0] P_der;
 input [2:0] P_izq;
-input  PARED;
 input [3:0] pos_act;
 input [1:0] sent_act;
 input  SENTIDOO;
@@ -133,7 +131,6 @@ reg [2:0] P_ad_expected;
 reg [2:0] P_at_expected;
 reg [2:0] P_der_expected;
 reg [2:0] P_izq_expected;
-reg  PARED_expected;
 reg [3:0] pos_act_expected;
 reg [1:0] sent_act_expected;
 reg  SENTIDOO_expected;
@@ -158,7 +155,6 @@ reg [2:0] P_ad_prev;
 reg [2:0] P_at_prev;
 reg [2:0] P_der_prev;
 reg [2:0] P_izq_prev;
-reg  PARED_prev;
 reg [3:0] pos_act_prev;
 reg [1:0] sent_act_prev;
 reg  SENTIDOO_prev;
@@ -208,7 +204,7 @@ reg trigger;
 integer i;
 integer nummismatches;
 
-reg [1:24] on_first_change ;
+reg [1:23] on_first_change ;
 
 
 initial
@@ -216,7 +212,7 @@ begin
 trigger = 0;
 i = 0;
 nummismatches = 0;
-on_first_change = 24'b1;
+on_first_change = 23'b1;
 end
 
 // update real /o prevs
@@ -241,7 +237,6 @@ begin
 	P_at_prev = P_at;
 	P_der_prev = P_der;
 	P_izq_prev = P_izq;
-	PARED_prev = PARED;
 	pos_act_prev = pos_act;
 	sent_act_prev = sent_act;
 	SENTIDOO_prev = SENTIDOO;
@@ -307,197 +302,235 @@ end
 initial
 begin
 	CUENTAA_expected = 1'bX;
+	CUENTAA_expected = #9999000 1'b0;
 end 
 
 // expected GIROO
 initial
 begin
 	GIROO_expected = 1'bX;
+	GIROO_expected = #9999000 1'b0;
 end 
 
 // expected MUROO
 initial
 begin
 	MUROO_expected = 1'bX;
+	MUROO_expected = #9999000 1'b0;
 end 
 
 // expected SENTIDOO
 initial
 begin
 	SENTIDOO_expected = 1'bX;
+	SENTIDOO_expected = #9999000 1'b0;
 end 
 // expected pos_act[ 3 ]
 initial
 begin
 	pos_act_expected[3] = 1'bX;
+	pos_act_expected[3] = #9999000 1'b0;
 end 
 // expected pos_act[ 2 ]
 initial
 begin
 	pos_act_expected[2] = 1'bX;
+	pos_act_expected[2] = #9999000 1'b0;
 end 
 // expected pos_act[ 1 ]
 initial
 begin
 	pos_act_expected[1] = 1'bX;
+	pos_act_expected[1] = #9999000 1'b0;
 end 
 // expected pos_act[ 0 ]
 initial
 begin
 	pos_act_expected[0] = 1'bX;
+	pos_act_expected[0] = #9999000 1'b0;
 end 
 // expected sent_act[ 1 ]
 initial
 begin
 	sent_act_expected[1] = 1'bX;
+	sent_act_expected[1] = #9999000 1'b0;
 end 
 // expected sent_act[ 0 ]
 initial
 begin
 	sent_act_expected[0] = 1'bX;
+	sent_act_expected[0] = #9999000 1'b0;
 end 
 // expected P_ad[ 2 ]
 initial
 begin
 	P_ad_expected[2] = 1'bX;
+	P_ad_expected[2] = #9999000 1'b0;
 end 
 // expected P_ad[ 1 ]
 initial
 begin
 	P_ad_expected[1] = 1'bX;
+	P_ad_expected[1] = #9999000 1'b0;
 end 
 // expected P_ad[ 0 ]
 initial
 begin
 	P_ad_expected[0] = 1'bX;
+	P_ad_expected[0] = #9999000 1'b0;
 end 
 // expected P_at[ 2 ]
 initial
 begin
 	P_at_expected[2] = 1'bX;
+	P_at_expected[2] = #9999000 1'b0;
 end 
 // expected P_at[ 1 ]
 initial
 begin
 	P_at_expected[1] = 1'bX;
+	P_at_expected[1] = #9999000 1'b0;
 end 
 // expected P_at[ 0 ]
 initial
 begin
 	P_at_expected[0] = 1'bX;
+	P_at_expected[0] = #9999000 1'b0;
 end 
 // expected P_der[ 2 ]
 initial
 begin
 	P_der_expected[2] = 1'bX;
+	P_der_expected[2] = #9999000 1'b0;
 end 
 // expected P_der[ 1 ]
 initial
 begin
 	P_der_expected[1] = 1'bX;
+	P_der_expected[1] = #9999000 1'b0;
 end 
 // expected P_der[ 0 ]
 initial
 begin
 	P_der_expected[0] = 1'bX;
+	P_der_expected[0] = #9999000 1'b0;
 end 
 // expected P_izq[ 2 ]
 initial
 begin
 	P_izq_expected[2] = 1'bX;
+	P_izq_expected[2] = #9999000 1'b0;
 end 
 // expected P_izq[ 1 ]
 initial
 begin
 	P_izq_expected[1] = 1'bX;
+	P_izq_expected[1] = #9999000 1'b0;
 end 
 // expected P_izq[ 0 ]
 initial
 begin
 	P_izq_expected[0] = 1'bX;
+	P_izq_expected[0] = #9999000 1'b0;
 end 
 // expected C_ad[ 3 ]
 initial
 begin
 	C_ad_expected[3] = 1'bX;
+	C_ad_expected[3] = #9999000 1'b0;
 end 
 // expected C_ad[ 2 ]
 initial
 begin
 	C_ad_expected[2] = 1'bX;
+	C_ad_expected[2] = #9999000 1'b0;
 end 
 // expected C_ad[ 1 ]
 initial
 begin
 	C_ad_expected[1] = 1'bX;
+	C_ad_expected[1] = #9999000 1'b0;
 end 
 // expected C_ad[ 0 ]
 initial
 begin
 	C_ad_expected[0] = 1'bX;
+	C_ad_expected[0] = #9999000 1'b0;
 end 
 // expected C_at[ 3 ]
 initial
 begin
 	C_at_expected[3] = 1'bX;
+	C_at_expected[3] = #9999000 1'b0;
 end 
 // expected C_at[ 2 ]
 initial
 begin
 	C_at_expected[2] = 1'bX;
+	C_at_expected[2] = #9999000 1'b0;
 end 
 // expected C_at[ 1 ]
 initial
 begin
 	C_at_expected[1] = 1'bX;
+	C_at_expected[1] = #9999000 1'b0;
 end 
 // expected C_at[ 0 ]
 initial
 begin
 	C_at_expected[0] = 1'bX;
+	C_at_expected[0] = #9999000 1'b0;
 end 
 // expected C_der[ 3 ]
 initial
 begin
 	C_der_expected[3] = 1'bX;
+	C_der_expected[3] = #9999000 1'b0;
 end 
 // expected C_der[ 2 ]
 initial
 begin
 	C_der_expected[2] = 1'bX;
+	C_der_expected[2] = #9999000 1'b0;
 end 
 // expected C_der[ 1 ]
 initial
 begin
 	C_der_expected[1] = 1'bX;
+	C_der_expected[1] = #9999000 1'b0;
 end 
 // expected C_der[ 0 ]
 initial
 begin
 	C_der_expected[0] = 1'bX;
+	C_der_expected[0] = #9999000 1'b0;
 end 
 // expected C_izq[ 3 ]
 initial
 begin
 	C_izq_expected[3] = 1'bX;
+	C_izq_expected[3] = #9999000 1'b0;
 end 
 // expected C_izq[ 2 ]
 initial
 begin
 	C_izq_expected[2] = 1'bX;
+	C_izq_expected[2] = #9999000 1'b0;
 end 
 // expected C_izq[ 1 ]
 initial
 begin
 	C_izq_expected[1] = 1'bX;
+	C_izq_expected[1] = #9999000 1'b0;
 end 
 // expected C_izq[ 0 ]
 initial
 begin
 	C_izq_expected[0] = 1'bX;
+	C_izq_expected[0] = #9999000 1'b0;
 end 
 // generate trigger
-always @(ADC_CS_N_expected or ADC_CS_N or ADC_DIN_expected or ADC_DIN or ADC_SCLK_expected or ADC_SCLK or C_ad_expected or C_ad or C_at_expected or C_at or C_der_expected or C_der or C_izq_expected or C_izq or CUENTAA_expected or CUENTAA or GIROO_expected or GIROO or MD0_expected or MD0 or MD1_expected or MD1 or MI0_expected or MI0 or MI1_expected or MI1 or MUROO_expected or MUROO or P_ad_expected or P_ad or P_at_expected or P_at or P_der_expected or P_der or P_izq_expected or P_izq or PARED_expected or PARED or pos_act_expected or pos_act or sent_act_expected or sent_act or SENTIDOO_expected or SENTIDOO or VELD_expected or VELD or VELI_expected or VELI)
+always @(ADC_CS_N_expected or ADC_CS_N or ADC_DIN_expected or ADC_DIN or ADC_SCLK_expected or ADC_SCLK or C_ad_expected or C_ad or C_at_expected or C_at or C_der_expected or C_der or C_izq_expected or C_izq or CUENTAA_expected or CUENTAA or GIROO_expected or GIROO or MD0_expected or MD0 or MD1_expected or MD1 or MI0_expected or MI0 or MI1_expected or MI1 or MUROO_expected or MUROO or P_ad_expected or P_ad or P_at_expected or P_at or P_der_expected or P_der or P_izq_expected or P_izq or pos_act_expected or pos_act or sent_act_expected or sent_act or SENTIDOO_expected or SENTIDOO or VELD_expected or VELD or VELI_expected or VELI)
 begin
 	trigger <= ~trigger;
 end
@@ -507,8 +540,8 @@ begin
 `ifdef debug_tbench
 	$display("Scanning pattern %d @time = %t",i,$realtime );
 	i = i + 1;
-	$display("| expected ADC_CS_N = %b | expected ADC_DIN = %b | expected ADC_SCLK = %b | expected C_ad = %b | expected C_at = %b | expected C_der = %b | expected C_izq = %b | expected CUENTAA = %b | expected GIROO = %b | expected MD0 = %b | expected MD1 = %b | expected MI0 = %b | expected MI1 = %b | expected MUROO = %b | expected P_ad = %b | expected P_at = %b | expected P_der = %b | expected P_izq = %b | expected PARED = %b | expected pos_act = %b | expected sent_act = %b | expected SENTIDOO = %b | expected VELD = %b | expected VELI = %b | ",ADC_CS_N_expected_prev,ADC_DIN_expected_prev,ADC_SCLK_expected_prev,C_ad_expected_prev,C_at_expected_prev,C_der_expected_prev,C_izq_expected_prev,CUENTAA_expected_prev,GIROO_expected_prev,MD0_expected_prev,MD1_expected_prev,MI0_expected_prev,MI1_expected_prev,MUROO_expected_prev,P_ad_expected_prev,P_at_expected_prev,P_der_expected_prev,P_izq_expected_prev,PARED_expected_prev,pos_act_expected_prev,sent_act_expected_prev,SENTIDOO_expected_prev,VELD_expected_prev,VELI_expected_prev);
-	$display("| real ADC_CS_N = %b | real ADC_DIN = %b | real ADC_SCLK = %b | real C_ad = %b | real C_at = %b | real C_der = %b | real C_izq = %b | real CUENTAA = %b | real GIROO = %b | real MD0 = %b | real MD1 = %b | real MI0 = %b | real MI1 = %b | real MUROO = %b | real P_ad = %b | real P_at = %b | real P_der = %b | real P_izq = %b | real PARED = %b | real pos_act = %b | real sent_act = %b | real SENTIDOO = %b | real VELD = %b | real VELI = %b | ",ADC_CS_N_prev,ADC_DIN_prev,ADC_SCLK_prev,C_ad_prev,C_at_prev,C_der_prev,C_izq_prev,CUENTAA_prev,GIROO_prev,MD0_prev,MD1_prev,MI0_prev,MI1_prev,MUROO_prev,P_ad_prev,P_at_prev,P_der_prev,P_izq_prev,PARED_prev,pos_act_prev,sent_act_prev,SENTIDOO_prev,VELD_prev,VELI_prev);
+	$display("| expected ADC_CS_N = %b | expected ADC_DIN = %b | expected ADC_SCLK = %b | expected C_ad = %b | expected C_at = %b | expected C_der = %b | expected C_izq = %b | expected CUENTAA = %b | expected GIROO = %b | expected MD0 = %b | expected MD1 = %b | expected MI0 = %b | expected MI1 = %b | expected MUROO = %b | expected P_ad = %b | expected P_at = %b | expected P_der = %b | expected P_izq = %b | expected pos_act = %b | expected sent_act = %b | expected SENTIDOO = %b | expected VELD = %b | expected VELI = %b | ",ADC_CS_N_expected_prev,ADC_DIN_expected_prev,ADC_SCLK_expected_prev,C_ad_expected_prev,C_at_expected_prev,C_der_expected_prev,C_izq_expected_prev,CUENTAA_expected_prev,GIROO_expected_prev,MD0_expected_prev,MD1_expected_prev,MI0_expected_prev,MI1_expected_prev,MUROO_expected_prev,P_ad_expected_prev,P_at_expected_prev,P_der_expected_prev,P_izq_expected_prev,pos_act_expected_prev,sent_act_expected_prev,SENTIDOO_expected_prev,VELD_expected_prev,VELI_expected_prev);
+	$display("| real ADC_CS_N = %b | real ADC_DIN = %b | real ADC_SCLK = %b | real C_ad = %b | real C_at = %b | real C_der = %b | real C_izq = %b | real CUENTAA = %b | real GIROO = %b | real MD0 = %b | real MD1 = %b | real MI0 = %b | real MI1 = %b | real MUROO = %b | real P_ad = %b | real P_at = %b | real P_der = %b | real P_izq = %b | real pos_act = %b | real sent_act = %b | real SENTIDOO = %b | real VELD = %b | real VELI = %b | ",ADC_CS_N_prev,ADC_DIN_prev,ADC_SCLK_prev,C_ad_prev,C_at_prev,C_der_prev,C_izq_prev,CUENTAA_prev,GIROO_prev,MD0_prev,MD1_prev,MI0_prev,MI1_prev,MUROO_prev,P_ad_prev,P_at_prev,P_der_prev,P_izq_prev,pos_act_prev,sent_act_prev,SENTIDOO_prev,VELD_prev,VELI_prev);
 `endif
 	if (
 		( C_ad_expected_prev[0] !== 1'bx ) && ( C_ad_prev[0] !== C_ad_expected_prev[0] )
@@ -968,92 +1001,92 @@ begin
 	if (
 		( pos_act_expected_prev[0] !== 1'bx ) && ( pos_act_prev[0] !== pos_act_expected_prev[0] )
 		&& ((pos_act_expected_prev[0] !== last_pos_act_exp[0]) ||
-			on_first_change[20])
+			on_first_change[19])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port pos_act[0] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", pos_act_expected_prev);
 		$display ("     Real value = %b", pos_act_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[20] = 1'b0;
+		on_first_change[19] = 1'b0;
 		last_pos_act_exp[0] = pos_act_expected_prev[0];
 	end
 	if (
 		( pos_act_expected_prev[1] !== 1'bx ) && ( pos_act_prev[1] !== pos_act_expected_prev[1] )
 		&& ((pos_act_expected_prev[1] !== last_pos_act_exp[1]) ||
-			on_first_change[20])
+			on_first_change[19])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port pos_act[1] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", pos_act_expected_prev);
 		$display ("     Real value = %b", pos_act_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[20] = 1'b0;
+		on_first_change[19] = 1'b0;
 		last_pos_act_exp[1] = pos_act_expected_prev[1];
 	end
 	if (
 		( pos_act_expected_prev[2] !== 1'bx ) && ( pos_act_prev[2] !== pos_act_expected_prev[2] )
 		&& ((pos_act_expected_prev[2] !== last_pos_act_exp[2]) ||
-			on_first_change[20])
+			on_first_change[19])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port pos_act[2] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", pos_act_expected_prev);
 		$display ("     Real value = %b", pos_act_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[20] = 1'b0;
+		on_first_change[19] = 1'b0;
 		last_pos_act_exp[2] = pos_act_expected_prev[2];
 	end
 	if (
 		( pos_act_expected_prev[3] !== 1'bx ) && ( pos_act_prev[3] !== pos_act_expected_prev[3] )
 		&& ((pos_act_expected_prev[3] !== last_pos_act_exp[3]) ||
-			on_first_change[20])
+			on_first_change[19])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port pos_act[3] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", pos_act_expected_prev);
 		$display ("     Real value = %b", pos_act_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[20] = 1'b0;
+		on_first_change[19] = 1'b0;
 		last_pos_act_exp[3] = pos_act_expected_prev[3];
 	end
 	if (
 		( sent_act_expected_prev[0] !== 1'bx ) && ( sent_act_prev[0] !== sent_act_expected_prev[0] )
 		&& ((sent_act_expected_prev[0] !== last_sent_act_exp[0]) ||
-			on_first_change[21])
+			on_first_change[20])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port sent_act[0] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", sent_act_expected_prev);
 		$display ("     Real value = %b", sent_act_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[21] = 1'b0;
+		on_first_change[20] = 1'b0;
 		last_sent_act_exp[0] = sent_act_expected_prev[0];
 	end
 	if (
 		( sent_act_expected_prev[1] !== 1'bx ) && ( sent_act_prev[1] !== sent_act_expected_prev[1] )
 		&& ((sent_act_expected_prev[1] !== last_sent_act_exp[1]) ||
-			on_first_change[21])
+			on_first_change[20])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port sent_act[1] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", sent_act_expected_prev);
 		$display ("     Real value = %b", sent_act_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[21] = 1'b0;
+		on_first_change[20] = 1'b0;
 		last_sent_act_exp[1] = sent_act_expected_prev[1];
 	end
 	if (
 		( SENTIDOO_expected_prev !== 1'bx ) && ( SENTIDOO_prev !== SENTIDOO_expected_prev )
 		&& ((SENTIDOO_expected_prev !== last_SENTIDOO_exp) ||
-			on_first_change[22])
+			on_first_change[21])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port SENTIDOO :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", SENTIDOO_expected_prev);
 		$display ("     Real value = %b", SENTIDOO_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[22] = 1'b0;
+		on_first_change[21] = 1'b0;
 		last_SENTIDOO_exp = SENTIDOO_expected_prev;
 	end
 
@@ -1063,7 +1096,7 @@ initial
 
 begin 
 $timeformat(-12,3," ps",6);
-#10000000;
+#100000000;
 if (nummismatches > 0)
 	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
 else
@@ -1099,7 +1132,6 @@ wire [2:0] P_ad;
 wire [2:0] P_at;
 wire [2:0] P_der;
 wire [2:0] P_izq;
-wire PARED;
 wire [3:0] pos_act;
 wire [1:0] sent_act;
 wire SENTIDOO;
@@ -1131,7 +1163,6 @@ Matriz_ubicacion i1 (
 	.P_at(P_at),
 	.P_der(P_der),
 	.P_izq(P_izq),
-	.PARED(PARED),
 	.pos_act(pos_act),
 	.Reset1(Reset1),
 	.SENSOR_LINEA(SENSOR_LINEA),
@@ -1154,20 +1185,20 @@ end
 initial
 begin
 	Reset1 = 1'b0;
-	Reset1 = #300000 1'b1;
+	Reset1 = #4000000 1'b1;
 end 
 
 // SENSOR_LINEA
 initial
 begin
 	SENSOR_LINEA = 1'b1;
-	SENSOR_LINEA = #2700000 1'b0;
-	# 300000;
-	repeat(2)
+	SENSOR_LINEA = #3200000 1'b0;
+	# 800000;
+	repeat(4)
 	begin
 		SENSOR_LINEA = 1'b1;
-		SENSOR_LINEA = #2700000 1'b0;
-		# 300000;
+		SENSOR_LINEA = #19200000 1'b0;
+		# 800000;
 	end
 	SENSOR_LINEA = 1'b1;
 end 
@@ -1206,7 +1237,6 @@ Matriz_ubicacion_vlg_check_tst tb_out(
 	.P_at(P_at),
 	.P_der(P_der),
 	.P_izq(P_izq),
-	.PARED(PARED),
 	.pos_act(pos_act),
 	.sent_act(sent_act),
 	.SENTIDOO(SENTIDOO),
