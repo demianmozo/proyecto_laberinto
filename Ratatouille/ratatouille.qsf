@@ -38,10 +38,10 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE22F17C6
-set_global_assignment -name TOP_LEVEL_ENTITY Matriz_ubicacion
+set_global_assignment -name TOP_LEVEL_ENTITY sumador_3_bits
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:56:38  NOVEMBER 11, 2024"
-set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -84,15 +84,11 @@ set_location_assignment PIN_J15 -to Reset1
 set_location_assignment PIN_R8 -to CLK
 set_global_assignment -name ENABLE_SIGNALTAP ON
 set_global_assignment -name USE_SIGNALTAP_FILE output_files/stp1.stp
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_D1 -to LED_0
 set_location_assignment PIN_A11 -to LED_1
 set_location_assignment PIN_B13 -to LED_2
 set_location_assignment PIN_A13 -to LED_3
 set_location_assignment PIN_A15 -to LED_4
-set_global_assignment -name SLD_FILE "C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/output_files/stp1_auto_stripped.stp"
 set_global_assignment -name BDF_FILE Ubicacion/MicroMouseCounterSCH.bdf
 set_global_assignment -name VHDL_FILE Ubicacion/DetectorSM.vhd
 set_global_assignment -name VHDL_FILE Ubicacion/MicroMouseCounter.vhd
@@ -146,6 +142,9 @@ set_global_assignment -name BDF_FILE Motores/Control_Motores.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform_todo(linea recta).vwf"
 set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform_todo(zigzag).vwf"
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform_ian.vwf
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform_callejon.vwf
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "D:/Documents/facultad/LaboratorioRaton/proyecto_laberinto/Ratatouille/Waveform_callejon.vwf"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

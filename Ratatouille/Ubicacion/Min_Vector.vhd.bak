@@ -4,11 +4,11 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity Min_Vector is
-    Port ( A : in STD_LOGIC_VECTOR(3 downto 0);
-           B : in STD_LOGIC_VECTOR(3 downto 0);
-           C : in STD_LOGIC_VECTOR(3 downto 0);
-           D : in STD_LOGIC_VECTOR(3 downto 0);
-           Min_Out : out STD_LOGIC_VECTOR(3 downto 0)
+    Port ( A : in STD_LOGIC_VECTOR(2 downto 0);
+           B : in STD_LOGIC_VECTOR(2 downto 0);
+           C : in STD_LOGIC_VECTOR(2 downto 0);
+           D : in STD_LOGIC_VECTOR(2 downto 0);
+           Min_Out : out STD_LOGIC_VECTOR(2 downto 0)
          );
 end Min_Vector;
 
