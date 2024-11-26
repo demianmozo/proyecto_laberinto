@@ -145,5 +145,7 @@ set_global_assignment -name VHDL_FILE Motores/temporizador_doble.vhd
 set_global_assignment -name BDF_FILE Motores/Control_Motores.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform_todo(linea recta).vwf"
 set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform_todo(zigzag).vwf"
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform_ian.vwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Waveform_todo.vwf"
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform_callejon.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "D:/Documents/facultad/LaboratorioRaton/proyecto_laberinto/Ratatouille/Waveform_callejon.vwf"

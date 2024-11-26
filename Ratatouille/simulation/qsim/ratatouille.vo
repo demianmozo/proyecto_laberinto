@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-// DATE "11/25/2024 23:50:14"
+// DATE "11/26/2024 12:46:04"
 
 // 
 // Device: Altera EP4CE22F17C6 Package FBGA256
@@ -1041,6 +1041,15 @@ wire \inst33|inst1|inst|inst5|Mux1~2_combout ;
 wire \inst33|inst1|inst|inst5|Mux1~3_combout ;
 wire \inst33|inst1|inst|inst5|Mux1~4_combout ;
 wire \inst33|inst1|inst4|Y[1]~7_combout ;
+wire [10:0] \inst33|inst|inst8|adc_mega_0|ADC_CTRL|shift_reg ;
+wire [3:0] \inst33|inst|inst8|adc_mega_0|ADC_CTRL|sclk_counter ;
+wire [11:0] \inst33|inst|inst8|adc_mega_0|ADC_CTRL|reading1 ;
+wire [11:0] \inst33|inst|inst8|adc_mega_0|ADC_CTRL|reading0 ;
+wire [2:0] \inst33|inst|inst8|adc_mega_0|ADC_CTRL|next_addr ;
+wire [7:0] \inst33|inst|inst8|adc_mega_0|ADC_CTRL|counter ;
+wire [2:0] \inst33|inst|inst8|adc_mega_0|ADC_CTRL|address ;
+wire [5:0] \inst33|inst|inst8|adc_mega_0|ADC_CTRL|addr_shift_reg ;
+wire [4:0] \inst33|inst|inst4|altpll_component|auto_generated|wire_pll1_clk ;
 wire [16:0] \inst33|inst|inst2|tiempo_limite ;
 wire [16:0] \inst33|inst|inst2|contador ;
 wire [1:0] \inst33|inst6|q_reg ;
@@ -1100,15 +1109,6 @@ wire [2:0] \inst12|inst17|$00000|auto_generated|result_node ;
 wire [2:0] \inst12|inst7|$00000|auto_generated|result_node ;
 wire [11:0] \inst33|inst|inst8|adc_mega_0|CH1 ;
 wire [11:0] \inst33|inst|inst8|adc_mega_0|CH0 ;
-wire [10:0] \inst33|inst|inst8|adc_mega_0|ADC_CTRL|shift_reg ;
-wire [3:0] \inst33|inst|inst8|adc_mega_0|ADC_CTRL|sclk_counter ;
-wire [11:0] \inst33|inst|inst8|adc_mega_0|ADC_CTRL|reading1 ;
-wire [11:0] \inst33|inst|inst8|adc_mega_0|ADC_CTRL|reading0 ;
-wire [2:0] \inst33|inst|inst8|adc_mega_0|ADC_CTRL|next_addr ;
-wire [7:0] \inst33|inst|inst8|adc_mega_0|ADC_CTRL|counter ;
-wire [2:0] \inst33|inst|inst8|adc_mega_0|ADC_CTRL|address ;
-wire [5:0] \inst33|inst|inst8|adc_mega_0|ADC_CTRL|addr_shift_reg ;
-wire [4:0] \inst33|inst|inst4|altpll_component|auto_generated|wire_pll1_clk ;
 
 wire [4:0] \inst33|inst|inst4|altpll_component|auto_generated|pll1_CLK_bus ;
 

@@ -1,5 +1,5 @@
 Flow report for ratatouille
-Mon Nov 25 23:50:15 2024
+Tue Nov 26 12:46:04 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon Nov 25 23:50:15 2024           ;
+; Flow Status                        ; Successful - Tue Nov 26 12:46:04 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ratatouille                                     ;
 ; Top-level Entity Name              ; Matriz_ubicacion                                ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/25/2024 23:49:02 ;
+; Start date & time ; 11/26/2024 11:29:14 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ratatouille         ;
 +-------------------+---------------------+
@@ -75,10 +75,10 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------------------------------------------------------------+---------------+------------------+-----------------------+
 ; Assignment Name                      ; Value                                                                                       ; Default Value ; Entity Name      ; Section Id            ;
 +--------------------------------------+---------------------------------------------------------------------------------------------+---------------+------------------+-----------------------+
-; COMPILER_SIGNATURE_ID                ; 31672459905691.173258934213852                                                              ; --            ; --               ; --                    ;
+; COMPILER_SIGNATURE_ID                ; 134660533428609.173263135411476                                                             ; --            ; --               ; --                    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; uut                                                                                         ; --            ; --               ; tb_temporizador_doble ;
 ; EDA_DESIGN_INSTANCE_NAME             ; uut                                                                                         ; --            ; --               ; tb_Control_Motores    ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; On                                                                                          ; --            ; --               ; eda_simulation        ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                                                                         ; --            ; --               ; eda_simulation        ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_Control_Motores                                                                          ; --            ; --               ; eda_simulation        ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                                                                                 ; --            ; --               ; eda_simulation        ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)                                                                   ; <None>        ; --               ; --                    ;
@@ -113,14 +113,24 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 4655 MB             ; 00:00:08                           ;
-; Fitter                    ; 00:00:18     ; 1.0                     ; 4946 MB             ; 00:00:13                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4544 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 4632 MB             ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4518 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4525 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4525 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:40     ; --                      ; --                  ; 00:00:29                           ;
+; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 4649 MB             ; 00:00:10                           ;
+; Fitter                    ; 00:00:13     ; 1.0                     ; 4943 MB             ; 00:00:13                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4541 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4633 MB             ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4531 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4523 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4539 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4523 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4523 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4523 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4523 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4523 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4539 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4523 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4523 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4523 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4523 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:47     ; --                      ; --                  ; 00:00:45                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -129,13 +139,23 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; Asus_de_Monica   ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; Asus_de_Monica   ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; Asus_de_Monica   ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; Asus_de_Monica   ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Asus_de_Monica   ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Asus_de_Monica   ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Asus_de_Monica   ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; Ian-PC           ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; Ian-PC           ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Ian-PC           ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Ian-PC           ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Ian-PC           ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Ian-PC           ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Ian-PC           ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Ian-PC           ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Ian-PC           ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Ian-PC           ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Ian-PC           ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Ian-PC           ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Ian-PC           ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Ian-PC           ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Ian-PC           ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Ian-PC           ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Ian-PC           ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -147,7 +167,17 @@ quartus_fit --read_settings_files=off --write_settings_files=off ratatouille -c 
 quartus_asm --read_settings_files=off --write_settings_files=off ratatouille -c ratatouille
 quartus_sta ratatouille -c ratatouille
 quartus_eda --read_settings_files=off --write_settings_files=off ratatouille -c ratatouille
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ratatouille -c ratatouille --vector_source=C:/Users/monig/Documents/proyecto_laberinto/Ratatouille/Waveform_todo.vwf --testbench_file=./simulation/qsim/ratatouille.vt
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ratatouille -c ratatouille --vector_source=D:/Documents/facultad/LaboratorioRaton/proyecto_laberinto/Ratatouille/Waveform_ian.vwf --testbench_file=./simulation/qsim/ratatouille.vt
+quartus_eda --functional=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog ratatouille -c ratatouille
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ratatouille -c ratatouille --vector_source=D:/Documents/facultad/LaboratorioRaton/proyecto_laberinto/Ratatouille/Waveform_todo(zigzag).vwf --testbench_file=./simulation/qsim/ratatouille.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ratatouille -c ratatouille
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ratatouille -c ratatouille --vector_source=D:/Documents/facultad/LaboratorioRaton/proyecto_laberinto/Ratatouille/Waveform_ian.vwf --testbench_file=./simulation/qsim/ratatouille.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ratatouille -c ratatouille
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ratatouille -c ratatouille --vector_source=D:/Documents/facultad/LaboratorioRaton/proyecto_laberinto/Ratatouille/Waveform_todo(zigzag).vwf --testbench_file=./simulation/qsim/ratatouille.vt
+quartus_eda --functional=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog ratatouille -c ratatouille
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ratatouille -c ratatouille --vector_source=D:/Documents/facultad/LaboratorioRaton/proyecto_laberinto/Ratatouille/Waveform_ian.vwf --testbench_file=./simulation/qsim/ratatouille.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ratatouille -c ratatouille
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ratatouille -c ratatouille --vector_source=D:/Documents/facultad/LaboratorioRaton/proyecto_laberinto/Ratatouille/Waveform_callejon.vwf --testbench_file=./simulation/qsim/ratatouille.vt
 quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ratatouille -c ratatouille
 
 
