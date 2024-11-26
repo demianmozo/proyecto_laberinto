@@ -1,26 +1,14 @@
 
-State Machine - |Matriz_ubicacion|MicroMouseCounterSCH:inst31|DetectorSM:instDetection|reg_fstate
-Name reg_fstate.Espera_Alto reg_fstate.Detecta reg_fstate.Espera_Bajo reg_fstate.No_detecta 
-reg_fstate.No_detecta 0 0 0 0 
-reg_fstate.Espera_Bajo 0 0 1 1 
-reg_fstate.Detecta 0 1 0 1 
-reg_fstate.Espera_Alto 1 0 0 1 
-
 State Machine - |Matriz_ubicacion|control:inst30|fstate
-Name fstate.deci5 fstate.deci4 fstate.deci3 fstate.deci2 fstate.deci1 fstate.chocandose2 fstate.chocandose1 fstate.girando fstate.decide fstate.se_choca fstate.nueva_celda fstate.cruzando fstate.MUEVE 
-fstate.MUEVE 0 0 0 0 0 0 0 0 0 0 0 0 0 
-fstate.cruzando 0 0 0 0 0 0 0 0 0 0 0 1 1 
-fstate.nueva_celda 0 0 0 0 0 0 0 0 0 0 1 0 1 
-fstate.se_choca 0 0 0 0 0 0 0 0 0 1 0 0 1 
-fstate.decide 0 0 0 0 0 0 0 0 1 0 0 0 1 
-fstate.girando 0 0 0 0 0 0 0 1 0 0 0 0 1 
-fstate.chocandose1 0 0 0 0 0 0 1 0 0 0 0 0 1 
-fstate.chocandose2 0 0 0 0 0 1 0 0 0 0 0 0 1 
-fstate.deci1 0 0 0 0 1 0 0 0 0 0 0 0 1 
-fstate.deci2 0 0 0 1 0 0 0 0 0 0 0 0 1 
-fstate.deci3 0 0 1 0 0 0 0 0 0 0 0 0 1 
-fstate.deci4 0 1 0 0 0 0 0 0 0 0 0 0 1 
-fstate.deci5 1 0 0 0 0 0 0 0 0 0 0 0 1 
+Name fstate.chocandose2 fstate.chocandose1 fstate.girando fstate.decide fstate.se_choca fstate.nueva_celda fstate.cruzando fstate.MUEVE 
+fstate.MUEVE 0 0 0 0 0 0 0 0 
+fstate.cruzando 0 0 0 0 0 0 1 1 
+fstate.nueva_celda 0 0 0 0 0 1 0 1 
+fstate.se_choca 0 0 0 0 1 0 0 1 
+fstate.decide 0 0 0 1 0 0 0 1 
+fstate.girando 0 0 1 0 0 0 0 1 
+fstate.chocandose1 0 1 0 0 0 0 0 1 
+fstate.chocandose2 1 0 0 0 0 0 0 1 
 
 State Machine - |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|Motores:inst|fstate
 Name fstate.Ganamos fstate.Gira_180 fstate.Gira_90_der fstate.Gira_90_izq fstate.Corrige_der fstate.Corrige_izq fstate.Avanza 

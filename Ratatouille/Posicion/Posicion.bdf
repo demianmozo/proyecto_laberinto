@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 112 200 280 216)
+	(rect 72 176 240 192)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "s[1..0]" (rect 5 0 36 12)(font "Arial" ))
 	(pt 168 8)
@@ -84,7 +84,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 280 176 432 256)
+	(rect 280 152 432 232)
 	(text "Mux_presuma" (rect 5 0 73 12)(font "Arial" ))
 	(text "inst" (rect 8 64 25 76)(font "Arial" ))
 	(port
@@ -106,7 +106,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 528 144 680 224)
+	(rect 536 136 688 216)
 	(text "sumador_fivebits" (rect 5 0 91 12)(font "Arial" ))
 	(text "inst1" (rect 8 64 31 76)(font "Arial" ))
 	(port
@@ -171,33 +171,8 @@ applicable agreement for further details.
 	)
 )
 (connector
-	(pt 440 208)
-	(pt 440 192)
-	(bus)
-)
-(connector
-	(pt 432 208)
-	(pt 440 208)
-	(bus)
-)
-(connector
-	(pt 440 192)
-	(pt 528 192)
-	(bus)
-)
-(connector
 	(pt 800 136)
 	(pt 808 136)
-)
-(connector
-	(pt 800 176)
-	(pt 800 168)
-	(bus)
-)
-(connector
-	(pt 800 168)
-	(pt 808 168)
-	(bus)
 )
 (connector
 	(pt 800 88)
@@ -220,21 +195,6 @@ applicable agreement for further details.
 	(pt 800 136)
 )
 (connector
-	(pt 680 176)
-	(pt 800 176)
-	(bus)
-)
-(connector
-	(pt 528 176)
-	(pt 504 176)
-	(bus)
-)
-(connector
-	(pt 504 56)
-	(pt 504 176)
-	(bus)
-)
-(connector
 	(pt 504 56)
 	(pt 992 56)
 	(bus)
@@ -252,6 +212,31 @@ applicable agreement for further details.
 (connector
 	(pt 992 136)
 	(pt 1080 136)
+	(bus)
+)
+(connector
+	(pt 504 168)
+	(pt 536 168)
+	(bus)
+)
+(connector
+	(pt 504 56)
+	(pt 504 168)
+	(bus)
+)
+(connector
+	(pt 688 168)
+	(pt 808 168)
+	(bus)
+)
+(connector
+	(pt 432 184)
+	(pt 536 184)
+	(bus)
+)
+(connector
+	(pt 240 184)
+	(pt 280 184)
 	(bus)
 )
 (junction (pt 992 136))

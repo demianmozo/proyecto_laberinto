@@ -1,3 +1,4 @@
+/* Simulator = Quartus II Simulator */
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
 editor if you plan to continue editing the block that represents it in
@@ -599,9 +600,9 @@ TRANSITION_LIST("CLK")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 5000;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
+			REPEAT = 250;
+			LEVEL 0 FOR 200.0;
+			LEVEL 1 FOR 200.0;
 		}
 	}
 }
@@ -661,15 +662,15 @@ TRANSITION_LIST("SENSOR_LINEA")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 3200.0;
-		LEVEL 0 FOR 800.0;
+		LEVEL 1 FOR 7000.0;
+		LEVEL 0 FOR 1000.0;
 		NODE
 		{
 			REPEAT = 4;
-			LEVEL 1 FOR 19200.0;
-			LEVEL 0 FOR 800.0;
+			LEVEL 1 FOR 19000.0;
+			LEVEL 0 FOR 1000.0;
 		}
-		LEVEL 1 FOR 16000.0;
+		LEVEL 1 FOR 12000.0;
 	}
 }
 
@@ -678,7 +679,15 @@ TRANSITION_LIST("SENSOR_MURO")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 1 FOR 3700.0;
+		LEVEL 0 FOR 300.0;
+		NODE
+		{
+			REPEAT = 3;
+			LEVEL 1 FOR 29700.0;
+			LEVEL 0 FOR 300.0;
+		}
+		LEVEL 1 FOR 6000.0;
 	}
 }
 

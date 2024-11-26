@@ -2,10 +2,6 @@ library verilog;
 use verilog.vl_types.all;
 entity Matriz_ubicacion is
     port(
-        altera_reserved_tms: in     vl_logic;
-        altera_reserved_tck: in     vl_logic;
-        altera_reserved_tdi: in     vl_logic;
-        altera_reserved_tdo: out    vl_logic;
         ADC_SCLK        : out    vl_logic;
         CLK             : in     vl_logic;
         Reset1          : in     vl_logic;
@@ -24,10 +20,13 @@ entity Matriz_ubicacion is
         SENTIDOO        : out    vl_logic;
         MUROO           : out    vl_logic;
         CUENTAA         : out    vl_logic;
+        \S/rebotes\     : out    vl_logic;
         C_ad            : out    vl_logic_vector(3 downto 0);
         C_at            : out    vl_logic_vector(3 downto 0);
         C_der           : out    vl_logic_vector(3 downto 0);
         C_izq           : out    vl_logic_vector(3 downto 0);
+        CH0             : out    vl_logic_vector(11 downto 0);
+        CH1             : out    vl_logic_vector(11 downto 0);
         P_ad            : out    vl_logic_vector(2 downto 0);
         P_at            : out    vl_logic_vector(2 downto 0);
         P_der           : out    vl_logic_vector(2 downto 0);
