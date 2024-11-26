@@ -57,7 +57,7 @@ applicable agreement for further details.
 	(input)
 	(rect 128 288 296 304)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "CLK_10k" (rect 5 0 50 12)(font "Arial" ))
+	(text "CLK_10k" (rect 5 0 49 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -376,6 +376,31 @@ applicable agreement for further details.
 	(annotation_block (parameter)(rect 1096 216 1288 264))
 )
 (symbol
+	(rect 1000 448 1048 480)
+	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
+	(text "instdasdasd2NMNM" (rect 3 21 100 33)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 13 16))
+	)
+	(port
+		(pt 48 16)
+		(output)
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(line (pt 39 16)(pt 48 16))
+	)
+	(drawing
+		(line (pt 13 25)(pt 13 7))
+		(line (pt 13 7)(pt 31 16))
+		(line (pt 13 25)(pt 31 16))
+		(circle (rect 31 12 39 20))
+	)
+)
+(symbol
 	(rect 648 496 792 608)
 	(text "DetectorSM" (rect 5 0 62 12)(font "Arial" ))
 	(text "instDetection" (rect 8 96 72 108)(font "Arial" ))
@@ -414,38 +439,13 @@ applicable agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"MAX_COUNT"
-		"300"
+		"150"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
 		(rectangle (rect 16 16 128 96))
 	)
-	(annotation_block (parameter)(rect 424 616 616 664))
-)
-(symbol
-	(rect 1000 448 1048 480)
-	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
-	(text "instdasdasd2NMNM" (rect 3 21 100 33)(font "Arial" ))
-	(port
-		(pt 0 16)
-		(input)
-		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
-		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
-		(line (pt 0 16)(pt 13 16))
-	)
-	(port
-		(pt 48 16)
-		(output)
-		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
-		(line (pt 39 16)(pt 48 16))
-	)
-	(drawing
-		(line (pt 13 25)(pt 13 7))
-		(line (pt 13 7)(pt 31 16))
-		(line (pt 13 25)(pt 31 16))
-		(circle (rect 31 12 39 20))
-	)
+	(annotation_block (parameter)(rect 424 616 616 658))
 )
 (connector
 	(pt 952 312)

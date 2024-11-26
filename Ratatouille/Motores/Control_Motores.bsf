@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 200 272)
+	(rect 16 16 200 304)
 	(text "Control_Motores" (rect 5 0 98 14)(font "Arial" (font_size 8)))
-	(text "inst" (rect 8 240 25 252)(font "Arial" ))
+	(text "inst" (rect 8 272 25 284)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -149,7 +149,14 @@ applicable agreement for further details.
 		(text "CH1[11..0]" (rect 104 219 163 233)(font "Arial" (font_size 8)))
 		(line (pt 184 224)(pt 168 224)(line_width 3))
 	)
+	(port
+		(pt 184 240)
+		(output)
+		(text "clk_40KHz" (rect 0 0 60 14)(font "Arial" (font_size 8)))
+		(text "clk_40KHz" (rect 103 235 163 249)(font "Arial" (font_size 8)))
+		(line (pt 184 240)(pt 168 240))
+	)
 	(drawing
-		(rectangle (rect 16 16 168 240))
+		(rectangle (rect 16 16 168 272))
 	)
 )

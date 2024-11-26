@@ -5,10 +5,10 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity elijo_sentido is
     Port (
-        adelante  : in STD_LOGIC_VECTOR(2 downto 0); --esto viene de los mux o sea que ya tengo en cuenta si hay muros
-        atras     : in STD_LOGIC_VECTOR(2 downto 0);
-        derecha   : in STD_LOGIC_VECTOR(2 downto 0);
-        izquierda : in STD_LOGIC_VECTOR(2 downto 0);
+        adelante  : in STD_LOGIC_VECTOR(3 downto 0); --esto viene de los mux o sea que ya tengo en cuenta si hay muros
+        atras     : in STD_LOGIC_VECTOR(3 downto 0);
+        derecha   : in STD_LOGIC_VECTOR(3 downto 0);
+        izquierda : in STD_LOGIC_VECTOR(3 downto 0);
         menor_cod : out STD_LOGIC_VECTOR(1 downto 0) -- Salida codificada
     );
 end elijo_sentido;
@@ -16,7 +16,7 @@ end elijo_sentido;
 architecture Behavioral of elijo_sentido is
 begin
     process(adelante, atras, derecha, izquierda)
-        variable min_value : STD_LOGIC_VECTOR(2 downto 0);
+        variable min_value : STD_LOGIC_VECTOR(3 downto 0);
         variable cod_value : STD_LOGIC_VECTOR(1 downto 0);
     begin
 	 

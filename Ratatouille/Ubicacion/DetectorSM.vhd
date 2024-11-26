@@ -22,7 +22,7 @@ USE ieee.numeric_std.all; -- Necesario para manejar enteros
 ENTITY DetectorSM IS
     GENERIC (
         MIN_COUNT : NATURAL := 0;
-        MAX_COUNT : NATURAL := 300 -- 30 ms con 10 kHz
+        MAX_COUNT : NATURAL := 150 -- 15 ms con 10 kHz
     );
     PORT (
         reset  : IN  STD_LOGIC := '0';

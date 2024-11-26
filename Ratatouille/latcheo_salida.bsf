@@ -40,15 +40,15 @@ applicable agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "d_in[2..0]" (rect 0 0 36 12)(font "Arial" ))
-		(text "d_in[2..0]" (rect 21 59 57 71)(font "Arial" ))
+		(text "d_in[3..0]" (rect 0 0 36 12)(font "Arial" ))
+		(text "d_in[3..0]" (rect 21 59 57 71)(font "Arial" ))
 		(line (pt 0 64)(pt 16 64)(line_width 3))
 	)
 	(port
 		(pt 184 32)
 		(output)
-		(text "q_out[2..0]" (rect 0 0 42 12)(font "Arial" ))
-		(text "q_out[2..0]" (rect 121 27 163 39)(font "Arial" ))
+		(text "q_out[3..0]" (rect 0 0 42 12)(font "Arial" ))
+		(text "q_out[3..0]" (rect 121 27 163 39)(font "Arial" ))
 		(line (pt 184 32)(pt 168 32)(line_width 3))
 	)
 	(drawing

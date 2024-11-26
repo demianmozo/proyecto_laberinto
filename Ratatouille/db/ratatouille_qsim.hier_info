@@ -2067,9 +2067,9 @@ Muro_Ad => inst4.IN1
 Muro_At => inst10.IN1
 Muro_Der => inst18.IN0
 Muro_Izq => inst19.IN0
-Peso[0] <= latcheo_salida:inst2.q_out[0]
-Peso[1] <= latcheo_salida:inst2.q_out[1]
-Peso[2] <= latcheo_salida:inst2.q_out[2]
+Peso[0] <= sumador_habilitacion:inst21.S[0]
+Peso[1] <= sumador_habilitacion:inst21.S[1]
+Peso[2] <= sumador_habilitacion:inst21.S[2]
 Adelante[0] => BUSMUX:inst17.dataa[0]
 Adelante[1] => BUSMUX:inst17.dataa[1]
 Adelante[2] => BUSMUX:inst17.dataa[2]
@@ -2121,6 +2121,36 @@ clk => estado.CLK
 reset => estado.ACLR
 entrada => estado.ENA
 salida <= estado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst15|sumador_habilitacion:inst21
+A[0] => Add0.IN6
+A[0] => S~2.DATAA
+A[1] => Add0.IN5
+A[1] => S~1.DATAA
+A[2] => Add0.IN4
+A[2] => S~0.DATAA
+EN => S~0.OUTPUTSELECT
+EN => S~1.OUTPUTSELECT
+EN => S~2.OUTPUTSELECT
+S[0] <= S~2.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S~1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst15|detecta_callejon:inst12
+A => Add0.IN2
+A => count~1.DATAA
+B => count~0.OUTPUTSELECT
+B => count~1.OUTPUTSELECT
+C => count~2.OUTPUTSELECT
+C => count~3.OUTPUTSELECT
+C => count~4.OUTPUTSELECT
+D => count[3].OUTPUTSELECT
+D => count[2].OUTPUTSELECT
+D => count[1].OUTPUTSELECT
+D => count[0].OUTPUTSELECT
+Y <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Matriz_ubicacion|Celda:inst15|latcheo_salida:inst2
@@ -2985,9 +3015,9 @@ Muro_Ad => inst4.IN1
 Muro_At => inst10.IN1
 Muro_Der => inst18.IN0
 Muro_Izq => inst19.IN0
-Peso[0] <= latcheo_salida:inst2.q_out[0]
-Peso[1] <= latcheo_salida:inst2.q_out[1]
-Peso[2] <= latcheo_salida:inst2.q_out[2]
+Peso[0] <= sumador_habilitacion:inst21.S[0]
+Peso[1] <= sumador_habilitacion:inst21.S[1]
+Peso[2] <= sumador_habilitacion:inst21.S[2]
 Adelante[0] => BUSMUX:inst17.dataa[0]
 Adelante[1] => BUSMUX:inst17.dataa[1]
 Adelante[2] => BUSMUX:inst17.dataa[2]
@@ -3039,6 +3069,36 @@ clk => estado.CLK
 reset => estado.ACLR
 entrada => estado.ENA
 salida <= estado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst11|sumador_habilitacion:inst21
+A[0] => Add0.IN6
+A[0] => S~2.DATAA
+A[1] => Add0.IN5
+A[1] => S~1.DATAA
+A[2] => Add0.IN4
+A[2] => S~0.DATAA
+EN => S~0.OUTPUTSELECT
+EN => S~1.OUTPUTSELECT
+EN => S~2.OUTPUTSELECT
+S[0] <= S~2.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S~1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst11|detecta_callejon:inst12
+A => Add0.IN2
+A => count~1.DATAA
+B => count~0.OUTPUTSELECT
+B => count~1.OUTPUTSELECT
+C => count~2.OUTPUTSELECT
+C => count~3.OUTPUTSELECT
+C => count~4.OUTPUTSELECT
+D => count[3].OUTPUTSELECT
+D => count[2].OUTPUTSELECT
+D => count[1].OUTPUTSELECT
+D => count[0].OUTPUTSELECT
+Y <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Matriz_ubicacion|Celda:inst11|latcheo_salida:inst2
@@ -3348,9 +3408,9 @@ Muro_Ad => inst4.IN1
 Muro_At => inst10.IN1
 Muro_Der => inst18.IN0
 Muro_Izq => inst19.IN0
-Peso[0] <= latcheo_salida:inst2.q_out[0]
-Peso[1] <= latcheo_salida:inst2.q_out[1]
-Peso[2] <= latcheo_salida:inst2.q_out[2]
+Peso[0] <= sumador_habilitacion:inst21.S[0]
+Peso[1] <= sumador_habilitacion:inst21.S[1]
+Peso[2] <= sumador_habilitacion:inst21.S[2]
 Adelante[0] => BUSMUX:inst17.dataa[0]
 Adelante[1] => BUSMUX:inst17.dataa[1]
 Adelante[2] => BUSMUX:inst17.dataa[2]
@@ -3402,6 +3462,36 @@ clk => estado.CLK
 reset => estado.ACLR
 entrada => estado.ENA
 salida <= estado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst7|sumador_habilitacion:inst21
+A[0] => Add0.IN6
+A[0] => S~2.DATAA
+A[1] => Add0.IN5
+A[1] => S~1.DATAA
+A[2] => Add0.IN4
+A[2] => S~0.DATAA
+EN => S~0.OUTPUTSELECT
+EN => S~1.OUTPUTSELECT
+EN => S~2.OUTPUTSELECT
+S[0] <= S~2.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S~1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst7|detecta_callejon:inst12
+A => Add0.IN2
+A => count~1.DATAA
+B => count~0.OUTPUTSELECT
+B => count~1.OUTPUTSELECT
+C => count~2.OUTPUTSELECT
+C => count~3.OUTPUTSELECT
+C => count~4.OUTPUTSELECT
+D => count[3].OUTPUTSELECT
+D => count[2].OUTPUTSELECT
+D => count[1].OUTPUTSELECT
+D => count[0].OUTPUTSELECT
+Y <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Matriz_ubicacion|Celda:inst7|latcheo_salida:inst2
@@ -3711,9 +3801,9 @@ Muro_Ad => inst4.IN1
 Muro_At => inst10.IN1
 Muro_Der => inst18.IN0
 Muro_Izq => inst19.IN0
-Peso[0] <= latcheo_salida:inst2.q_out[0]
-Peso[1] <= latcheo_salida:inst2.q_out[1]
-Peso[2] <= latcheo_salida:inst2.q_out[2]
+Peso[0] <= sumador_habilitacion:inst21.S[0]
+Peso[1] <= sumador_habilitacion:inst21.S[1]
+Peso[2] <= sumador_habilitacion:inst21.S[2]
 Adelante[0] => BUSMUX:inst17.dataa[0]
 Adelante[1] => BUSMUX:inst17.dataa[1]
 Adelante[2] => BUSMUX:inst17.dataa[2]
@@ -3765,6 +3855,36 @@ clk => estado.CLK
 reset => estado.ACLR
 entrada => estado.ENA
 salida <= estado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst2|sumador_habilitacion:inst21
+A[0] => Add0.IN6
+A[0] => S~2.DATAA
+A[1] => Add0.IN5
+A[1] => S~1.DATAA
+A[2] => Add0.IN4
+A[2] => S~0.DATAA
+EN => S~0.OUTPUTSELECT
+EN => S~1.OUTPUTSELECT
+EN => S~2.OUTPUTSELECT
+S[0] <= S~2.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S~1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst2|detecta_callejon:inst12
+A => Add0.IN2
+A => count~1.DATAA
+B => count~0.OUTPUTSELECT
+B => count~1.OUTPUTSELECT
+C => count~2.OUTPUTSELECT
+C => count~3.OUTPUTSELECT
+C => count~4.OUTPUTSELECT
+D => count[3].OUTPUTSELECT
+D => count[2].OUTPUTSELECT
+D => count[1].OUTPUTSELECT
+D => count[0].OUTPUTSELECT
+Y <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Matriz_ubicacion|Celda:inst2|latcheo_salida:inst2
@@ -4085,9 +4205,9 @@ Muro_Ad => inst4.IN1
 Muro_At => inst10.IN1
 Muro_Der => inst18.IN0
 Muro_Izq => inst19.IN0
-Peso[0] <= latcheo_salida:inst2.q_out[0]
-Peso[1] <= latcheo_salida:inst2.q_out[1]
-Peso[2] <= latcheo_salida:inst2.q_out[2]
+Peso[0] <= sumador_habilitacion:inst21.S[0]
+Peso[1] <= sumador_habilitacion:inst21.S[1]
+Peso[2] <= sumador_habilitacion:inst21.S[2]
 Adelante[0] => BUSMUX:inst17.dataa[0]
 Adelante[1] => BUSMUX:inst17.dataa[1]
 Adelante[2] => BUSMUX:inst17.dataa[2]
@@ -4139,6 +4259,36 @@ clk => estado.CLK
 reset => estado.ACLR
 entrada => estado.ENA
 salida <= estado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst1|sumador_habilitacion:inst21
+A[0] => Add0.IN6
+A[0] => S~2.DATAA
+A[1] => Add0.IN5
+A[1] => S~1.DATAA
+A[2] => Add0.IN4
+A[2] => S~0.DATAA
+EN => S~0.OUTPUTSELECT
+EN => S~1.OUTPUTSELECT
+EN => S~2.OUTPUTSELECT
+S[0] <= S~2.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S~1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst1|detecta_callejon:inst12
+A => Add0.IN2
+A => count~1.DATAA
+B => count~0.OUTPUTSELECT
+B => count~1.OUTPUTSELECT
+C => count~2.OUTPUTSELECT
+C => count~3.OUTPUTSELECT
+C => count~4.OUTPUTSELECT
+D => count[3].OUTPUTSELECT
+D => count[2].OUTPUTSELECT
+D => count[1].OUTPUTSELECT
+D => count[0].OUTPUTSELECT
+Y <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Matriz_ubicacion|Celda:inst1|latcheo_salida:inst2
@@ -4448,9 +4598,9 @@ Muro_Ad => inst4.IN1
 Muro_At => inst10.IN1
 Muro_Der => inst18.IN0
 Muro_Izq => inst19.IN0
-Peso[0] <= latcheo_salida:inst2.q_out[0]
-Peso[1] <= latcheo_salida:inst2.q_out[1]
-Peso[2] <= latcheo_salida:inst2.q_out[2]
+Peso[0] <= sumador_habilitacion:inst21.S[0]
+Peso[1] <= sumador_habilitacion:inst21.S[1]
+Peso[2] <= sumador_habilitacion:inst21.S[2]
 Adelante[0] => BUSMUX:inst17.dataa[0]
 Adelante[1] => BUSMUX:inst17.dataa[1]
 Adelante[2] => BUSMUX:inst17.dataa[2]
@@ -4502,6 +4652,36 @@ clk => estado.CLK
 reset => estado.ACLR
 entrada => estado.ENA
 salida <= estado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst6|sumador_habilitacion:inst21
+A[0] => Add0.IN6
+A[0] => S~2.DATAA
+A[1] => Add0.IN5
+A[1] => S~1.DATAA
+A[2] => Add0.IN4
+A[2] => S~0.DATAA
+EN => S~0.OUTPUTSELECT
+EN => S~1.OUTPUTSELECT
+EN => S~2.OUTPUTSELECT
+S[0] <= S~2.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S~1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst6|detecta_callejon:inst12
+A => Add0.IN2
+A => count~1.DATAA
+B => count~0.OUTPUTSELECT
+B => count~1.OUTPUTSELECT
+C => count~2.OUTPUTSELECT
+C => count~3.OUTPUTSELECT
+C => count~4.OUTPUTSELECT
+D => count[3].OUTPUTSELECT
+D => count[2].OUTPUTSELECT
+D => count[1].OUTPUTSELECT
+D => count[0].OUTPUTSELECT
+Y <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Matriz_ubicacion|Celda:inst6|latcheo_salida:inst2
@@ -4811,9 +4991,9 @@ Muro_Ad => inst4.IN1
 Muro_At => inst10.IN1
 Muro_Der => inst18.IN0
 Muro_Izq => inst19.IN0
-Peso[0] <= latcheo_salida:inst2.q_out[0]
-Peso[1] <= latcheo_salida:inst2.q_out[1]
-Peso[2] <= latcheo_salida:inst2.q_out[2]
+Peso[0] <= sumador_habilitacion:inst21.S[0]
+Peso[1] <= sumador_habilitacion:inst21.S[1]
+Peso[2] <= sumador_habilitacion:inst21.S[2]
 Adelante[0] => BUSMUX:inst17.dataa[0]
 Adelante[1] => BUSMUX:inst17.dataa[1]
 Adelante[2] => BUSMUX:inst17.dataa[2]
@@ -4865,6 +5045,36 @@ clk => estado.CLK
 reset => estado.ACLR
 entrada => estado.ENA
 salida <= estado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst10|sumador_habilitacion:inst21
+A[0] => Add0.IN6
+A[0] => S~2.DATAA
+A[1] => Add0.IN5
+A[1] => S~1.DATAA
+A[2] => Add0.IN4
+A[2] => S~0.DATAA
+EN => S~0.OUTPUTSELECT
+EN => S~1.OUTPUTSELECT
+EN => S~2.OUTPUTSELECT
+S[0] <= S~2.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S~1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst10|detecta_callejon:inst12
+A => Add0.IN2
+A => count~1.DATAA
+B => count~0.OUTPUTSELECT
+B => count~1.OUTPUTSELECT
+C => count~2.OUTPUTSELECT
+C => count~3.OUTPUTSELECT
+C => count~4.OUTPUTSELECT
+D => count[3].OUTPUTSELECT
+D => count[2].OUTPUTSELECT
+D => count[1].OUTPUTSELECT
+D => count[0].OUTPUTSELECT
+Y <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Matriz_ubicacion|Celda:inst10|latcheo_salida:inst2
@@ -5174,9 +5384,9 @@ Muro_Ad => inst4.IN1
 Muro_At => inst10.IN1
 Muro_Der => inst18.IN0
 Muro_Izq => inst19.IN0
-Peso[0] <= latcheo_salida:inst2.q_out[0]
-Peso[1] <= latcheo_salida:inst2.q_out[1]
-Peso[2] <= latcheo_salida:inst2.q_out[2]
+Peso[0] <= sumador_habilitacion:inst21.S[0]
+Peso[1] <= sumador_habilitacion:inst21.S[1]
+Peso[2] <= sumador_habilitacion:inst21.S[2]
 Adelante[0] => BUSMUX:inst17.dataa[0]
 Adelante[1] => BUSMUX:inst17.dataa[1]
 Adelante[2] => BUSMUX:inst17.dataa[2]
@@ -5228,6 +5438,36 @@ clk => estado.CLK
 reset => estado.ACLR
 entrada => estado.ENA
 salida <= estado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst14|sumador_habilitacion:inst21
+A[0] => Add0.IN6
+A[0] => S~2.DATAA
+A[1] => Add0.IN5
+A[1] => S~1.DATAA
+A[2] => Add0.IN4
+A[2] => S~0.DATAA
+EN => S~0.OUTPUTSELECT
+EN => S~1.OUTPUTSELECT
+EN => S~2.OUTPUTSELECT
+S[0] <= S~2.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S~1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst14|detecta_callejon:inst12
+A => Add0.IN2
+A => count~1.DATAA
+B => count~0.OUTPUTSELECT
+B => count~1.OUTPUTSELECT
+C => count~2.OUTPUTSELECT
+C => count~3.OUTPUTSELECT
+C => count~4.OUTPUTSELECT
+D => count[3].OUTPUTSELECT
+D => count[2].OUTPUTSELECT
+D => count[1].OUTPUTSELECT
+D => count[0].OUTPUTSELECT
+Y <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Matriz_ubicacion|Celda:inst14|latcheo_salida:inst2
@@ -5548,9 +5788,9 @@ Muro_Ad => inst4.IN1
 Muro_At => inst10.IN1
 Muro_Der => inst18.IN0
 Muro_Izq => inst19.IN0
-Peso[0] <= latcheo_salida:inst2.q_out[0]
-Peso[1] <= latcheo_salida:inst2.q_out[1]
-Peso[2] <= latcheo_salida:inst2.q_out[2]
+Peso[0] <= sumador_habilitacion:inst21.S[0]
+Peso[1] <= sumador_habilitacion:inst21.S[1]
+Peso[2] <= sumador_habilitacion:inst21.S[2]
 Adelante[0] => BUSMUX:inst17.dataa[0]
 Adelante[1] => BUSMUX:inst17.dataa[1]
 Adelante[2] => BUSMUX:inst17.dataa[2]
@@ -5602,6 +5842,36 @@ clk => estado.CLK
 reset => estado.ACLR
 entrada => estado.ENA
 salida <= estado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst13|sumador_habilitacion:inst21
+A[0] => Add0.IN6
+A[0] => S~2.DATAA
+A[1] => Add0.IN5
+A[1] => S~1.DATAA
+A[2] => Add0.IN4
+A[2] => S~0.DATAA
+EN => S~0.OUTPUTSELECT
+EN => S~1.OUTPUTSELECT
+EN => S~2.OUTPUTSELECT
+S[0] <= S~2.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S~1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst13|detecta_callejon:inst12
+A => Add0.IN2
+A => count~1.DATAA
+B => count~0.OUTPUTSELECT
+B => count~1.OUTPUTSELECT
+C => count~2.OUTPUTSELECT
+C => count~3.OUTPUTSELECT
+C => count~4.OUTPUTSELECT
+D => count[3].OUTPUTSELECT
+D => count[2].OUTPUTSELECT
+D => count[1].OUTPUTSELECT
+D => count[0].OUTPUTSELECT
+Y <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Matriz_ubicacion|Celda:inst13|latcheo_salida:inst2
@@ -5911,9 +6181,9 @@ Muro_Ad => inst4.IN1
 Muro_At => inst10.IN1
 Muro_Der => inst18.IN0
 Muro_Izq => inst19.IN0
-Peso[0] <= latcheo_salida:inst2.q_out[0]
-Peso[1] <= latcheo_salida:inst2.q_out[1]
-Peso[2] <= latcheo_salida:inst2.q_out[2]
+Peso[0] <= sumador_habilitacion:inst21.S[0]
+Peso[1] <= sumador_habilitacion:inst21.S[1]
+Peso[2] <= sumador_habilitacion:inst21.S[2]
 Adelante[0] => BUSMUX:inst17.dataa[0]
 Adelante[1] => BUSMUX:inst17.dataa[1]
 Adelante[2] => BUSMUX:inst17.dataa[2]
@@ -5965,6 +6235,36 @@ clk => estado.CLK
 reset => estado.ACLR
 entrada => estado.ENA
 salida <= estado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst9|sumador_habilitacion:inst21
+A[0] => Add0.IN6
+A[0] => S~2.DATAA
+A[1] => Add0.IN5
+A[1] => S~1.DATAA
+A[2] => Add0.IN4
+A[2] => S~0.DATAA
+EN => S~0.OUTPUTSELECT
+EN => S~1.OUTPUTSELECT
+EN => S~2.OUTPUTSELECT
+S[0] <= S~2.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S~1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst9|detecta_callejon:inst12
+A => Add0.IN2
+A => count~1.DATAA
+B => count~0.OUTPUTSELECT
+B => count~1.OUTPUTSELECT
+C => count~2.OUTPUTSELECT
+C => count~3.OUTPUTSELECT
+C => count~4.OUTPUTSELECT
+D => count[3].OUTPUTSELECT
+D => count[2].OUTPUTSELECT
+D => count[1].OUTPUTSELECT
+D => count[0].OUTPUTSELECT
+Y <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Matriz_ubicacion|Celda:inst9|latcheo_salida:inst2
@@ -6274,9 +6574,9 @@ Muro_Ad => inst4.IN1
 Muro_At => inst10.IN1
 Muro_Der => inst18.IN0
 Muro_Izq => inst19.IN0
-Peso[0] <= latcheo_salida:inst2.q_out[0]
-Peso[1] <= latcheo_salida:inst2.q_out[1]
-Peso[2] <= latcheo_salida:inst2.q_out[2]
+Peso[0] <= sumador_habilitacion:inst21.S[0]
+Peso[1] <= sumador_habilitacion:inst21.S[1]
+Peso[2] <= sumador_habilitacion:inst21.S[2]
 Adelante[0] => BUSMUX:inst17.dataa[0]
 Adelante[1] => BUSMUX:inst17.dataa[1]
 Adelante[2] => BUSMUX:inst17.dataa[2]
@@ -6328,6 +6628,36 @@ clk => estado.CLK
 reset => estado.ACLR
 entrada => estado.ENA
 salida <= estado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst5|sumador_habilitacion:inst21
+A[0] => Add0.IN6
+A[0] => S~2.DATAA
+A[1] => Add0.IN5
+A[1] => S~1.DATAA
+A[2] => Add0.IN4
+A[2] => S~0.DATAA
+EN => S~0.OUTPUTSELECT
+EN => S~1.OUTPUTSELECT
+EN => S~2.OUTPUTSELECT
+S[0] <= S~2.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S~1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst5|detecta_callejon:inst12
+A => Add0.IN2
+A => count~1.DATAA
+B => count~0.OUTPUTSELECT
+B => count~1.OUTPUTSELECT
+C => count~2.OUTPUTSELECT
+C => count~3.OUTPUTSELECT
+C => count~4.OUTPUTSELECT
+D => count[3].OUTPUTSELECT
+D => count[2].OUTPUTSELECT
+D => count[1].OUTPUTSELECT
+D => count[0].OUTPUTSELECT
+Y <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Matriz_ubicacion|Celda:inst5|latcheo_salida:inst2
@@ -6637,9 +6967,9 @@ Muro_Ad => inst4.IN1
 Muro_At => inst10.IN1
 Muro_Der => inst18.IN0
 Muro_Izq => inst19.IN0
-Peso[0] <= latcheo_salida:inst2.q_out[0]
-Peso[1] <= latcheo_salida:inst2.q_out[1]
-Peso[2] <= latcheo_salida:inst2.q_out[2]
+Peso[0] <= sumador_habilitacion:inst21.S[0]
+Peso[1] <= sumador_habilitacion:inst21.S[1]
+Peso[2] <= sumador_habilitacion:inst21.S[2]
 Adelante[0] => BUSMUX:inst17.dataa[0]
 Adelante[1] => BUSMUX:inst17.dataa[1]
 Adelante[2] => BUSMUX:inst17.dataa[2]
@@ -6691,6 +7021,36 @@ clk => estado.CLK
 reset => estado.ACLR
 entrada => estado.ENA
 salida <= estado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst|sumador_habilitacion:inst21
+A[0] => Add0.IN6
+A[0] => S~2.DATAA
+A[1] => Add0.IN5
+A[1] => S~1.DATAA
+A[2] => Add0.IN4
+A[2] => S~0.DATAA
+EN => S~0.OUTPUTSELECT
+EN => S~1.OUTPUTSELECT
+EN => S~2.OUTPUTSELECT
+S[0] <= S~2.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S~1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst|detecta_callejon:inst12
+A => Add0.IN2
+A => count~1.DATAA
+B => count~0.OUTPUTSELECT
+B => count~1.OUTPUTSELECT
+C => count~2.OUTPUTSELECT
+C => count~3.OUTPUTSELECT
+C => count~4.OUTPUTSELECT
+D => count[3].OUTPUTSELECT
+D => count[2].OUTPUTSELECT
+D => count[1].OUTPUTSELECT
+D => count[0].OUTPUTSELECT
+Y <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Matriz_ubicacion|Celda:inst|latcheo_salida:inst2
@@ -7011,9 +7371,9 @@ Muro_Ad => inst4.IN1
 Muro_At => inst10.IN1
 Muro_Der => inst18.IN0
 Muro_Izq => inst19.IN0
-Peso[0] <= latcheo_salida:inst2.q_out[0]
-Peso[1] <= latcheo_salida:inst2.q_out[1]
-Peso[2] <= latcheo_salida:inst2.q_out[2]
+Peso[0] <= sumador_habilitacion:inst21.S[0]
+Peso[1] <= sumador_habilitacion:inst21.S[1]
+Peso[2] <= sumador_habilitacion:inst21.S[2]
 Adelante[0] => BUSMUX:inst17.dataa[0]
 Adelante[1] => BUSMUX:inst17.dataa[1]
 Adelante[2] => BUSMUX:inst17.dataa[2]
@@ -7065,6 +7425,36 @@ clk => estado.CLK
 reset => estado.ACLR
 entrada => estado.ENA
 salida <= estado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst4|sumador_habilitacion:inst21
+A[0] => Add0.IN6
+A[0] => S~2.DATAA
+A[1] => Add0.IN5
+A[1] => S~1.DATAA
+A[2] => Add0.IN4
+A[2] => S~0.DATAA
+EN => S~0.OUTPUTSELECT
+EN => S~1.OUTPUTSELECT
+EN => S~2.OUTPUTSELECT
+S[0] <= S~2.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S~1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst4|detecta_callejon:inst12
+A => Add0.IN2
+A => count~1.DATAA
+B => count~0.OUTPUTSELECT
+B => count~1.OUTPUTSELECT
+C => count~2.OUTPUTSELECT
+C => count~3.OUTPUTSELECT
+C => count~4.OUTPUTSELECT
+D => count[3].OUTPUTSELECT
+D => count[2].OUTPUTSELECT
+D => count[1].OUTPUTSELECT
+D => count[0].OUTPUTSELECT
+Y <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Matriz_ubicacion|Celda:inst4|latcheo_salida:inst2
@@ -7385,9 +7775,9 @@ Muro_Ad => inst4.IN1
 Muro_At => inst10.IN1
 Muro_Der => inst18.IN0
 Muro_Izq => inst19.IN0
-Peso[0] <= latcheo_salida:inst2.q_out[0]
-Peso[1] <= latcheo_salida:inst2.q_out[1]
-Peso[2] <= latcheo_salida:inst2.q_out[2]
+Peso[0] <= sumador_habilitacion:inst21.S[0]
+Peso[1] <= sumador_habilitacion:inst21.S[1]
+Peso[2] <= sumador_habilitacion:inst21.S[2]
 Adelante[0] => BUSMUX:inst17.dataa[0]
 Adelante[1] => BUSMUX:inst17.dataa[1]
 Adelante[2] => BUSMUX:inst17.dataa[2]
@@ -7439,6 +7829,36 @@ clk => estado.CLK
 reset => estado.ACLR
 entrada => estado.ENA
 salida <= estado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst8|sumador_habilitacion:inst21
+A[0] => Add0.IN6
+A[0] => S~2.DATAA
+A[1] => Add0.IN5
+A[1] => S~1.DATAA
+A[2] => Add0.IN4
+A[2] => S~0.DATAA
+EN => S~0.OUTPUTSELECT
+EN => S~1.OUTPUTSELECT
+EN => S~2.OUTPUTSELECT
+S[0] <= S~2.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S~1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst8|detecta_callejon:inst12
+A => Add0.IN2
+A => count~1.DATAA
+B => count~0.OUTPUTSELECT
+B => count~1.OUTPUTSELECT
+C => count~2.OUTPUTSELECT
+C => count~3.OUTPUTSELECT
+C => count~4.OUTPUTSELECT
+D => count[3].OUTPUTSELECT
+D => count[2].OUTPUTSELECT
+D => count[1].OUTPUTSELECT
+D => count[0].OUTPUTSELECT
+Y <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Matriz_ubicacion|Celda:inst8|latcheo_salida:inst2
@@ -7748,9 +8168,9 @@ Muro_Ad => inst4.IN1
 Muro_At => inst10.IN1
 Muro_Der => inst18.IN0
 Muro_Izq => inst19.IN0
-Peso[0] <= latcheo_salida:inst2.q_out[0]
-Peso[1] <= latcheo_salida:inst2.q_out[1]
-Peso[2] <= latcheo_salida:inst2.q_out[2]
+Peso[0] <= sumador_habilitacion:inst21.S[0]
+Peso[1] <= sumador_habilitacion:inst21.S[1]
+Peso[2] <= sumador_habilitacion:inst21.S[2]
 Adelante[0] => BUSMUX:inst17.dataa[0]
 Adelante[1] => BUSMUX:inst17.dataa[1]
 Adelante[2] => BUSMUX:inst17.dataa[2]
@@ -7802,6 +8222,36 @@ clk => estado.CLK
 reset => estado.ACLR
 entrada => estado.ENA
 salida <= estado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst12|sumador_habilitacion:inst21
+A[0] => Add0.IN6
+A[0] => S~2.DATAA
+A[1] => Add0.IN5
+A[1] => S~1.DATAA
+A[2] => Add0.IN4
+A[2] => S~0.DATAA
+EN => S~0.OUTPUTSELECT
+EN => S~1.OUTPUTSELECT
+EN => S~2.OUTPUTSELECT
+S[0] <= S~2.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S~1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|Celda:inst12|detecta_callejon:inst12
+A => Add0.IN2
+A => count~1.DATAA
+B => count~0.OUTPUTSELECT
+B => count~1.OUTPUTSELECT
+C => count~2.OUTPUTSELECT
+C => count~3.OUTPUTSELECT
+C => count~4.OUTPUTSELECT
+D => count[3].OUTPUTSELECT
+D => count[2].OUTPUTSELECT
+D => count[1].OUTPUTSELECT
+D => count[0].OUTPUTSELECT
+Y <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Matriz_ubicacion|Celda:inst12|latcheo_salida:inst2

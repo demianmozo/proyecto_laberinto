@@ -319,6 +319,22 @@ applicable agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
+(pin
+	(output)
+	(rect 728 760 904 776)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "clk_40KHz" (rect 90 0 141 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
 (symbol
 	(rect 40 208 176 288)
 	(text "comparador_izquierda" (rect 5 0 111 12)(font "Arial" ))
@@ -342,7 +358,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 40 88 176 168)
+	(rect 40 80 176 160)
 	(text "comparador_derecha" (rect 5 0 107 12)(font "Arial" ))
 	(text "inst9" (rect 8 64 31 76)(font "Arial" ))
 	(port
@@ -781,14 +797,6 @@ applicable agreement for further details.
 	)
 )
 (connector
-	(pt 176 120)
-	(pt 280 120)
-)
-(connector
-	(pt 280 120)
-	(pt 280 168)
-)
-(connector
 	(pt 352 168)
 	(pt 280 168)
 )
@@ -1006,16 +1014,6 @@ applicable agreement for further details.
 	(pt 576 440)
 )
 (connector
-	(pt 40 120)
-	(pt -336 120)
-	(bus)
-)
-(connector
-	(pt -336 160)
-	(pt -336 120)
-	(bus)
-)
-(connector
 	(text "clk_10KHz" (rect -710 8 -659 20)(font "Arial" ))
 	(pt -696 24)
 	(pt -544 24)
@@ -1095,6 +1093,29 @@ applicable agreement for further details.
 	(pt -376 176)
 	(pt -336 176)
 	(bus)
+)
+(connector
+	(pt 280 112)
+	(pt 176 112)
+)
+(connector
+	(pt 280 168)
+	(pt 280 112)
+)
+(connector
+	(pt -336 112)
+	(pt 40 112)
+	(bus)
+)
+(connector
+	(pt -336 160)
+	(pt -336 112)
+	(bus)
+)
+(connector
+	(text "clk_20KHz" (rect 712 752 763 764)(font "Arial" ))
+	(pt 712 768)
+	(pt 728 768)
 )
 (junction (pt -1064 96))
 (junction (pt 712 544))

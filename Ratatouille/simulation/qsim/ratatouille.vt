@@ -18,32 +18,26 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/26/2024 12:46:02"
+// Generated on "11/26/2024 14:46:24"
                                                                         
-// Verilog Self-Checking Test Bench (with test vectors) for design :    Matriz_ubicacion
+// Verilog Self-Checking Test Bench (with test vectors) for design :    sumador_habilitacion
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module Matriz_ubicacion_vlg_sample_tst(
-	ADC_DOUT,
-	CLK,
-	Reset1,
-	SENSOR_LINEA,
-	SENSOR_MURO,
+module sumador_habilitacion_vlg_sample_tst(
+	A,
+	EN,
 	sampler_tx
 );
-input  ADC_DOUT;
-input  CLK;
-input  Reset1;
-input  SENSOR_LINEA;
-input  SENSOR_MURO;
+input [2:0] A;
+input  EN;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(ADC_DOUT or CLK or Reset1 or SENSOR_LINEA or SENSOR_MURO)
+always @(A or EN)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -62,129 +56,27 @@ end
 assign sampler_tx = sample;
 endmodule
 
-module Matriz_ubicacion_vlg_check_tst (
-	ADC_CS_N,
-	ADC_DIN,
-	ADC_SCLK,
-	C_ad,
-	C_at,
-	C_der,
-	C_izq,
-	CH0,
-	CH1,
-	CUENTAA,
-	GIROO,
-	MD0,
-	MD1,
-	MI0,
-	MI1,
-	MUROO,
-	P_ad,
-	P_at,
-	P_der,
-	P_izq,
-	pos_act,
-	S/rebotes,
-	sent_act,
-	SENTIDOO,
-	VELD,
-	VELI,
+module sumador_habilitacion_vlg_check_tst (
+	S,
 	sampler_rx
 );
-input  ADC_CS_N;
-input  ADC_DIN;
-input  ADC_SCLK;
-input [3:0] C_ad;
-input [3:0] C_at;
-input [3:0] C_der;
-input [3:0] C_izq;
-input [11:0] CH0;
-input [11:0] CH1;
-input  CUENTAA;
-input  GIROO;
-input  MD0;
-input  MD1;
-input  MI0;
-input  MI1;
-input  MUROO;
-input [2:0] P_ad;
-input [2:0] P_at;
-input [2:0] P_der;
-input [2:0] P_izq;
-input [3:0] pos_act;
-input  S/rebotes;
-input [1:0] sent_act;
-input  SENTIDOO;
-input  VELD;
-input  VELI;
+input [2:0] S;
 input sampler_rx;
 
-reg  ADC_CS_N_expected;
-reg  ADC_DIN_expected;
-reg  ADC_SCLK_expected;
-reg [3:0] C_ad_expected;
-reg [3:0] C_at_expected;
-reg [3:0] C_der_expected;
-reg [3:0] C_izq_expected;
-reg [11:0] CH0_expected;
-reg [11:0] CH1_expected;
-reg  CUENTAA_expected;
-reg  GIROO_expected;
-reg  MD0_expected;
-reg  MD1_expected;
-reg  MI0_expected;
-reg  MI1_expected;
-reg  MUROO_expected;
-reg [2:0] P_ad_expected;
-reg [2:0] P_at_expected;
-reg [2:0] P_der_expected;
-reg [2:0] P_izq_expected;
-reg [3:0] pos_act_expected;
-reg  S/rebotes_expected;
-reg [1:0] sent_act_expected;
-reg  SENTIDOO_expected;
-reg  VELD_expected;
-reg  VELI_expected;
+reg [2:0] S_expected;
 
-reg  ADC_CS_N_prev;
-reg  ADC_DIN_prev;
-reg  ADC_SCLK_prev;
-reg [3:0] C_ad_prev;
-reg [3:0] C_at_prev;
-reg [3:0] C_der_prev;
-reg [3:0] C_izq_prev;
-reg [11:0] CH0_prev;
-reg [11:0] CH1_prev;
-reg  CUENTAA_prev;
-reg  GIROO_prev;
-reg  MD0_prev;
-reg  MD1_prev;
-reg  MI0_prev;
-reg  MI1_prev;
-reg  MUROO_prev;
-reg [2:0] P_ad_prev;
-reg [2:0] P_at_prev;
-reg [2:0] P_der_prev;
-reg [2:0] P_izq_prev;
-reg [3:0] pos_act_prev;
-reg  S/rebotes_prev;
-reg [1:0] sent_act_prev;
-reg  SENTIDOO_prev;
-reg  VELD_prev;
-reg  VELI_prev;
+reg [2:0] S_prev;
 
-reg [3:0] pos_act_expected_prev;
-reg [1:0] sent_act_expected_prev;
+reg [2:0] S_expected_prev;
 
-reg [3:0] last_pos_act_exp;
-reg [1:0] last_sent_act_exp;
+reg [2:0] last_S_exp;
 
 reg trigger;
 
 integer i;
 integer nummismatches;
 
-reg [1:26] on_first_change ;
+reg [1:1] on_first_change ;
 
 
 initial
@@ -192,88 +84,41 @@ begin
 trigger = 0;
 i = 0;
 nummismatches = 0;
-on_first_change = 26'b1;
+on_first_change = 1'b1;
 end
 
 // update real /o prevs
 
 always @(trigger)
 begin
-	ADC_CS_N_prev = ADC_CS_N;
-	ADC_DIN_prev = ADC_DIN;
-	ADC_SCLK_prev = ADC_SCLK;
-	C_ad_prev = C_ad;
-	C_at_prev = C_at;
-	C_der_prev = C_der;
-	C_izq_prev = C_izq;
-	CH0_prev = CH0;
-	CH1_prev = CH1;
-	CUENTAA_prev = CUENTAA;
-	GIROO_prev = GIROO;
-	MD0_prev = MD0;
-	MD1_prev = MD1;
-	MI0_prev = MI0;
-	MI1_prev = MI1;
-	MUROO_prev = MUROO;
-	P_ad_prev = P_ad;
-	P_at_prev = P_at;
-	P_der_prev = P_der;
-	P_izq_prev = P_izq;
-	pos_act_prev = pos_act;
-	S/rebotes_prev = S/rebotes;
-	sent_act_prev = sent_act;
-	SENTIDOO_prev = SENTIDOO;
-	VELD_prev = VELD;
-	VELI_prev = VELI;
+	S_prev = S;
 end
 
 // update expected /o prevs
 
 always @(trigger)
 begin
-	pos_act_expected_prev = pos_act_expected;
-	sent_act_expected_prev = sent_act_expected;
+	S_expected_prev = S_expected;
 end
 
 
-// expected sent_act[ 1 ]
+// expected S[ 2 ]
 initial
 begin
-	sent_act_expected[1] = 1'bX;
-	sent_act_expected[1] = #999000 1'b0;
+	S_expected[2] = 1'bX;
 end 
-// expected sent_act[ 0 ]
+// expected S[ 1 ]
 initial
 begin
-	sent_act_expected[0] = 1'bX;
-	sent_act_expected[0] = #999000 1'b0;
+	S_expected[1] = 1'bX;
 end 
-// expected pos_act[ 3 ]
+// expected S[ 0 ]
 initial
 begin
-	pos_act_expected[3] = 1'bX;
-	pos_act_expected[3] = #999000 1'b0;
-end 
-// expected pos_act[ 2 ]
-initial
-begin
-	pos_act_expected[2] = 1'bX;
-	pos_act_expected[2] = #999000 1'b0;
-end 
-// expected pos_act[ 1 ]
-initial
-begin
-	pos_act_expected[1] = 1'bX;
-	pos_act_expected[1] = #999000 1'b0;
-end 
-// expected pos_act[ 0 ]
-initial
-begin
-	pos_act_expected[0] = 1'bX;
-	pos_act_expected[0] = #999000 1'b0;
+	S_expected[0] = 1'bX;
 end 
 // generate trigger
-always @(ADC_CS_N_expected or ADC_CS_N or ADC_DIN_expected or ADC_DIN or ADC_SCLK_expected or ADC_SCLK or C_ad_expected or C_ad or C_at_expected or C_at or C_der_expected or C_der or C_izq_expected or C_izq or CH0_expected or CH0 or CH1_expected or CH1 or CUENTAA_expected or CUENTAA or GIROO_expected or GIROO or MD0_expected or MD0 or MD1_expected or MD1 or MI0_expected or MI0 or MI1_expected or MI1 or MUROO_expected or MUROO or P_ad_expected or P_ad or P_at_expected or P_at or P_der_expected or P_der or P_izq_expected or P_izq or pos_act_expected or pos_act or S/rebotes_expected or S/rebotes or sent_act_expected or sent_act or SENTIDOO_expected or SENTIDOO or VELD_expected or VELD or VELI_expected or VELI)
+always @(S_expected or S)
 begin
 	trigger <= ~trigger;
 end
@@ -283,86 +128,47 @@ begin
 `ifdef debug_tbench
 	$display("Scanning pattern %d @time = %t",i,$realtime );
 	i = i + 1;
-	$display("| expected ADC_CS_N = %b | expected ADC_DIN = %b | expected ADC_SCLK = %b | expected C_ad = %b | expected C_at = %b | expected C_der = %b | expected C_izq = %b | expected CH0 = %b | expected CH1 = %b | expected CUENTAA = %b | expected GIROO = %b | expected MD0 = %b | expected MD1 = %b | expected MI0 = %b | expected MI1 = %b | expected MUROO = %b | expected P_ad = %b | expected P_at = %b | expected P_der = %b | expected P_izq = %b | expected pos_act = %b | expected S/rebotes = %b | expected sent_act = %b | expected SENTIDOO = %b | expected VELD = %b | expected VELI = %b | ",ADC_CS_N_expected_prev,ADC_DIN_expected_prev,ADC_SCLK_expected_prev,C_ad_expected_prev,C_at_expected_prev,C_der_expected_prev,C_izq_expected_prev,CH0_expected_prev,CH1_expected_prev,CUENTAA_expected_prev,GIROO_expected_prev,MD0_expected_prev,MD1_expected_prev,MI0_expected_prev,MI1_expected_prev,MUROO_expected_prev,P_ad_expected_prev,P_at_expected_prev,P_der_expected_prev,P_izq_expected_prev,pos_act_expected_prev,S/rebotes_expected_prev,sent_act_expected_prev,SENTIDOO_expected_prev,VELD_expected_prev,VELI_expected_prev);
-	$display("| real ADC_CS_N = %b | real ADC_DIN = %b | real ADC_SCLK = %b | real C_ad = %b | real C_at = %b | real C_der = %b | real C_izq = %b | real CH0 = %b | real CH1 = %b | real CUENTAA = %b | real GIROO = %b | real MD0 = %b | real MD1 = %b | real MI0 = %b | real MI1 = %b | real MUROO = %b | real P_ad = %b | real P_at = %b | real P_der = %b | real P_izq = %b | real pos_act = %b | real S/rebotes = %b | real sent_act = %b | real SENTIDOO = %b | real VELD = %b | real VELI = %b | ",ADC_CS_N_prev,ADC_DIN_prev,ADC_SCLK_prev,C_ad_prev,C_at_prev,C_der_prev,C_izq_prev,CH0_prev,CH1_prev,CUENTAA_prev,GIROO_prev,MD0_prev,MD1_prev,MI0_prev,MI1_prev,MUROO_prev,P_ad_prev,P_at_prev,P_der_prev,P_izq_prev,pos_act_prev,S/rebotes_prev,sent_act_prev,SENTIDOO_prev,VELD_prev,VELI_prev);
+	$display("| expected S = %b | ",S_expected_prev);
+	$display("| real S = %b | ",S_prev);
 `endif
 	if (
-		( pos_act_expected_prev[0] !== 1'bx ) && ( pos_act_prev[0] !== pos_act_expected_prev[0] )
-		&& ((pos_act_expected_prev[0] !== last_pos_act_exp[0]) ||
-			on_first_change[21])
+		( S_expected_prev[0] !== 1'bx ) && ( S_prev[0] !== S_expected_prev[0] )
+		&& ((S_expected_prev[0] !== last_S_exp[0]) ||
+			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port pos_act[0] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", pos_act_expected_prev);
-		$display ("     Real value = %b", pos_act_prev);
+		$display ("ERROR! Vector Mismatch for output port S[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", S_expected_prev);
+		$display ("     Real value = %b", S_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[21] = 1'b0;
-		last_pos_act_exp[0] = pos_act_expected_prev[0];
+		on_first_change[1] = 1'b0;
+		last_S_exp[0] = S_expected_prev[0];
 	end
 	if (
-		( pos_act_expected_prev[1] !== 1'bx ) && ( pos_act_prev[1] !== pos_act_expected_prev[1] )
-		&& ((pos_act_expected_prev[1] !== last_pos_act_exp[1]) ||
-			on_first_change[21])
+		( S_expected_prev[1] !== 1'bx ) && ( S_prev[1] !== S_expected_prev[1] )
+		&& ((S_expected_prev[1] !== last_S_exp[1]) ||
+			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port pos_act[1] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", pos_act_expected_prev);
-		$display ("     Real value = %b", pos_act_prev);
+		$display ("ERROR! Vector Mismatch for output port S[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", S_expected_prev);
+		$display ("     Real value = %b", S_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[21] = 1'b0;
-		last_pos_act_exp[1] = pos_act_expected_prev[1];
+		on_first_change[1] = 1'b0;
+		last_S_exp[1] = S_expected_prev[1];
 	end
 	if (
-		( pos_act_expected_prev[2] !== 1'bx ) && ( pos_act_prev[2] !== pos_act_expected_prev[2] )
-		&& ((pos_act_expected_prev[2] !== last_pos_act_exp[2]) ||
-			on_first_change[21])
+		( S_expected_prev[2] !== 1'bx ) && ( S_prev[2] !== S_expected_prev[2] )
+		&& ((S_expected_prev[2] !== last_S_exp[2]) ||
+			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port pos_act[2] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", pos_act_expected_prev);
-		$display ("     Real value = %b", pos_act_prev);
+		$display ("ERROR! Vector Mismatch for output port S[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", S_expected_prev);
+		$display ("     Real value = %b", S_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[21] = 1'b0;
-		last_pos_act_exp[2] = pos_act_expected_prev[2];
-	end
-	if (
-		( pos_act_expected_prev[3] !== 1'bx ) && ( pos_act_prev[3] !== pos_act_expected_prev[3] )
-		&& ((pos_act_expected_prev[3] !== last_pos_act_exp[3]) ||
-			on_first_change[21])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port pos_act[3] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", pos_act_expected_prev);
-		$display ("     Real value = %b", pos_act_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[21] = 1'b0;
-		last_pos_act_exp[3] = pos_act_expected_prev[3];
-	end
-	if (
-		( sent_act_expected_prev[0] !== 1'bx ) && ( sent_act_prev[0] !== sent_act_expected_prev[0] )
-		&& ((sent_act_expected_prev[0] !== last_sent_act_exp[0]) ||
-			on_first_change[23])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port sent_act[0] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", sent_act_expected_prev);
-		$display ("     Real value = %b", sent_act_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[23] = 1'b0;
-		last_sent_act_exp[0] = sent_act_expected_prev[0];
-	end
-	if (
-		( sent_act_expected_prev[1] !== 1'bx ) && ( sent_act_prev[1] !== sent_act_expected_prev[1] )
-		&& ((sent_act_expected_prev[1] !== last_sent_act_exp[1]) ||
-			on_first_change[23])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port sent_act[1] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", sent_act_expected_prev);
-		$display ("     Real value = %b", sent_act_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[23] = 1'b0;
-		last_sent_act_exp[1] = sent_act_expected_prev[1];
+		on_first_change[1] = 1'b0;
+		last_S_exp[2] = S_expected_prev[2];
 	end
 
 	trigger <= ~trigger;
@@ -371,7 +177,7 @@ initial
 
 begin 
 $timeformat(-12,3," ps",6);
-#100000000;
+#1000000;
 if (nummismatches > 0)
 	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
 else
@@ -380,161 +186,56 @@ $finish;
 end 
 endmodule
 
-module Matriz_ubicacion_vlg_vec_tst();
+module sumador_habilitacion_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg ADC_DOUT;
-reg CLK;
-reg Reset1;
-reg SENSOR_LINEA;
-reg SENSOR_MURO;
+reg [2:0] A;
+reg EN;
 // wires                                               
-wire ADC_CS_N;
-wire ADC_DIN;
-wire ADC_SCLK;
-wire [3:0] C_ad;
-wire [3:0] C_at;
-wire [3:0] C_der;
-wire [3:0] C_izq;
-wire [11:0] CH0;
-wire [11:0] CH1;
-wire CUENTAA;
-wire GIROO;
-wire MD0;
-wire MD1;
-wire MI0;
-wire MI1;
-wire MUROO;
-wire [2:0] P_ad;
-wire [2:0] P_at;
-wire [2:0] P_der;
-wire [2:0] P_izq;
-wire [3:0] pos_act;
-wire S/rebotes;
-wire [1:0] sent_act;
-wire SENTIDOO;
-wire VELD;
-wire VELI;
+wire [2:0] S;
 
 wire sampler;                             
 
 // assign statements (if any)                          
-Matriz_ubicacion i1 (
+sumador_habilitacion i1 (
 // port map - connection between master ports and signals/registers   
-	.ADC_CS_N(ADC_CS_N),
-	.ADC_DIN(ADC_DIN),
-	.ADC_DOUT(ADC_DOUT),
-	.ADC_SCLK(ADC_SCLK),
-	.C_ad(C_ad),
-	.C_at(C_at),
-	.C_der(C_der),
-	.C_izq(C_izq),
-	.CH0(CH0),
-	.CH1(CH1),
-	.CLK(CLK),
-	.CUENTAA(CUENTAA),
-	.GIROO(GIROO),
-	.MD0(MD0),
-	.MD1(MD1),
-	.MI0(MI0),
-	.MI1(MI1),
-	.MUROO(MUROO),
-	.P_ad(P_ad),
-	.P_at(P_at),
-	.P_der(P_der),
-	.P_izq(P_izq),
-	.pos_act(pos_act),
-	.Reset1(Reset1),
-	.\S/rebotes (S/rebotes),
-	.SENSOR_LINEA(SENSOR_LINEA),
-	.SENSOR_MURO(SENSOR_MURO),
-	.sent_act(sent_act),
-	.SENTIDOO(SENTIDOO),
-	.VELD(VELD),
-	.VELI(VELI)
+	.A(A),
+	.EN(EN),
+	.S(S)
 );
-
-// CLK
-always
-begin
-	CLK = 1'b0;
-	CLK = #100000 1'b1;
-	#100000;
-end 
-
-// Reset1
+// A[ 2 ]
 initial
 begin
-	Reset1 = 1'b0;
-	Reset1 = #1280000 1'b1;
+	A[2] = 1'b1;
 end 
-
-// SENSOR_LINEA
+// A[ 1 ]
 initial
 begin
-	SENSOR_LINEA = 1'b1;
-	SENSOR_LINEA = #2560000 1'b0;
-	SENSOR_LINEA = #640000 1'b1;
-	SENSOR_LINEA = #5120000 1'b0;
-	SENSOR_LINEA = #640000 1'b1;
-	SENSOR_LINEA = #4480000 1'b0;
-	SENSOR_LINEA = #640000 1'b1;
-	SENSOR_LINEA = #4480000 1'b0;
-	SENSOR_LINEA = #640000 1'b1;
-	SENSOR_LINEA = #4480000 1'b0;
-	SENSOR_LINEA = #640000 1'b1;
-	SENSOR_LINEA = #6400000 1'b0;
-	SENSOR_LINEA = #640000 1'b1;
-	SENSOR_LINEA = #7040000 1'b0;
-	SENSOR_LINEA = #640000 1'b1;
+	A[1] = 1'b0;
 end 
-
-// SENSOR_MURO
+// A[ 0 ]
 initial
 begin
-	SENSOR_MURO = 1'b1;
-	SENSOR_MURO = #10240000 1'b0;
-	SENSOR_MURO = #1280000 1'b1;
-	SENSOR_MURO = #4480000 1'b0;
-	SENSOR_MURO = #640000 1'b1;
+	A[0] = 1'b1;
 end 
 
-Matriz_ubicacion_vlg_sample_tst tb_sample (
-	.ADC_DOUT(ADC_DOUT),
-	.CLK(CLK),
-	.Reset1(Reset1),
-	.SENSOR_LINEA(SENSOR_LINEA),
-	.SENSOR_MURO(SENSOR_MURO),
+// EN
+initial
+begin
+	EN = 1'b0;
+	EN = #15000 1'b1;
+	EN = #855000 1'b0;
+	EN = #45000 1'b1;
+end 
+
+sumador_habilitacion_vlg_sample_tst tb_sample (
+	.A(A),
+	.EN(EN),
 	.sampler_tx(sampler)
 );
 
-Matriz_ubicacion_vlg_check_tst tb_out(
-	.ADC_CS_N(ADC_CS_N),
-	.ADC_DIN(ADC_DIN),
-	.ADC_SCLK(ADC_SCLK),
-	.C_ad(C_ad),
-	.C_at(C_at),
-	.C_der(C_der),
-	.C_izq(C_izq),
-	.CH0(CH0),
-	.CH1(CH1),
-	.CUENTAA(CUENTAA),
-	.GIROO(GIROO),
-	.MD0(MD0),
-	.MD1(MD1),
-	.MI0(MI0),
-	.MI1(MI1),
-	.MUROO(MUROO),
-	.P_ad(P_ad),
-	.P_at(P_at),
-	.P_der(P_der),
-	.P_izq(P_izq),
-	.pos_act(pos_act),
-	.S/rebotes(S/rebotes),
-	.sent_act(sent_act),
-	.SENTIDOO(SENTIDOO),
-	.VELD(VELD),
-	.VELI(VELI),
+sumador_habilitacion_vlg_check_tst tb_out(
+	.S(S),
 	.sampler_rx(sampler)
 );
 endmodule

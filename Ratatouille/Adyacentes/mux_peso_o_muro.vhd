@@ -20,7 +20,7 @@ begin
         if Sel = '0' then
             Y <= A;  -- Si Sel es 0, la salida es A
         else
-            Y <= B;  -- Si Sel es 1, la salida es B (fija a "1111")
+            Y <= B;  -- Si Sel es 1, la salida es B (fija a "111")
         end if;
     end process;
 end Behavioral;

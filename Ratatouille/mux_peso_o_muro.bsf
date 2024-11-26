@@ -26,8 +26,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "A[2..0]" (rect 0 0 28 12)(font "Arial" ))
-		(text "A[2..0]" (rect 21 27 49 39)(font "Arial" ))
+		(text "A[3..0]" (rect 0 0 28 12)(font "Arial" ))
+		(text "A[3..0]" (rect 21 27 49 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
@@ -40,8 +40,8 @@ applicable agreement for further details.
 	(port
 		(pt 160 32)
 		(output)
-		(text "Y[2..0]" (rect 0 0 27 12)(font "Arial" ))
-		(text "Y[2..0]" (rect 112 27 139 39)(font "Arial" ))
+		(text "Y[3..0]" (rect 0 0 27 12)(font "Arial" ))
+		(text "Y[3..0]" (rect 112 27 139 39)(font "Arial" ))
 		(line (pt 160 32)(pt 144 32)(line_width 3))
 	)
 	(drawing
