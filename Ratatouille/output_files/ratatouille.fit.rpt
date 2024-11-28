@@ -1,5 +1,5 @@
 Fitter report for ratatouille
-Thu Nov 28 15:08:53 2024
+Thu Nov 28 15:43:38 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -71,7 +71,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Thu Nov 28 15:08:53 2024      ;
+; Fitter Status                      ; Successful - Thu Nov 28 15:43:38 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; ratatouille                                ;
 ; Top-level Entity Name              ; Matriz_ubicacion                           ;
@@ -3157,10 +3157,10 @@ Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 8% of the available device resources in the region that extends from location X32_Y11 to location X42_Y22
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.28 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.44 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -3170,9 +3170,9 @@ Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments 
 Info (144001): Generated suppressed messages file C:/Users/asusx/OneDrive/Escritorio/proyecto_laberinto/Ratatouille/output_files/ratatouille.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 10 warnings
     Info: Peak virtual memory: 5004 megabytes
-    Info: Processing ended: Thu Nov 28 15:08:53 2024
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Processing ended: Thu Nov 28 15:43:38 2024
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +----------------------------+
