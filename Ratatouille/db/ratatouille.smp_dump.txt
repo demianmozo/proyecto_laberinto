@@ -7,18 +7,16 @@ reg_fstate.Detecta 0 1 0 1
 reg_fstate.Espera_Alto 1 0 0 1 
 
 State Machine - |Matriz_ubicacion|control:inst30|fstate
-Name fstate.deci3 fstate.deci2 fstate.deci1 fstate.chocandose2 fstate.chocandose1 fstate.girando fstate.decide fstate.se_choca fstate.nueva_celda fstate.cruzando fstate.MUEVE 
-fstate.MUEVE 0 0 0 0 0 0 0 0 0 0 0 
-fstate.cruzando 0 0 0 0 0 0 0 0 0 1 1 
-fstate.nueva_celda 0 0 0 0 0 0 0 0 1 0 1 
-fstate.se_choca 0 0 0 0 0 0 0 1 0 0 1 
-fstate.decide 0 0 0 0 0 0 1 0 0 0 1 
-fstate.girando 0 0 0 0 0 1 0 0 0 0 1 
-fstate.chocandose1 0 0 0 0 1 0 0 0 0 0 1 
-fstate.chocandose2 0 0 0 1 0 0 0 0 0 0 1 
-fstate.deci1 0 0 1 0 0 0 0 0 0 0 1 
-fstate.deci2 0 1 0 0 0 0 0 0 0 0 1 
-fstate.deci3 1 0 0 0 0 0 0 0 0 0 1 
+Name fstate.deci1 fstate.chocandose2 fstate.chocandose1 fstate.girando fstate.decide fstate.se_choca fstate.nueva_celda fstate.cruzando fstate.MUEVE 
+fstate.MUEVE 0 0 0 0 0 0 0 0 0 
+fstate.cruzando 0 0 0 0 0 0 0 1 1 
+fstate.nueva_celda 0 0 0 0 0 0 1 0 1 
+fstate.se_choca 0 0 0 0 0 1 0 0 1 
+fstate.decide 0 0 0 0 1 0 0 0 1 
+fstate.girando 0 0 0 1 0 0 0 0 1 
+fstate.chocandose1 0 0 1 0 0 0 0 0 1 
+fstate.chocandose2 0 1 0 0 0 0 0 0 1 
+fstate.deci1 1 0 0 0 0 0 0 0 1 
 
 State Machine - |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|Motores:inst|fstate
 Name fstate.Ganamos fstate.Gira_180 fstate.Gira_90_der fstate.Gira_90_izq fstate.Corrige_der fstate.Corrige_izq fstate.Avanza 
