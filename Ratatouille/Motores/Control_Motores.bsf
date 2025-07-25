@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 200 304)
+	(rect 16 16 200 336)
 	(text "Control_Motores" (rect 5 0 98 14)(font "Arial" (font_size 8)))
-	(text "inst" (rect 8 272 25 284)(font "Arial" ))
+	(text "inst" (rect 8 304 25 316)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -156,7 +156,21 @@ applicable agreement for further details.
 		(text "clk_40KHz" (rect 103 235 163 249)(font "Arial" (font_size 8)))
 		(line (pt 184 240)(pt 168 240))
 	)
+	(port
+		(pt 184 256)
+		(output)
+		(text "LedIRi" (rect 0 0 34 14)(font "Arial" (font_size 8)))
+		(text "LedIRi" (rect 129 251 163 265)(font "Arial" (font_size 8)))
+		(line (pt 184 256)(pt 168 256))
+	)
+	(port
+		(pt 184 272)
+		(output)
+		(text "LedIRd" (rect 0 0 38 14)(font "Arial" (font_size 8)))
+		(text "LedIRd" (rect 125 267 163 281)(font "Arial" (font_size 8)))
+		(line (pt 184 272)(pt 168 272))
+	)
 	(drawing
-		(rectangle (rect 16 16 168 272))
+		(rectangle (rect 16 16 168 304))
 	)
 )

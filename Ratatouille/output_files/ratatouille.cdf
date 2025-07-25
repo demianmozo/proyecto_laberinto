@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE22F17) Path("C:/Users/LSC/Desktop/proyecto_laberinto-master/Ratatouille/output_files/") File("ratatouille.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE22F17) Path("C:/Users/LSC/Desktop/Ratatouille/output_files/") File("ratatouille.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

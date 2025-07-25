@@ -45,6 +45,13 @@ applicable agreement for further details.
 		(line (pt 0 64)(pt 16 64)(line_width 1))
 	)
 	(port
+		(pt 0 80)
+		(input)
+		(text "modo" (rect 0 0 22 12)(font "Arial" ))
+		(text "modo" (rect 21 75 43 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
 		(pt 184 32)
 		(output)
 		(text "fin_avanza" (rect 0 0 43 12)(font "Arial" ))

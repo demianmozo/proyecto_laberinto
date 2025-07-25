@@ -2,25 +2,89 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module sumador_habilitacion
+# -- Compiling module Control_Motores
 # 
 # Top level modules:
-# 	sumador_habilitacion
+# 	Control_Motores
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module sumador_habilitacion_vlg_sample_tst
-# -- Compiling module sumador_habilitacion_vlg_check_tst
-# -- Compiling module sumador_habilitacion_vlg_vec_tst
+# -- Compiling module Control_Motores_vlg_sample_tst
+# -- Compiling module Control_Motores_vlg_check_tst
+# -- Compiling module Control_Motores_vlg_vec_tst
 # 
 # Top level modules:
-# 	sumador_habilitacion_vlg_vec_tst
-# vsim -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.sumador_habilitacion_vlg_vec_tst 
-# Loading work.sumador_habilitacion_vlg_vec_tst
-# Loading work.sumador_habilitacion
+# 	Control_Motores_vlg_vec_tst
+# vsim -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.Control_Motores_vlg_vec_tst 
+# Loading work.Control_Motores_vlg_vec_tst
+# Loading work.Control_Motores
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading cycloneive_ver.cycloneive_jtag
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
 # Loading cycloneive_ver.cycloneive_io_obuf
 # Loading cycloneive_ver.cycloneive_io_ibuf
-# Loading cycloneive_ver.cycloneive_lcell_comb
-# Loading work.sumador_habilitacion_vlg_sample_tst
-# Loading work.sumador_habilitacion_vlg_check_tst
-# Simulation passed !
-# ** Note: $finish    : ratatouille.vt(185)
-#    Time: 1 us  Iteration: 0  Instance: /sumador_habilitacion_vlg_vec_tst/tb_out
+# Loading cycloneive_ver.cycloneive_pll
+# Loading cycloneive_ver.cycloneive_m_cntr
+# Loading cycloneive_ver.cycloneive_n_cntr
+# Loading cycloneive_ver.cycloneive_scale_cntr
+# Loading work.Control_Motores_vlg_sample_tst
+# Loading work.Control_Motores_vlg_check_tst
+# ** Warning: (vsim-3017) ratatouille.vt(1049): [TFMPC] - Too few port connections. Expected 25, found 21.
+# 
+#         Region: /Control_Motores_vlg_vec_tst/i1
+# ** Warning: (vsim-3722) ratatouille.vt(1049): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
+# 
+# ** Warning: (vsim-3722) ratatouille.vt(1049): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
+# 
+# ** Warning: (vsim-3722) ratatouille.vt(1049): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
+# 
+# ** Warning: (vsim-3722) ratatouille.vt(1049): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
+# 
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+#  Note : Cycloneive PLL was reset
+# Time: 0.000 ps  Instance: Control_Motores_vlg_vec_tst.i1.\inst4|altpll_component|auto_generated|pll1 
+# ERROR! Vector Mismatch for output port ADC_CS_N :: @time = 999500.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port ADC_SCLK :: @time = 999500.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port MD0 :: @time = 999500.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port MI0 :: @time = 999500.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port CLK1MHz :: @time = 1280500.000 ps
+#      Expected value = 0
+#      Real value = x
+# ERROR! Vector Mismatch for output port CLK10KHz :: @time = 1280500.000 ps
+#      Expected value = 0
+#      Real value = x
+# ERROR! Vector Mismatch for output port clk_40KHz :: @time = 1280500.000 ps
+#      Expected value = 0
+#      Real value = x
+# ERROR! Vector Mismatch for output port LedIRd :: @time = 1280500.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port LedIRi :: @time = 1280500.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port VELD :: @time = 1280500.000 ps
+#      Expected value = 0
+#      Real value = x
+# ERROR! Vector Mismatch for output port VELI :: @time = 1280500.000 ps
+#      Expected value = 0
+#      Real value = x
+# Warning : Input clock freq. is under VCO range. Cycloneive PLL may lose lock
+# Time: 1282500.000 ps  Instance: Control_Motores_vlg_vec_tst.i1.\inst4|altpll_component|auto_generated|pll1 
+#          11 mismatched vectors : Simulation failed !
+# ** Note: $finish    : ratatouille.vt(993)
+#    Time: 100 us  Iteration: 0  Instance: /Control_Motores_vlg_vec_tst/tb_out

@@ -18,6 +18,16 @@ fstate.chocandose1 0 0 1 0 0 0 0 0 1
 fstate.chocandose2 0 1 0 0 0 0 0 0 1 
 fstate.deci1 1 0 0 0 0 0 0 0 1 
 
+State Machine - |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|ir_smf:inst13|state
+Name state.DONE state.SUB state.LAT_LO state.TX_OFF state.LAT_HI state.TX_ON state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 
+state.TX_ON 0 0 0 0 0 1 1 
+state.LAT_HI 0 0 0 0 1 0 1 
+state.TX_OFF 0 0 0 1 0 0 1 
+state.LAT_LO 0 0 1 0 0 0 1 
+state.SUB 0 1 0 0 0 0 1 
+state.DONE 1 0 0 0 0 0 1 
+
 State Machine - |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|Motores:inst|fstate
 Name fstate.Ganamos fstate.Gira_180 fstate.Gira_90_der fstate.Gira_90_izq fstate.Corrige_der fstate.Corrige_izq fstate.Avanza 
 fstate.Avanza 0 0 0 0 0 0 0 

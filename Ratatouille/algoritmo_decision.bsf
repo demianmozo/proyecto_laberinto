@@ -304,6 +304,13 @@ applicable agreement for further details.
 		(line (pt 0 656)(pt 16 656)(line_width 3))
 	)
 	(port
+		(pt 0 672)
+		(input)
+		(text "sprint" (rect 0 0 31 14)(font "Arial" (font_size 8)))
+		(text "sprint" (rect 21 667 52 681)(font "Arial" (font_size 8)))
+		(line (pt 0 672)(pt 16 672))
+	)
+	(port
 		(pt 232 32)
 		(output)
 		(text "CLK10KHz" (rect 0 0 61 14)(font "Arial" (font_size 8)))
@@ -470,6 +477,20 @@ applicable agreement for further details.
 		(text "40KHz" (rect 0 0 37 14)(font "Arial" (font_size 8)))
 		(text "40KHz" (rect 174 395 211 409)(font "Arial" (font_size 8)))
 		(line (pt 232 400)(pt 216 400))
+	)
+	(port
+		(pt 232 416)
+		(output)
+		(text "LedIRi" (rect 0 0 34 14)(font "Arial" (font_size 8)))
+		(text "LedIRi" (rect 177 411 211 425)(font "Arial" (font_size 8)))
+		(line (pt 232 416)(pt 216 416))
+	)
+	(port
+		(pt 232 432)
+		(output)
+		(text "LedIRd" (rect 0 0 38 14)(font "Arial" (font_size 8)))
+		(text "LedIRd" (rect 173 427 211 441)(font "Arial" (font_size 8)))
+		(line (pt 232 432)(pt 216 432))
 	)
 	(drawing
 		(rectangle (rect 16 16 216 688))

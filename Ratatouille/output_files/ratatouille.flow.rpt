@@ -1,6 +1,6 @@
 Flow report for ratatouille
-Thu Nov 28 15:43:47 2024
-Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Thu Jul 24 20:35:29 2025
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -37,26 +37,26 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Flow Summary                                                                    ;
-+------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Thu Nov 28 15:43:47 2024      ;
-; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
-; Revision Name                      ; ratatouille                                ;
-; Top-level Entity Name              ; Matriz_ubicacion                           ;
-; Family                             ; Cyclone IV E                               ;
-; Device                             ; EP4CE22F17C6                               ;
-; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 1,224 / 22,320 ( 5 % )                     ;
-;     Total combinational functions  ; 1,182 / 22,320 ( 5 % )                     ;
-;     Dedicated logic registers      ; 322 / 22,320 ( 1 % )                       ;
-; Total registers                    ; 322                                        ;
-; Total pins                         ; 89 / 154 ( 58 % )                          ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0 / 608,256 ( 0 % )                        ;
-; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                            ;
-; Total PLLs                         ; 1 / 4 ( 25 % )                             ;
-+------------------------------------+--------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Flow Summary                                                                         ;
++------------------------------------+-------------------------------------------------+
+; Flow Status                        ; Successful - Thu Jul 24 20:35:29 2025           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; ratatouille                                     ;
+; Top-level Entity Name              ; Matriz_ubicacion                                ;
+; Family                             ; Cyclone IV E                                    ;
+; Device                             ; EP4CE22F17C6                                    ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 2,307 / 22,320 ( 10 % )                         ;
+;     Total combinational functions  ; 1,738 / 22,320 ( 8 % )                          ;
+;     Dedicated logic registers      ; 1,259 / 22,320 ( 6 % )                          ;
+; Total registers                    ; 1259                                            ;
+; Total pins                         ; 94 / 154 ( 61 % )                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 147,456 / 608,256 ( 24 % )                      ;
+; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                                 ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                                  ;
++------------------------------------+-------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -64,47 +64,71 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/28/2024 15:43:14 ;
+; Start date & time ; 07/24/2025 20:34:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ratatouille         ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                        ;
-+--------------------------------------+---------------------------------------+---------------+------------------+-----------------------+
-; Assignment Name                      ; Value                                 ; Default Value ; Entity Name      ; Section Id            ;
-+--------------------------------------+---------------------------------------+---------------+------------------+-----------------------+
-; COMPILER_SIGNATURE_ID                ; 119384635693263.173281939404840       ; --            ; --               ; --                    ;
-; EDA_DESIGN_INSTANCE_NAME             ; uut                                   ; --            ; --               ; tb_temporizador_doble ;
-; EDA_DESIGN_INSTANCE_NAME             ; uut                                   ; --            ; --               ; tb_Control_Motores    ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; On                                    ; --            ; --               ; eda_simulation        ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_Control_Motores                    ; --            ; --               ; eda_simulation        ;
-; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --               ; eda_simulation        ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)             ; <None>        ; --               ; --                    ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --               ; eda_simulation        ;
-; EDA_TEST_BENCH_FILE                  ; Motores/tb_temporizador_doble.vhd     ; --            ; --               ; tb_temporizador_doble ;
-; EDA_TEST_BENCH_FILE                  ; Motores/tb_Control_Motores.vhd        ; --            ; --               ; tb_Control_Motores    ;
-; EDA_TEST_BENCH_MODULE_NAME           ; tb_temporizador_doble                 ; --            ; --               ; tb_temporizador_doble ;
-; EDA_TEST_BENCH_MODULE_NAME           ; tb_Control_Motores                    ; --            ; --               ; tb_Control_Motores    ;
-; EDA_TEST_BENCH_NAME                  ; tb_temporizador_doble                 ; --            ; --               ; eda_simulation        ;
-; EDA_TEST_BENCH_NAME                  ; tb_Control_Motores                    ; --            ; --               ; eda_simulation        ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 3 s                                   ; --            ; --               ; tb_temporizador_doble ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 5 s                                   ; --            ; --               ; tb_Control_Motores    ;
-; EDA_TIME_SCALE                       ; 1 ps                                  ; --            ; --               ; eda_simulation        ;
-; ENABLE_SIGNALTAP                     ; On                                    ; --            ; --               ; --                    ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --               ; --                    ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --               ; --                    ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --               ; --                    ;
-; PARTITION_COLOR                      ; 16764057                              ; --            ; Matriz_ubicacion ; Top                   ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; Matriz_ubicacion ; Top                   ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; Matriz_ubicacion ; Top                   ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --               ; --                    ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --               ; --                    ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --               ; --                    ;
-; TOP_LEVEL_ENTITY                     ; Matriz_ubicacion                      ; ratatouille   ; --               ; --                    ;
-; USE_SIGNALTAP_FILE                   ; output_files/stp3.stp                 ; --            ; --               ; --                    ;
-+--------------------------------------+---------------------------------------+---------------+------------------+-----------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                                                                            ;
++--------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+-----------------------+
+; Assignment Name                      ; Value                                                                                                                                                     ; Default Value ; Entity Name      ; Section Id            ;
++--------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+-----------------------+
+; COMPILER_SIGNATURE_ID                ; 88750187570030.175340008202084                                                                                                                            ; --            ; --               ; --                    ;
+; EDA_DESIGN_INSTANCE_NAME             ; uut                                                                                                                                                       ; --            ; --               ; tb_temporizador_doble ;
+; EDA_DESIGN_INSTANCE_NAME             ; uut                                                                                                                                                       ; --            ; --               ; tb_Control_Motores    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; On                                                                                                                                                        ; --            ; --               ; eda_simulation        ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_Control_Motores                                                                                                                                        ; --            ; --               ; eda_simulation        ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                                                                                                                                               ; --            ; --               ; eda_simulation        ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)                                                                                                                                 ; <None>        ; --               ; --                    ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                                                                                                                                           ; --            ; --               ; eda_simulation        ;
+; EDA_TEST_BENCH_FILE                  ; Motores/tb_temporizador_doble.vhd                                                                                                                         ; --            ; --               ; tb_temporizador_doble ;
+; EDA_TEST_BENCH_FILE                  ; Motores/tb_Control_Motores.vhd                                                                                                                            ; --            ; --               ; tb_Control_Motores    ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb_temporizador_doble                                                                                                                                     ; --            ; --               ; tb_temporizador_doble ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb_Control_Motores                                                                                                                                        ; --            ; --               ; tb_Control_Motores    ;
+; EDA_TEST_BENCH_NAME                  ; tb_temporizador_doble                                                                                                                                     ; --            ; --               ; eda_simulation        ;
+; EDA_TEST_BENCH_NAME                  ; tb_Control_Motores                                                                                                                                        ; --            ; --               ; eda_simulation        ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 3 s                                                                                                                                                       ; --            ; --               ; tb_temporizador_doble ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 5 s                                                                                                                                                       ; --            ; --               ; tb_Control_Motores    ;
+; EDA_TIME_SCALE                       ; 1 ps                                                                                                                                                      ; --            ; --               ; eda_simulation        ;
+; ENABLE_SIGNALTAP                     ; On                                                                                                                                                        ; --            ; --               ; --                    ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                                                                                                                                        ; --            ; --               ; --                    ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                                                                                                                                         ; --            ; --               ; --                    ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                                                                                                                                      ; --            ; --               ; --                    ;
+; PARTITION_COLOR                      ; 16764057                                                                                                                                                  ; --            ; Matriz_ubicacion ; Top                   ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                                                                                                                                     ; --            ; Matriz_ubicacion ; Top                   ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                                                                                                                                    ; --            ; Matriz_ubicacion ; Top                   ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                                                                                                                                       ; --            ; --               ; --                    ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                                                                                     ; --            ; --               ; --                    ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                                                                                                                                              ; --            ; --               ; --                    ;
+; SLD_FILE                             ; output_files/stp_auto_stripped.stp                                                                                                                        ; --            ; --               ; --                    ;
+; SLD_NODE_CREATOR_ID                  ; 110                                                                                                                                                       ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_ENTITY_NAME                 ; sld_signaltap                                                                                                                                             ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_NODE_INFO=805334528                                                                                                                                   ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_POWER_UP_TRIGGER=0                                                                                                                                    ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0                                                                                                             ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_SEGMENT_SIZE=4096                                                                                                                                     ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_ATTRIBUTE_MEM_MODE=OFF                                                                                                                                ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_STATE_FLOW_USE_GENERATED=0                                                                                                                            ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_STATE_BITS=11                                                                                                                                         ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_BUFFER_FULL_STOP=1                                                                                                                                    ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_CURRENT_RESOURCE_WIDTH=1                                                                                                                              ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_LEVEL=1                                                                                                                                       ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_SAMPLE_DEPTH=4096                                                                                                                                     ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_IN_ENABLED=0                                                                                                                                  ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_ADVANCED_TRIGGER_ENTITY=basic,1,                                                                                                                      ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_LEVEL_PIPELINE=1                                                                                                                              ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_ENABLE_ADVANCED_TRIGGER=0                                                                                                                             ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_DATA_BITS=36                                                                                                                                          ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_BITS=36                                                                                                                                       ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_INVERSION_MASK=00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_INVERSION_MASK_LENGTH=134                                                                                                                             ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_NODE_CRC_LOWORD=23386                                                                                                                                 ; --            ; --               ; auto_signaltap_0      ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_NODE_CRC_HIWORD=11562                                                                                                                                 ; --            ; --               ; auto_signaltap_0      ;
+; TOP_LEVEL_ENTITY                     ; Matriz_ubicacion                                                                                                                                          ; ratatouille   ; --               ; --                    ;
+; USE_SIGNALTAP_FILE                   ; output_files/stp.stp                                                                                                                                      ; --            ; --               ; --                    ;
++--------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+-----------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -112,12 +136,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 4685 MB             ; 00:00:02                           ;
-; Fitter                    ; 00:00:15     ; 1.0                     ; 5004 MB             ; 00:00:06                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4596 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4677 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4545 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:27     ; --                      ; --                  ; 00:00:10                           ;
+; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 4681 MB             ; 00:00:15                           ;
+; Fitter                    ; 00:00:16     ; 1.1                     ; 5107 MB             ; 00:00:18                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4559 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 4652 MB             ; 00:00:05                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4520 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:41     ; --                      ; --                  ; 00:00:42                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -126,11 +150,11 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; Asus             ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; Asus             ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; Asus             ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; Asus             ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Asus             ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; DESKTOP-25ASN12  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-25ASN12  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-25ASN12  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-25ASN12  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-25ASN12  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

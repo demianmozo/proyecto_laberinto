@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 216 368)
+	(rect 16 16 216 400)
 	(text "Donde_ir" (rect 5 0 55 14)(font "Arial" (font_size 8)))
-	(text "inst" (rect 8 336 25 348)(font "Arial" ))
+	(text "inst" (rect 8 368 25 380)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -157,6 +157,13 @@ applicable agreement for further details.
 		(line (pt 0 320)(pt 16 320)(line_width 3))
 	)
 	(port
+		(pt 0 336)
+		(input)
+		(text "sprint" (rect 0 0 31 14)(font "Arial" (font_size 8)))
+		(text "sprint" (rect 21 331 52 345)(font "Arial" (font_size 8)))
+		(line (pt 0 336)(pt 16 336))
+	)
+	(port
 		(pt 200 32)
 		(output)
 		(text "Yizq[3..0]" (rect 0 0 54 14)(font "Arial" (font_size 8)))
@@ -220,6 +227,6 @@ applicable agreement for further details.
 		(line (pt 200 160)(pt 184 160)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 184 336))
+		(rectangle (rect 16 16 184 368))
 	)
 )

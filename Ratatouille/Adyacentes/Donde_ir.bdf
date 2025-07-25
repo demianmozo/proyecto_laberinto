@@ -71,7 +71,7 @@ applicable agreement for further details.
 	(input)
 	(rect 32 -312 200 -296)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "I0[3..0]" (rect 5 0 41 12)(font "Arial" ))
+	(text "I0[3..0]" (rect 5 0 40 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -87,7 +87,7 @@ applicable agreement for further details.
 	(input)
 	(rect 40 -288 208 -272)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "En[3..0]" (rect 5 0 44 12)(font "Arial" ))
+	(text "En[3..0]" (rect 5 0 43 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -103,7 +103,7 @@ applicable agreement for further details.
 	(input)
 	(rect 40 -272 208 -256)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "I2[3..0]" (rect 5 0 41 12)(font "Arial" ))
+	(text "I2[3..0]" (rect 5 0 40 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -119,7 +119,7 @@ applicable agreement for further details.
 	(input)
 	(rect 40 -256 208 -240)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "I3[3..0]" (rect 5 0 41 12)(font "Arial" ))
+	(text "I3[3..0]" (rect 5 0 40 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -135,7 +135,7 @@ applicable agreement for further details.
 	(input)
 	(rect 40 -240 208 -224)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "I4[3..0]" (rect 5 0 41 12)(font "Arial" ))
+	(text "I4[3..0]" (rect 5 0 40 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -151,7 +151,7 @@ applicable agreement for further details.
 	(input)
 	(rect 40 -224 208 -208)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "I5[3..0]" (rect 5 0 41 12)(font "Arial" ))
+	(text "I5[3..0]" (rect 5 0 40 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -167,7 +167,7 @@ applicable agreement for further details.
 	(input)
 	(rect 40 -208 208 -192)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "I6[3..0]" (rect 5 0 41 12)(font "Arial" ))
+	(text "I6[3..0]" (rect 5 0 40 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -183,7 +183,7 @@ applicable agreement for further details.
 	(input)
 	(rect 40 -192 208 -176)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "I7[3..0]" (rect 5 0 41 12)(font "Arial" ))
+	(text "I7[3..0]" (rect 5 0 40 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -199,7 +199,7 @@ applicable agreement for further details.
 	(input)
 	(rect 40 -176 208 -160)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "I8[3..0]" (rect 5 0 41 12)(font "Arial" ))
+	(text "I8[3..0]" (rect 5 0 40 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -215,7 +215,7 @@ applicable agreement for further details.
 	(input)
 	(rect 40 -160 208 -144)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "I9[3..0]" (rect 5 0 41 12)(font "Arial" ))
+	(text "I9[3..0]" (rect 5 0 40 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -231,7 +231,7 @@ applicable agreement for further details.
 	(input)
 	(rect 40 -144 208 -128)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "I10[3..0]" (rect 5 0 47 12)(font "Arial" ))
+	(text "I10[3..0]" (rect 5 0 46 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -247,7 +247,7 @@ applicable agreement for further details.
 	(input)
 	(rect 40 -128 208 -112)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "I11[3..0]" (rect 5 0 47 12)(font "Arial" ))
+	(text "I11[3..0]" (rect 5 0 46 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -263,7 +263,7 @@ applicable agreement for further details.
 	(input)
 	(rect 40 -112 208 -96)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "I12[3..0]" (rect 5 0 47 12)(font "Arial" ))
+	(text "I12[3..0]" (rect 5 0 46 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -279,7 +279,7 @@ applicable agreement for further details.
 	(input)
 	(rect 40 -96 208 -80)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "I13[3..0]" (rect 5 0 47 12)(font "Arial" ))
+	(text "I13[3..0]" (rect 5 0 46 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -295,7 +295,7 @@ applicable agreement for further details.
 	(input)
 	(rect 40 -80 208 -64)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "I14[3..0]" (rect 5 0 47 12)(font "Arial" ))
+	(text "I14[3..0]" (rect 5 0 46 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -311,7 +311,23 @@ applicable agreement for further details.
 	(input)
 	(rect 40 -64 208 -48)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "I15[3..0]" (rect 5 0 47 12)(font "Arial" ))
+	(text "I15[3..0]" (rect 5 0 46 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect -296 104 -128 120)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "sprint" (rect 5 0 32 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -511,42 +527,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect -96 32 32 128)
-	(text "Posicion" (rect 5 0 52 14)(font "Arial" (font_size 8)))
-	(text "inst" (rect 8 80 25 92)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "LS" (rect 0 0 15 14)(font "Arial" (font_size 8)))
-		(text "LS" (rect 21 27 36 41)(font "Arial" (font_size 8)))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "reset" (rect 0 0 29 14)(font "Arial" (font_size 8)))
-		(text "reset" (rect 21 43 50 57)(font "Arial" (font_size 8)))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "s[1..0]" (rect 0 0 35 14)(font "Arial" (font_size 8)))
-		(text "s[1..0]" (rect 21 59 56 73)(font "Arial" (font_size 8)))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 128 32)
-		(output)
-		(text "Q[3..0]" (rect 0 0 37 14)(font "Arial" (font_size 8)))
-		(text "Q[3..0]" (rect 70 27 107 41)(font "Arial" (font_size 8)))
-		(line (pt 128 32)(pt 112 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 112 80))
-	)
-)
-(symbol
 	(rect 400 1072 560 1408)
 	(text "mux_16to1" (rect 5 0 59 12)(font "Arial" ))
 	(text "inst4" (rect 8 320 31 332)(font "Arial" ))
@@ -673,7 +653,7 @@ applicable agreement for further details.
 		(pt 160 32)
 		(output)
 		(text "Y[3..0]" (rect 0 0 34 12)(font "Arial" ))
-		(text "Y[3..0]" (rect 111 27 139 39)(font "Arial" ))
+		(text "Y[3..0]" (rect 111 27 145 39)(font "Arial" ))
 		(line (pt 160 32)(pt 144 32)(line_width 3))
 	)
 	(drawing
@@ -807,7 +787,7 @@ applicable agreement for further details.
 		(pt 160 32)
 		(output)
 		(text "Y[3..0]" (rect 0 0 34 12)(font "Arial" ))
-		(text "Y[3..0]" (rect 111 27 139 39)(font "Arial" ))
+		(text "Y[3..0]" (rect 111 27 145 39)(font "Arial" ))
 		(line (pt 160 32)(pt 144 32)(line_width 3))
 	)
 	(drawing
@@ -941,7 +921,7 @@ applicable agreement for further details.
 		(pt 160 32)
 		(output)
 		(text "Y[3..0]" (rect 0 0 34 12)(font "Arial" ))
-		(text "Y[3..0]" (rect 111 27 139 39)(font "Arial" ))
+		(text "Y[3..0]" (rect 111 27 145 39)(font "Arial" ))
 		(line (pt 160 32)(pt 144 32)(line_width 3))
 	)
 	(drawing
@@ -1075,11 +1055,54 @@ applicable agreement for further details.
 		(pt 160 32)
 		(output)
 		(text "Y[3..0]" (rect 0 0 34 12)(font "Arial" ))
-		(text "Y[3..0]" (rect 111 27 139 39)(font "Arial" ))
+		(text "Y[3..0]" (rect 111 27 145 39)(font "Arial" ))
 		(line (pt 160 32)(pt 144 32)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 144 320))
+	)
+)
+(symbol
+	(rect -96 32 32 160)
+	(text "Posicion" (rect 5 0 52 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 112 25 124)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "LS" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "LS" (rect 21 27 36 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "reset" (rect 0 0 29 14)(font "Arial" (font_size 8)))
+		(text "reset" (rect 21 43 50 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "s[1..0]" (rect 0 0 35 14)(font "Arial" (font_size 8)))
+		(text "s[1..0]" (rect 21 59 56 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "sprint" (rect 0 0 31 14)(font "Arial" (font_size 8)))
+		(text "sprint" (rect 21 75 52 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 128 32)
+		(output)
+		(text "Q[3..0]" (rect 0 0 37 14)(font "Arial" (font_size 8)))
+		(text "Q[3..0]" (rect 70 27 107 41)(font "Arial" (font_size 8)))
+		(line (pt 128 32)(pt 112 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 112 112))
 	)
 )
 (connector
@@ -1896,6 +1919,10 @@ applicable agreement for further details.
 	(pt 200 -304)
 	(pt 392 -304)
 	(bus)
+)
+(connector
+	(pt -96 112)
+	(pt -128 112)
 )
 (junction (pt 392 432))
 (junction (pt 392 776))

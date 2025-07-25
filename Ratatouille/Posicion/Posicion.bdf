@@ -53,9 +53,25 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 568 112 736 128)
+	(rect 512 112 680 128)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "reset" (rect 5 0 29 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 544 272 712 288)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "sprint" (rect 5 0 32 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -163,11 +179,44 @@ applicable agreement for further details.
 		(pt 160 32)
 		(output)
 		(text "Q[3..0]" (rect 0 0 34 12)(font "Arial" ))
-		(text "Q[3..0]" (rect 111 27 145 39)(font "Arial" ))
+		(text "Q[3..0]" (rect 111 27 139 39)(font "Arial" ))
 		(line (pt 160 32)(pt 144 32)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 144 96))
+	)
+)
+(symbol
+	(rect 744 128 808 176)
+	(text "OR2" (rect 1 0 19 10)(font "Arial" (font_size 6)))
+	(text "inst3" (rect 3 37 26 49)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 15 32))
+	)
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 15 16))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(line (pt 48 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 36)(pt 25 36))
+		(line (pt 14 13)(pt 25 13))
+		(arc (pt 7 29)(pt 7 19)(rect -14 8 19 41))
+		(arc (pt 49 24)(pt 25 13)(rect -6 13 57 76))
+		(arc (pt 25 35)(pt 49 24)(rect -6 -27 57 36))
 	)
 )
 (connector
@@ -177,18 +226,6 @@ applicable agreement for further details.
 (connector
 	(pt 800 88)
 	(pt 736 88)
-)
-(connector
-	(pt 744 120)
-	(pt 744 152)
-)
-(connector
-	(pt 744 152)
-	(pt 808 152)
-)
-(connector
-	(pt 744 120)
-	(pt 736 120)
 )
 (connector
 	(pt 800 88)
@@ -225,11 +262,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 688 168)
-	(pt 808 168)
-	(bus)
-)
-(connector
 	(pt 432 184)
 	(pt 536 184)
 	(bus)
@@ -238,5 +270,34 @@ applicable agreement for further details.
 	(pt 240 184)
 	(pt 280 184)
 	(bus)
+)
+(connector
+	(pt 808 168)
+	(pt 688 168)
+	(bus)
+)
+(connector
+	(pt 680 120)
+	(pt 696 120)
+)
+(connector
+	(pt 696 144)
+	(pt 744 144)
+)
+(connector
+	(pt 696 120)
+	(pt 696 144)
+)
+(connector
+	(pt 712 280)
+	(pt 736 280)
+)
+(connector
+	(pt 736 280)
+	(pt 736 160)
+)
+(connector
+	(pt 744 160)
+	(pt 736 160)
 )
 (junction (pt 992 136))

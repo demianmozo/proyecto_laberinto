@@ -1,0 +1,36 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity frequency_100hz is
+    port (
+        clk_in   : in  std_logic;  -- Reloj de entrada: 10 kHz
+        reset    : in  std_logic;  -- Reset activo en '0'
+        clk_out  : out std_logic   -- Reloj de salida: 100 Hz
+    );
+end entity;
+
+architecture Behavioral of frequency_divider is
+    constant DIVISOR : integer := 49;  -- Divide por 100 (cada flanco 50 ciclos)
+    signal counter   : integer := 0;
+    signal clk_reg   : std_logic := '0';
+begin
+
+    process (clk_in, reset)
+    begin
+        if reset = '0' then
+            counter <= 0;
+            clk_reg <= '0';
+        elsif rising_edge(clk_in) then
+            if counter = DIVISOR then
+                counter <= 0;
+                clk_reg <= not clk_reg;
+            else
+                counter <= counter + 1;
+            end if;
+        end if;
+    end process;
+
+    clk_out <= clk_reg;
+
+end Behavioral;

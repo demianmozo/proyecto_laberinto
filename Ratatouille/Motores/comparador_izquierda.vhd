@@ -8,7 +8,7 @@ o: out std_logic);
 end comparador_izquierda;
 
 architecture behavorial of comparador_izquierda is
- constant valor_3000 :std_logic_vector(11 downto 0):="000011111010";
+ constant valor_3000 :std_logic_vector(11 downto 0):="000011011100";
  begin 
  o<='1' when a > valor_3000 else '0';
  end behavorial;
