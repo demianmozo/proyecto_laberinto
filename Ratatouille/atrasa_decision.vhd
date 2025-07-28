@@ -13,8 +13,8 @@ ENTITY atrasa_decision IS
 END atrasa_decision;
 
 ARCHITECTURE behavior OF atrasa_decision IS
-    CONSTANT CUENTA_LARGA : INTEGER := 5000;
-    CONSTANT CUENTA_CORTA : INTEGER := 3000;
+    CONSTANT CUENTA_LARGA : INTEGER := 4200;
+    CONSTANT CUENTA_CORTA : INTEGER := 4200;
     SIGNAL contador       : INTEGER := 0;
     SIGNAL fin            : STD_LOGIC := '0';
     SIGNAL cuenta_max     : INTEGER;

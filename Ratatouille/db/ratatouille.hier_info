@@ -334,16 +334,17 @@ sent_actual[1] <= SENT_ACTUAL:inst6.q_out[1]
 |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst
 ADC_SCLK <= adc:inst8.ADC_SCLK
 inclk0 => pll1:inst4.inclk0
+inclk0 => pwm_20k_77:inst6.clk
 areset => pll1:inst4.areset
 areset => adc:inst8.RESET
 areset => Motores:inst.reset
-areset => frequency_100hz:inst14.reset
+areset => frequency_100hz:inst1.reset
 areset => ir_smf:inst13.reset
 areset => temporizador_doble:inst2.reset
+areset => pwm_20k_77:inst6.reset
 ADC_DOUT => adc:inst8.ADC_DOUT
 ADC_CS_N <= adc:inst8.ADC_CS_N
 ADC_DIN <= adc:inst8.ADC_DIN
-VELD <= clk_20KHz.DB_MAX_OUTPUT_PORT_TYPE
 VELI <= clk_20KHz.DB_MAX_OUTPUT_PORT_TYPE
 MD0 <= Motores:inst.MD0
 CH0[0] <= ir_smf:inst13.ir_diff_r[0]
@@ -381,6 +382,7 @@ CLK1MHz <= 1M.DB_MAX_OUTPUT_PORT_TYPE
 clk_40KHz <= clk_20KHz.DB_MAX_OUTPUT_PORT_TYPE
 LedIRi <= ir_smf:inst13.tx_en
 LedIRd <= ir_smf:inst13.tx_en
+VELD <= pwm_20k_77:inst6.pwm_out
 
 
 |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|adc:inst8
@@ -938,14 +940,18 @@ locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
 reset => fstate~3.DATAIN
 clock => fstate~1.DATAIN
 SR => process_1.IN1
-SR => process_1.IN0
 SR => process_1.IN1
-SR => process_1.IN0
+SR => process_1.IN1
+SR => process_1.IN1
+SR => process_1.IN1
 SL => process_1.IN1
 SL => process_1.IN1
-SL => process_1.IN0
 SL => process_1.IN1
-SL => process_1.IN0
+SL => process_1.IN1
+SL => process_1.IN1
+SL => process_1.IN1
+SL => process_1.IN1
+SL => process_1.IN1
 SEL[0] => Equal0.IN1
 SEL[0] => Equal1.IN1
 SEL[0] => Equal2.IN0
@@ -957,11 +963,19 @@ SEL[1] => Equal3.IN0
 fin_giro => Selector0.IN4
 fin_giro => Selector0.IN5
 fin_giro => Selector0.IN6
-fin_giro => Selector3.IN2
-fin_giro => Selector4.IN2
-fin_giro => Selector5.IN2
+fin_giro => Selector3.IN4
+fin_giro => Selector4.IN4
+fin_giro => Selector5.IN4
 llego => reg_fstate.DATAA
+llego => reg_fstate.OUTPUTSELECT
+llego => reg_fstate.OUTPUTSELECT
+llego => reg_fstate.OUTPUTSELECT
+llego => reg_fstate.OUTPUTSELECT
 llego => reg_fstate.DATAA
+llego => reg_fstate.OUTPUTSELECT
+llego => reg_fstate.OUTPUTSELECT
+llego => reg_fstate.OUTPUTSELECT
+llego => reg_fstate.OUTPUTSELECT
 llego => reg_fstate.DATAA
 llego => Selector6.IN5
 llego => reg_fstate.DATAA
@@ -976,11 +990,15 @@ llego => process_1.IN1
 llego => process_1.IN1
 llego => process_1.IN1
 llego => Selector0.IN0
-llego => reg_fstate.DATAA
-llego => reg_fstate.DATAA
-MD0 <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+llego => process_1.IN1
+llego => process_1.IN1
+llego => process_1.IN1
+llego => process_1.IN1
+llego => process_1.IN1
+llego => process_1.IN1
+MD0 <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
 MI0 <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
-MD1 <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+MD1 <= MD1.DB_MAX_OUTPUT_PORT_TYPE
 MI1 <= MI1.DB_MAX_OUTPUT_PORT_TYPE
 h_giro[0] <= h_giro.DB_MAX_OUTPUT_PORT_TYPE
 h_giro[1] <= h_giro[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -1177,7 +1195,7 @@ ir_diff_l[11] <= ir_diff_l[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 tx_en <= tx_en~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|frequency_100hz:inst14
+|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|frequency_100hz:inst1
 clk_10khz => tick_100hz~reg0.CLK
 clk_10khz => counter[0].CLK
 clk_10khz => counter[1].CLK
@@ -1291,6 +1309,34 @@ hab[1] => Equal0.IN0
 hab[1] => Equal1.IN0
 hab[1] => Equal2.IN1
 fin <= fin_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|pwm_20k_77:inst6
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+reset => counter[0].ACLR
+reset => counter[1].ACLR
+reset => counter[2].ACLR
+reset => counter[3].ACLR
+reset => counter[4].ACLR
+reset => counter[5].ACLR
+reset => counter[6].ACLR
+reset => counter[7].ACLR
+reset => counter[8].ACLR
+reset => counter[9].ACLR
+reset => counter[10].ACLR
+reset => counter[11].ACLR
+pwm_out <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Matriz_ubicacion|algoritmo_decision:inst33|Control_Motores:inst|BUSMUX:inst11
@@ -2758,10 +2804,7 @@ habilitacion => contador.OUTPUTSELECT
 habilitacion => contador.OUTPUTSELECT
 habilitacion => contador.OUTPUTSELECT
 habilitacion => fin.OUTPUTSELECT
-modo => LessThan0.IN29
-modo => LessThan0.IN30
-modo => LessThan0.IN31
-modo => LessThan0.IN64
+modo => ~NO_FANOUT~
 fin_avanza <= fin.DB_MAX_OUTPUT_PORT_TYPE
 
 

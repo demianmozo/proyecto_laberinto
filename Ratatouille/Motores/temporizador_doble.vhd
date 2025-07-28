@@ -17,8 +17,8 @@ architecture Behavioral of temporizador_doble is
     signal fin_reg : std_logic := '0';  -- Registro de la señal 'fin'
 
     -- Constantes para el límite de tiempo (contadores basados en reloj de 10kHz)
-    constant limite_075s : unsigned(16 downto 0) := to_unsigned(7000, 17);  -- 
-    constant limite_15s  : unsigned(16 downto 0) := to_unsigned(14000, 17); -- 
+    constant limite_075s : unsigned(16 downto 0) := to_unsigned(6600, 17);  -- 
+    constant limite_15s  : unsigned(16 downto 0) := to_unsigned(13200, 17); -- 
 
 begin
 
