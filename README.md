@@ -1,58 +1,62 @@
-# Proyecto Escape de Laberinto
+# FPGA-Based Autonomous Maze-Solving Robot
 
-**Autores**: Álvarez, J.; Solari Sab, S.; Larrieu Lacoste, I.P.; Mozo, D.N.  
-**Fecha**: Noviembre 2024
+This repository contains the implementation of a digital control system on FPGA for an autonomous robot capable of navigating unknown mazes using a hardware-accelerated flood-fill algorithm. The project was developed as part of the course "Digital Devices and Techniques II" (3rd year of Electronic Engineering) at the National University of Mar del Plata.
 
-------
+## Overview
 
-### **Resumen**
+Maze-solving is a classic problem in robotics and graph theory. The goal is to enable a mobile robot to traverse from an initial position to a target location within a grid-like environment with obstacles. While most solutions rely on microcontrollers (e.g., Arduino), this project leverages the inherent parallelism of FPGAs to implement a fully distributed and real-time navigation system.
 
-Este proyecto consiste en la implementación de un sistema de control digital en una **FPGA** para un robot autónomo que navegue y salga de un laberinto desconocido empleando estrategias de navegación eficientes. El objetivo principal es diseñar un sistema que permita al robot detectar obstáculos, ajustar su trayectoria y salir del laberinto en el menor tiempo posible. **Nuestro equipo logró ganar la competencia** desarrollada con los otros equipos participantes en la asignatura, gracias a la implementación de un eficiente **algoritmo de llenado**, que permitió encontrar el camino más corto hacia la salida.
+A flood-fill algorithm is used to build an internal map of the maze and calculate optimal paths. Each cell of the maze is implemented as an independent VHDL module that communicates with its neighbors, allowing real-time propagation of distance and wall data. The current implementation uses a 4x4 grid, but the design is fully scalable to larger maze sizes.
 
-**Especificaciones Técnicas**
+## Features
 
-- **Board**: FPGA **Cyclone IV**.
+- Real-time autonomous navigation using a flood-fill algorithm implemented entirely in hardware.
+- Fully parallel architecture using distributed cell modules in VHDL.
+- Wall detection and live map updating using onboard sensors.
+- Smooth motion control with trajectory correction based on IR side sensors.
+- Executed entirely on an Altera DE0-Nano FPGA board.
+- Scalable design adaptable to larger mazes and more complex environments.
 
-- **Device**: EP4CE22F17C6.
+## Hardware Components
 
-  
+- **FPGA**: Altera DE0-Nano (Cyclone IV)
+- **Motors**: Two DC motors with L298N dual H-bridge driver
+- **Sensors**:
+  - Front obstacle sensor (digital)
+  - Two analog side IR sensors for wall tracking
+  - Line detection sensor for cell crossing (digital)
+- **ADC**: Integrated 8-channel converter controlled by the FPGA
+- **Maze**: Custom 4x4 wooden maze with 3D printed wall columns
 
-### **Objetivos del Proyecto**
+## System Architecture
 
-- Implementar un sistema autónomo capaz de resolver un laberinto mediante un algoritmo adecuado.
-- Diseñar subsistemas modulares para control de motores, detección de obstáculos y lógica de decisión.
-- Optimizar la distancia recorrida por el robot.
-- Aplicar herramientas modernas de diseño digital y sistemas embebidos.
-- Fomentar el trabajo en equipo y el uso de **Git** para la gestión de versiones.
+- **Maze Controller**: Grid of 16 interconnected VHDL-based cells handling wall data and path weights.
+- **Motor FSM**: Finite State Machine for motion control including forward movement, turning, and alignment.
+- **Obstacle Detection**: Uses front sensor to detect walls and initiate turn maneuvers.
+- **Position Tracking**: Line sensor increments cell counter as the robot progresses.
+- **Decision Logic**: Chooses next move based on wall configuration and weight propagation.
 
-### **Subsistemas**
+## Highlights
 
-1. **Control de motores**:
-   - Responsable de la **navegación en línea recta** y la ejecución de **giros precisos** de 90° y 180°.
-   - Integra sensores analógicos laterales para ajustar la trayectoria y evitar colisiones.
-2. **Detección y escritura de muros**:
-   - Encargado de registrar casillas con obstrucciones para evitar que el robot pase nuevamente por ellas.
-   - Utiliza datos del sensor frontal para actualizar un mapa interno del laberinto.
-3. **Detección de cuadrículas**:
-   - Cuenta el número de celdas recorridas utilizando un sensor de línea.
-   - Actualiza la posición actual del robot mediante operaciones aritméticas, teniendo en cuenta su sentido con cada cambio de celda.
-   - Muestra el progreso en los LEDs de la FPGA, facilitando el monitoreo durante la ejecución.
-4. **Lógica de decisión** (algoritmo de llenado):
-   - Actualiza constantemente el "peso" de cada celda de la cuadricula en base a los muros detectados.
-   - Haciendo uso de la posición actual, del sentido actual y de la información de sus celdas vecinas, toma la decisión del sentido futuro que debe tomar el robot. 
-   - Envia la señal correspondiente al sistema de control de motores para ejecutar la acción correspondiente.
-5. **Control general**:
-   - Coordina todos los subsistemas, tomando decisiones en tiempo real.
+- Designed for low-latency and high-efficiency embedded applications.
+- Supports partial resets to allow faster second runs with memory of previous wall detections.
+- Demonstrates the practical advantages of FPGA-based parallel processing in robotic navigation.
 
-### **Conclusión**
+## Future Work
 
-Este proyecto no solo representó un gran desafío, sino también una buena experiencia de trabajo en equipo. Logramos trasladar con éxito nuestros planteos electrónicos a código VHDL, empleando diagramas en bloques como base para nuestra implementación en Quartus II. A lo largo del desarrollo, aprendimos muchísimo sobre VHDL, Quartus, y la importancia de dividir sistemas complejos en modulos más pequeños. Logramos identificar y solucionar errores recurrentes durante las simulaciones y pruebas. Finalmente, alcanzamos el prototipo final, superando los obstáculos y ganando la competencia. 
+- Extendable to larger maze sizes and complex navigation rules.
+- Potential applications in warehouse automation, hazardous environment exploration, or educational robotics.
+- Evaluation under real-world conditions and industrial environments.
 
-En conclusión, el trabajo puede considerarse **exitoso y confiable**, y queda abierto a futuras integraciones y mejoras que podrían mejorar aún más su funcionamiento.
+## Authors
 
-###### Asignatura Técnicas y Dispositivos Digitales II - Depto. de Electrónica y Computación - Facultad de Ingeniería - UNMdP
+- **Ian P. Larrieu Lacoste** – `ianlarrieu@alumnos.fi.mdp.edu.ar`
+- **Demian N. Mozo** – `dmozo@alumnos.fi.mdp.edu.ar`
 
+## License
 
+This project is for academic and research purposes.
 
+## References
 
-
+See full project documentation and technical report for implementation details, theory background, and system design.
